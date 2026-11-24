@@ -353,11 +353,19 @@ const KLURIGA = [
     };
   },
   function initialer(ups) {
+    // Skrivfråga utan svarsalternativ – annars avslöjar alternativen svaret
     const p = slump(P.filter(x => ups.includes(x.nivå)));
-    const init = x => x.namn.split(/[\s-]+/).filter(Boolean).map(d => d[0].toUpperCase() + '.').join(' ');
-    const fel = liknandePersoner(p, 6, x => init(x) !== init(p)).slice(0, 3);
-    return ettval('Initialer', `Vilken pristagare har initialerna ${init(p)}?`, p.namn, fel.map(x => x.namn),
-      { person: p, statTyp: 'initialer', tips: `Fick priset på ${Math.floor(p.år / 10) * 10}-talet.` });
+    const init = x => x.namn.split(/[\s.-]+/).filter(Boolean).map(d => d[0].toUpperCase() + '.').join(' ');
+    const dec = Math.floor(p.år / 10) * 10;
+    // Rätt svar: samma initialer OCH passar ledtråden (årtionde, land)
+    const passar = x => init(x) === init(p) && Math.floor(x.år / 10) * 10 === dec &&
+      (!p.land || !p.land.length || x.land.some(l => p.land.includes(l)));
+    const giltiga = unika(P.filter(passar).map(x => x.namn)).map(n => P.find(x => x.namn === n));
+    const ledtrad = [`fick priset under åren ${dec}–${dec + 9}`];
+    if (p.land && p.land.length) ledtrad.push(`från ${lista(p.land)}`);
+    return { rubrik: 'Initialer', läge: 'skriv', text: `Vilken pristagare har initialerna ${init(p)}?`,
+      tips: `Ledtråd: ${ledtrad.join(', ')}.${giltiga.length > 1 ? ` (${giltiga.length} möjliga svar.)` : ''}`,
+      giltiga, person: p, statTyp: 'initialer' };
   },
   function kvinna(ups) {
     const kv = P.filter(p => p.kön === 'kvinna');
