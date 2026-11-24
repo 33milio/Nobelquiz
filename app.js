@@ -186,13 +186,13 @@ function fragaForKort(id) {
   } else if (typ === 'land' || typ === 'språk') {
     const falt = typ;
     const varden = p[falt];
-    const ord = falt === 'land' ? { fr: 'Vilket land', frFler: 'Vilka länder', av: 'representerade', om: v => `från ${v}` }
-      : { fr: 'Vilket språk', frFler: 'Vilka språk', av: 'skrev på', om: v => `som skrev på ${v.toLowerCase()}` };
+    const ord = falt === 'land' ? { fr: 'Vilket land', frFler: 'Vilka länder', av: 'representerade', om: v => `representerade ${v}` }
+      : { fr: 'Vilket språk', frFler: 'Vilka språk', av: 'skrev på', om: v => `skrev på ${v.toLowerCase()}` };
     if (bakat) {
       const v = slump(varden);
       const fel = liknandePersoner(p, 3, x => !x[falt].includes(v)).map(x => x.namn);
       q = ettval(falt === 'land' ? 'Land → pristagare' : 'Språk → pristagare',
-        `Vilken av dessa pristagare är ${ord.om(v)}?`, p.namn, fel);
+        `Vilken av dessa pristagare ${ord.om(v)}?`, p.namn, fel);
     } else if (varden.length > 1) {
       q = flerval(falt === 'land' ? 'Pristagare → land' : 'Pristagare → språk',
         falt === 'land' ? `Vilka länder representerade ${p.namn}?` : `På vilka språk skrev ${p.namn}?`,
