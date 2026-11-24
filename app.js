@@ -9,8 +9,21 @@ const LARD_FACK = 3;               // fack 3 av 5 = lärd
 const DAG = 24 * 60 * 60 * 1000;
 // Hur länge man väntar innan ett kort kommer tillbaka (per fack)
 const VANTETID = { 1: 10 * 60 * 1000, 2: 1 * DAG, 3: 3 * DAG, 4: 7 * DAG, 5: 14 * DAG };
-const FAKTA_TYPER = ['år', 'land', 'språk', 'verk'];
-const LAGRING = 'nobelquiz.v1';
+// Två avdelningar som delar samma spelmotor men har egen data och egna framsteg
+const SAMLINGAR = {
+  nobel: {
+    nyckel: 'nobel', fil: 'data.json', lagring: 'nobelquiz.v1', flik: 'Nobelpriset',
+    titel: 'Nobelquiz', underrubrik: år => `Nobelpriset i litteratur 1901–${år}`,
+    pris: 'Nobelpriset i litteratur', nivaer: 5, fakta: ['år', 'land', 'språk', 'verk'], verkOrd: 'verk',
+  },
+  august: {
+    nyckel: 'august', fil: 'data-august.json', lagring: 'nobelquiz.august.v1', flik: 'Augustpriset',
+    titel: 'Augustpriset', underrubrik: år => `Årets svenska skönlitterära bok 1990–${år}`,
+    pris: 'Augustpriset', nivaer: 2, fakta: ['år', 'verk'], verkOrd: 'bok',
+  },
+};
+let S = SAMLINGAR.nobel;
+const VALD_SAMLING = 'nobelquiz.samling';
 
 // ---------- Hjälpfunktioner ----------
 const $ = (sel, rot = document) => rot.querySelector(sel);
@@ -43,10 +56,11 @@ function nyttTillstand() {
 }
 let T = nyttTillstand();
 function ladda() {
-  try { const s = localStorage.getItem(LAGRING); if (s) T = Object.assign(nyttTillstand(), JSON.parse(s)); } catch (e) { /* tom start */ }
+  T = nyttTillstand();
+  try { const s = localStorage.getItem(S.lagring); if (s) T = Object.assign(nyttTillstand(), JSON.parse(s)); } catch (e) { /* tom start */ }
 }
 function spara() {
-  try { localStorage.setItem(LAGRING, JSON.stringify(T)); } catch (e) { /* lagring ej möjlig */ }
+  try { localStorage.setItem(S.lagring, JSON.stringify(T)); } catch (e) { /* lagring ej möjlig */ }
 }
 
 // ---------- Data ----------
@@ -58,8 +72,9 @@ function personMedAndringar(p) {
 function byggData() {
   P = DATA.pristagare.map(personMedAndringar);
   PID = Object.fromEntries(P.map(p => [p.id, p]));
-  NIVAER = [1, 2, 3, 4, 5].map(n => P.filter(p => p.nivå === n));
+  NIVAER = nivaLista().map(n => P.filter(p => p.nivå === n));
 }
+const nivaLista = () => Array.from({ length: S.nivaer }, (_, i) => i + 1);
 const faktaFragor = () => DATA.faktafrågor.filter(f => !T.borttagnaFakta[f.id]);
 const visaLand = p => lista(p.land);
 const visaSprak = p => lista(p.språk);
@@ -68,7 +83,7 @@ const efternamn = p => p.efternamn || p.namn.split(' ').slice(-1)[0];
 // ---------- Leitner ----------
 function kortId(pid, typ) { return pid + '|' + typ; }
 function harFakta(p, typ) { return typ !== 'verk' || !!p.verk; }
-function kortFor(p) { return FAKTA_TYPER.filter(t => harFakta(p, t)).map(t => kortId(p.id, t)); }
+function kortFor(p) { return S.fakta.filter(t => harFakta(p, t)).map(t => kortId(p.id, t)); }
 function personFack(p) {
   const k = kortFor(p).map(id => (T.kort[id] && T.kort[id].fack) || 0);
   return Math.min(...k);
@@ -83,7 +98,7 @@ function nivaStatus(n) {
 function upplasta() {
   // En nivå som en gång låsts upp förblir upplåst
   let hogsta = T.hogstaNiva || 1;
-  while (hogsta < 5 && nivaStatus(hogsta).andel >= UPPLASNING_ANDEL) hogsta++;
+  while (hogsta < S.nivaer && nivaStatus(hogsta).andel >= UPPLASNING_ANDEL) hogsta++;
   if (hogsta !== T.hogstaNiva) { T.hogstaNiva = hogsta; spara(); }
   return Array.from({ length: hogsta }, (_, i) => i + 1);
 }
@@ -125,7 +140,7 @@ function likhet(a, b) {
   return s;
 }
 function liknandePersoner(p, antal, filter = () => true) {
-  return P.filter(q => q.id !== p.id && filter(q))
+  return P.filter(q => q.id !== p.id && q.namn !== p.namn && filter(q))
     .map(q => [likhet(p, q), q]).sort((x, y) => y[0] - x[0])
     .slice(0, antal * 3).sort(() => Math.random() - .5).slice(0, antal).map(x => x[1]);
 }
@@ -135,7 +150,7 @@ function nastanAr(ar, antal, undvik) {
   while (ut.size < antal && f++ < 200) {
     const d = (Math.floor(Math.random() * 14) + 1) * (Math.random() < .5 ? -1 : 1);
     const y = ar + d;
-    if (y >= 1901 && y <= DATA.senasteÅr && y !== ar && !undvik.includes(y)) ut.add(y);
+    if (y >= DATA.förstaÅr && y <= DATA.senasteÅr && y !== ar && !undvik.includes(y)) ut.add(y);
   }
   return [...ut];
 }
@@ -150,10 +165,14 @@ function alternativVarden(falt, korrekta, antal, p) {
 // ---------- Frågebyggare ----------
 // En fråga: { typ, rubrik, text, tips, läge: 'ett'|'flera'|'skriv'|'ordning'|'tal',
 //   alternativ:[{t, ratt}], ratta:[...], kontroll(svar)->resultat, forklaring, kortId, källa, person }
+function arFraga(p) {
+  const flera = P.filter(x => x.namn === p.namn).length > 1;
+  return flera ? `Vilket år fick ${p.namn} ${S.pris} för ”${p.verk}”?` : `Vilket år fick ${p.namn} ${S.pris}?`;
+}
 function faktaRad(p) {
-  const delar = [`${p.år}`, visaLand(p), visaSprak(p)];
+  const delar = [esc(p.år), esc(visaLand(p)), esc(visaSprak(p))].filter(Boolean);
   if (p.verk) delar.push(`<i>${esc(p.verk)}</i>`);
-  return `<b>${esc(p.namn)}</b> – ${delar.map((d, i) => i === 3 ? d : esc(d)).join(' · ')}`;
+  return `<b>${esc(p.namn)}</b> – ${delar.join(' · ')}`;
 }
 function ettval(rubrik, text, ratt, fel, extra = {}) {
   const alternativ = blanda([{ t: String(ratt), ratt: true }, ...fel.map(f => ({ t: String(f), ratt: false }))]);
@@ -174,14 +193,14 @@ function fragaForKort(id) {
   if (typ === 'år') {
     const medvinnare = P.filter(x => x.år === p.år && x.id !== p.id);
     if (bakat) {
-      q = ettval('Årtal → pristagare', `Vem fick Nobelpriset i litteratur ${p.år}?`, p.namn,
+      q = ettval('Årtal → pristagare', `Vem fick ${S.pris} ${p.år}?`, p.namn,
         liknandePersoner(p, 3, x => x.år !== p.år).map(x => x.namn),
         { tips: medvinnare.length ? 'Priset delades detta år.' : '' });
     } else if (fack >= 3 && Math.random() < .6) {
-      q = { rubrik: 'Pristagare → årtal', text: `Vilket år fick ${p.namn} priset?`, läge: 'tal', ratta: [p.år],
+      q = { rubrik: 'Pristagare → årtal', text: arFraga(p), läge: 'tal', ratta: [p.år],
         tips: 'Skriv årtalet. Inom två år ger halvpoäng.' };
     } else {
-      q = ettval('Pristagare → årtal', `Vilket år fick ${p.namn} priset?`, p.år, nastanAr(p.år, 3, []));
+      q = ettval('Pristagare → årtal', arFraga(p), p.år, nastanAr(p.år, 3, P.filter(x => x.namn === p.namn).map(x => x.år)));
     }
   } else if (typ === 'land' || typ === 'språk') {
     const falt = typ;
@@ -204,11 +223,15 @@ function fragaForKort(id) {
     }
   } else if (typ === 'verk') {
     if (bakat) {
-      q = ettval('Verk → författare', `Vem skrev ”${p.verk}”?`, p.namn,
+      q = ettval(S.verkOrd === 'bok' ? 'Bok → författare' : 'Verk → författare', `Vem skrev ”${p.verk}”?`, p.namn,
         liknandePersoner(p, 3, x => x.verk && x.verk !== p.verk).map(x => x.namn));
     } else {
-      q = ettval('Pristagare → verk', `Vilket verk skrev ${p.namn}?`, p.verk,
-        liknandePersoner(p, 3, x => x.verk && x.verk !== p.verk).map(x => x.verk));
+      const andraVinster = P.filter(x => x.namn === p.namn && x !== p).map(x => x.verk);
+      q = S.verkOrd === 'bok'
+        ? ettval('Pristagare → bok', `För vilken bok fick ${p.namn} ${S.pris}${andraVinster.length ? ` ${p.år}` : ''}?`, p.verk,
+          liknandePersoner(p, 3, x => x.verk && !andraVinster.includes(x.verk)).map(x => x.verk))
+        : ettval('Pristagare → verk', `Vilket verk skrev ${p.namn}?`, p.verk,
+          liknandePersoner(p, 3, x => x.verk && x.verk !== p.verk).map(x => x.verk));
     }
   }
   q.kortId = id;
@@ -228,7 +251,27 @@ function faktaFraga(f) {
 
 // ---------- Kluriga frågor (genereras fritt) ----------
 const KLURIGA = [
+  function bokstav(ups) {
+    // Nämn en pristagare vars efternamn börjar på X (fungerar i båda avdelningarna)
+    const p = slump(P.filter(x => ups.includes(x.nivå)));
+    const b = normalisera(efternamn(p))[0].toUpperCase();
+    const giltiga = unika(P.filter(q => normalisera(efternamn(q))[0].toUpperCase() === b).map(q => q.namn)).map(n => P.find(q => q.namn === n));
+    if (giltiga.length > 4) return null;
+    return { rubrik: 'Bokstav', läge: 'skriv', text: `Nämn en pristagare vars efternamn börjar på ${b}.`,
+      tips: giltiga.length > 1 ? `Det finns ${giltiga.length} möjliga svar.` : 'Det finns ett möjligt svar.', giltiga, statTyp: 'bokstav' };
+  },
+  function tvaGanger() {
+    const namn = unika(P.filter(p => P.filter(q => q.namn === p.namn).length > 1).map(p => p.namn));
+    if (!namn.length) return null;
+    const n = slump(namn);
+    const vinster = P.filter(p => p.namn === n);
+    const fel = liknandePersoner(vinster[0], 3, x => P.filter(q => q.namn === x.namn).length === 1).map(x => x.namn);
+    const q = ettval('Två gånger', `Vem av dessa har fått ${S.pris} två gånger?`, n, fel, { statTyp: 'två gånger' });
+    q.extraFakta = vinster.map(v => `${v.år}: ${v.verk}`);
+    return q;
+  },
   function landOchBokstav(ups) {
+    if (!S.fakta.includes('land')) return null;
     // Nämn en pristagare från X vars efternamn börjar på Y
     const kandidater = P.filter(p => ups.includes(p.nivå));
     for (let f = 0; f < 30; f++) {
@@ -246,6 +289,7 @@ const KLURIGA = [
     }
   },
   function flersprakiga(ups) {
+    if (!S.fakta.includes('språk')) return null;
     const fler = P.filter(p => p.språk.length > 1 && ups.includes(p.nivå) || p.språk.length > 1 && Math.random() < .3);
     if (fler.length < 1) return null;
     if (Math.random() < .5) {
@@ -261,6 +305,7 @@ const KLURIGA = [
     return q;
   },
   function sprakGrupp(ups) {
+    if (!S.fakta.includes('språk')) return null;
     const sprak = slump(unika(P.filter(p => ups.includes(p.nivå)).flatMap(p => p.språk)));
     const med = P.filter(p => p.språk.includes(sprak));
     const utan = P.filter(p => !p.språk.includes(sprak));
@@ -269,6 +314,7 @@ const KLURIGA = [
     return flerval('Språkgrupp', `Vilka av dessa skrev på ${sprak.toLowerCase()}?`, ratta.map(p => p.namn), fela.map(p => p.namn), { statTyp: 'språkgrupp' });
   },
   function antalFranLand() {
+    if (!S.fakta.includes('land')) return null;
     const räkning = {};
     P.forEach(p => p.land.forEach(l => räkning[l] = (räkning[l] || 0) + 1));
     const land = slump(Object.keys(räkning).filter(l => räkning[l] >= 2));
@@ -278,6 +324,7 @@ const KLURIGA = [
       { statTyp: 'räkna', extraFakta: [P.filter(p => p.land.includes(land)).map(p => p.namn).join(', ')] });
   },
   function enda(ups) {
+    if (!S.fakta.includes('land')) return null;
     const räkning = {};
     P.forEach(p => p.land.forEach(l => räkning[l] = (räkning[l] || 0) + 1));
     const ensam = Object.keys(räkning).filter(l => räkning[l] === 1 && ups.includes(P.find(x => x.land.includes(l)).nivå));
@@ -289,7 +336,7 @@ const KLURIGA = [
   function forst(ups) {
     const val = blanda(P.filter(p => ups.includes(p.nivå)));
     const fyra = [];
-    for (const p of val) if (!fyra.some(q => q.år === p.år)) { fyra.push(p); if (fyra.length === 4) break; }
+    for (const p of val) if (!fyra.some(q => q.år === p.år || q.namn === p.namn)) { fyra.push(p); if (fyra.length === 4) break; }
     const tidigast = fyra.reduce((a, b) => a.år < b.år ? a : b);
     return ettval('Tidslinje', 'Vem av dessa fick priset först?', tidigast.namn, fyra.filter(p => p !== tidigast).map(p => p.namn),
       { statTyp: 'tidslinje', extraFakta: fyra.slice().sort((a, b) => a.år - b.år).map(p => `${p.år}: ${p.namn}`) });
@@ -297,7 +344,7 @@ const KLURIGA = [
   function ordning(ups) {
     const val = blanda(P.filter(p => ups.includes(p.nivå)));
     const fyra = [];
-    for (const p of val) if (!fyra.some(q => Math.abs(q.år - p.år) < 3)) { fyra.push(p); if (fyra.length === 4) break; }
+    for (const p of val) if (!fyra.some(q => Math.abs(q.år - p.år) < 3 || q.namn === p.namn)) { fyra.push(p); if (fyra.length === 4) break; }
     const ratt = fyra.slice().sort((a, b) => a.år - b.år);
     return {
       rubrik: 'Tidslinje', läge: 'ordning', text: 'Tryck på pristagarna i den ordning de fick priset, tidigast först.',
@@ -314,7 +361,13 @@ const KLURIGA = [
   },
   function kvinna(ups) {
     const kv = P.filter(p => p.kön === 'kvinna');
-    if (Math.random() < .5) {
+    if (!S.fakta.includes('språk') && Math.random() < .5) {
+      const dec = Math.floor(slump(kv).år / 10) * 10;
+      const giltiga = kv.filter(p => Math.floor(p.år / 10) * 10 === dec);
+      return { rubrik: 'Kvinnliga pristagare', läge: 'skriv', text: `Nämn en kvinna som fick ${S.pris} under åren ${dec}–${dec + 9}.`,
+        giltiga, statTyp: 'kvinnor', tips: giltiga.length > 1 ? `Det finns ${giltiga.length} möjliga svar.` : '' };
+    }
+    if (S.fakta.includes('språk') && Math.random() < .5) {
       const sprak = slump(unika(kv.flatMap(p => p.språk)));
       const giltiga = kv.filter(p => p.språk.includes(sprak));
       return { rubrik: 'Kvinnliga pristagare', läge: 'skriv', text: `Nämn en kvinnlig pristagare som skrev på ${sprak.toLowerCase()}.`,
@@ -443,7 +496,7 @@ function visaHem() {
   let forfallna = 0;
   for (const p of P) if (ups.includes(p.nivå)) for (const id of kortFor(p)) if (T.kort[id] && T.kort[id].nasta <= nu) forfallna++;
   const oGodkanda = P.filter(p => p.osäkert && p.osäkert.length && !T.godkanda[p.id]).length;
-  const nivaHtml = [1, 2, 3, 4, 5].map(n => {
+  const nivaHtml = nivaLista().map(n => {
     const s = nivaStatus(n);
     const last = !ups.includes(n);
     const krav = Math.ceil(UPPLASNING_ANDEL * s.totalt);
@@ -452,13 +505,15 @@ function visaHem() {
       <div class="info">
         <div><b>Nivå ${n}</b> <span class="svag">· ${s.larda}/${s.totalt} lärda</span></div>
         <div class="mätare"><div style="width:${Math.round(s.andel * 100)}%"></div></div>
-        ${!last && n < 5 && !ups.includes(n + 1) ? `<div class="svag">Lär dig ${krav} för att låsa upp nivå ${n + 1}</div>` : ''}
+        ${!last && n < S.nivaer && !ups.includes(n + 1) ? `<div class="svag">Lär dig ${krav} för att låsa upp nivå ${n + 1}</div>` : ''}
       </div>
     </div>`;
   }).join('');
   app().innerHTML = `
-    <h1>Nobelquiz</h1>
-    <p class="svag">Litteraturpristagare 1901–${DATA.senasteÅr}</p>
+    <div class="flikar">${Object.values(SAMLINGAR).map(x =>
+      `<button data-samling="${x.nyckel}" class="${x === S ? 'aktiv' : ''}">${esc(x.flik)}</button>`).join('')}</div>
+    <h1>${esc(S.titel)}</h1>
+    <p class="svag">${esc(S.underrubrik(DATA.senasteÅr))}</p>
     <div class="stapel" style="margin-top:12px">${nivaHtml}</div>
     <div class="botten">
       <p class="svag" style="text-align:center">${forfallna ? `${forfallna} kort väntar på repetition` : 'Inga kort väntar – nya personer står på tur'}</p>
@@ -471,6 +526,7 @@ function visaHem() {
       <button class="liten" id="mer" style="width:100%">Säkerhetskopia och inställningar</button>
     </div>`;
   $('#spela').onclick = startaRunda;
+  app().querySelectorAll('[data-samling]').forEach(b => b.onclick = () => bytSamling(b.dataset.samling));
   $('#stat').onclick = visaStatistik;
   $('#las').onclick = () => visaLasPa(ups[ups.length - 1]);
   $('#kontroll').onclick = () => visaKontroll('uppgifter');
@@ -632,7 +688,7 @@ function visaStatistik() {
     .map(([id, k]) => [k.fel / (k.ratt + k.fel), k, id]).sort((a, b) => b[0] - a[0] || b[1].fel - a[1].fel).slice(0, 12);
   const typNamn = { år: 'Årtal', land: 'Land', språk: 'Språk', verk: 'Verk', fakta: 'Faktafrågor', 'land+bokstav': 'Land + bokstav',
     flerspråkiga: 'Flerspråkiga', språkgrupp: 'Språkgrupp', räkna: 'Räkna', ensam: 'Ensam i sitt land', tidslinje: 'Vem först', ordning: 'Tidsordning',
-    initialer: 'Initialer', kvinnor: 'Kvinnliga pristagare', delat: 'Delat pris' };
+    initialer: 'Initialer', kvinnor: 'Kvinnliga pristagare', delat: 'Delat pris', bokstav: 'Bokstav', 'två gånger': 'Två gånger' };
   const dagar = Object.keys(T.dagar).sort().slice(-7);
   app().innerHTML = `
     <div class="topprad"><button class="stang liten" id="tillbaka">←</button><h1 style="margin:0">Statistik</h1></div>
@@ -642,7 +698,7 @@ function visaStatistik() {
       <div><b>${ratt + fel ? Math.round(100 * ratt / (ratt + fel)) : 0} %</b><span>träffsäkerhet</span></div>
     </div>
     <h2>Framsteg per nivå</h2>
-    <div class="stapel">${[1, 2, 3, 4, 5].map(n => {
+    <div class="stapel">${nivaLista().map(n => {
       const s = nivaStatus(n);
       return `<div><div class="rad" style="justify-content:space-between"><span>Nivå ${n}</span><span class="svag" style="text-align:right">${s.larda} lärda · ${s.paborjade} påbörjade · ${s.totalt} totalt</span></div>
       <div class="mätare"><div style="width:${Math.round(100 * s.andel)}%"></div></div></div>`;
@@ -670,7 +726,7 @@ function visaStatistik() {
 function visaLasPa(n) {
   app().innerHTML = `
     <div class="topprad"><button class="stang liten" id="tillbaka">←</button><h1 style="margin:0">Läs på</h1></div>
-    <div class="flikar">${[1, 2, 3, 4, 5].map(i => `<button data-n="${i}" class="${i === n ? 'aktiv' : ''}">${i}</button>`).join('')}</div>
+    <div class="flikar">${nivaLista().map(i => `<button data-n="${i}" class="${i === n ? 'aktiv' : ''}">${i}</button>`).join('')}</div>
     <p class="svag">Nivå ${n}, sorterad efter årtal. Fack = hur väl du kan personen (0–5).</p>
     <ul class="lista">${NIVAER[n - 1].slice().sort((a, b) => a.år - b.år).map(p =>
       `<li>${faktaRad(p)}<div><span class="etikett ${arLard(p) ? 'ok' : ''}">fack ${personFack(p)}</span></div></li>`).join('')}</ul>`;
@@ -690,14 +746,15 @@ function visaKontroll(flik) {
       <li data-id="${p.id}">
         <div class="namn">${esc(p.namn)} (${p.år}) ${T.godkanda[p.id] ? '<span class="etikett ok">godkänd</span>' : ''} ${T.andringar[p.id] ? '<span class="etikett varning">ändrad</span>' : ''}</div>
         ${p.osäkert.map(o => `<div class="svag">⚠️ ${esc(o)}</div>`).join('')}
-        <label class="falt">Land<input type="text" data-f="land" value="${esc(p.land.join(', '))}"></label>
-        <label class="falt">Språk<input type="text" data-f="språk" value="${esc(p.språk.join(', '))}"></label>
-        <label class="falt">Känt verk<input type="text" data-f="verk" value="${esc(p.verk || '')}"></label>
+        ${S.fakta.includes('land') ? `<label class="falt">Land<input type="text" data-f="land" value="${esc(p.land.join(', '))}"></label>` : ''}
+        ${S.fakta.includes('språk') ? `<label class="falt">Språk<input type="text" data-f="språk" value="${esc(p.språk.join(', '))}"></label>` : ''}
+        ${S.fakta.includes('land') ? '' : `<label class="falt">Kön<input type="text" data-f="kön" value="${esc(p.kön || '')}"></label>`}
+        <label class="falt">${S.verkOrd === 'bok' ? 'Bok' : 'Känt verk'}<input type="text" data-f="verk" value="${esc(p.verk || '')}"></label>
         <div class="svag">Källa: ”${esc(p.artikel)}”${p.verk_källa ? ` · verk: ${esc(p.verk_källa)}` : ''}</div>
         <div class="rad" style="margin-top:8px"><button class="liten primar" data-godkann>${T.godkanda[p.id] ? 'Godkänd ✓' : 'Godkänn'}</button></div>
       </li>`).join('')}</ul>`;
   } else if (flik === 'fakta') {
-    innehall = `<p class="svag">${fakta.length} faktafrågor från ${kallor.length} artiklar. ”Ta bort” stänger av en fråga i spelet.</p>
+    innehall = !fakta.length ? '<p class="svag">Den här avdelningen har inga faktafrågor.</p>' : `<p class="svag">${fakta.length} faktafrågor från ${kallor.length} artiklar. ”Ta bort” stänger av en fråga i spelet.</p>
     ${kallor.map(k => `<details><summary>${esc(k)} (${fakta.filter(f => f.källa === k).length})</summary><ul class="lista">${fakta.filter(f => f.källa === k).map(f => `
       <li data-fid="${f.id}">
         <div>${esc(f.fråga)}</div>
@@ -730,7 +787,7 @@ function visaKontroll(flik) {
     li.querySelectorAll('input').forEach(inp => inp.onchange = () => {
       const orig = DATA.pristagare.find(p => p.id === id);
       const f = inp.dataset.f;
-      const varde = f === 'verk' ? inp.value.trim() : inp.value.split(',').map(s => s.trim()).filter(Boolean);
+      const varde = (f === 'verk' || f === 'kön') ? inp.value.trim() : inp.value.split(',').map(s => s.trim()).filter(Boolean);
       T.andringar[id] = Object.assign({}, T.andringar[id], { [f]: varde });
       if (JSON.stringify(orig[f]) === JSON.stringify(varde)) delete T.andringar[id][f];
       if (!Object.keys(T.andringar[id]).length) delete T.andringar[id];
@@ -786,16 +843,35 @@ function visaInstallningar() {
 }
 
 // ---------- Start ----------
-async function start() {
+const DATACACHE = {};
+async function laddaSamling(nyckel) {
+  const ny = SAMLINGAR[nyckel] || SAMLINGAR.nobel;
+  // Hämta datan först; byt avdelning först när allt är på plats (inget sparas i fel avdelning)
+  if (!DATACACHE[ny.nyckel]) {
+    const svar = await fetch(ny.fil);
+    DATACACHE[ny.nyckel] = await svar.json();
+  }
+  S = ny;
+  try { localStorage.setItem(VALD_SAMLING, S.nyckel); } catch (e) { /* ingen lagring */ }
+  DATA = DATACACHE[S.nyckel];
+  if (!DATA.förstaÅr) DATA.förstaÅr = Math.min(...DATA.pristagare.map(p => p.år));
   ladda();
-  try {
-    const svar = await fetch('data.json');
-    DATA = await svar.json();
-  } catch (e) {
+  byggData();
+}
+async function bytSamling(nyckel) {
+  if (nyckel === S.nyckel) return;
+  spara();
+  app().innerHTML = '<p class="laddar">Laddar…</p>';
+  try { await laddaSamling(nyckel); } catch (e) { app().innerHTML = '<p class="laddar">Kunde inte läsa datafilen.</p>'; return; }
+  visaHem();
+}
+async function start() {
+  let nyckel = 'nobel';
+  try { nyckel = localStorage.getItem(VALD_SAMLING) || 'nobel'; } catch (e) { /* standard */ }
+  try { await laddaSamling(nyckel); } catch (e) {
     app().innerHTML = '<p class="laddar">Kunde inte läsa datafilen.</p>';
     return;
   }
-  byggData();
   visaHem();
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 }

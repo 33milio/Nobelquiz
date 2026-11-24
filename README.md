@@ -10,7 +10,8 @@ Fungerar i mobilen, även utan internet, och kan läggas på hemskärmen.
 | `index.html` | Själva sidan som öppnas |
 | `app.js` | Spelet: frågor, Leitner-repetition, nivåer, statistik, kontrollista |
 | `stil.css` | Utseendet (stora knappar, mörkt läge) |
-| `data.json` | **All fakta**: pristagare, nivåer och faktafrågor med källa |
+| `data.json` | **All fakta om Nobelpriset**: pristagare, nivåer och faktafrågor med källa |
+| `data-august.json` | **Augustpriset**, årets skönlitterära bok: namn, kön, år, titel och nivå |
 | `sw.js` | Gör att appen fungerar offline |
 | `manifest.webmanifest`, `ikoner/` | Gör att appen kan läggas på hemskärmen |
 | `verktyg/` | Programmen som hämtade datan från svenska Wikipedia (behövs inte i mobilen) |
@@ -29,10 +30,19 @@ Fungerar i mobilen, även utan internet, och kan läggas på hemskärmen.
 - **Kontrollista:** under *Kontroll* finns alla osäkra uppgifter och alla faktafrågor med citat ur
   artikeln. Där kan man rätta, godkänna och stänga av frågor. Allt sparas i telefonen.
 
+## Augustpriset
+
+Fliken *Augustpriset* överst på startsidan är en egen avdelning med två nivåer (sorterade efter
+artikellängd på svenska Wikipedia) och egna framsteg. Där övas årtal och titel, plus kluriga frågor
+(kvinnliga pristagare, tidsordning, initialer, vem som vunnit två gånger). Med från 1992, då
+kategorin infördes, samt 1990–1991 då priset bara hade en kategori men gick till romaner.
+
 ## Uppdatera datan (för den som vill)
 
 ```
 python3 verktyg/hamta.py /tmp/wiki          # hämtar artiklarna
 python3 verktyg/bygg_data.py grund /tmp/wiki
 python3 verktyg/bygg_data.py klar /tmp/wiki  # skriver data.json
+python3 verktyg/hamta_august.py /tmp/wiki    # skriver data-august.json
+python3 verktyg/kontrollista.py              # skriver KONTROLLISTA.md
 ```

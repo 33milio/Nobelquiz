@@ -157,6 +157,21 @@ Pristagare med flera länder (alla räknas som rätt) eller historiska landsnamn
 - **Anne Carson** (2026) – land: Kanada, Island · språk: Engelska · verk: *Röd självbiografi*
   - flera länder (Kanada, Island) – alla räknas som rätt
 
+## Augustpriset (årets skönlitterära bok)
+
+37 vinnare 1990–2026. Kön är bestämt utifrån pronomen i författarens artikel; osäkra fall är kontrollerade för hand.
+
+- **Lars Ahlin** (1990) – *De sotarna! De sotarna!* · man
+  - kategori: före 1992 delades bara ett Augustpris ut – boken räknas här som skönlitterär
+- **Sven Delblanc** (1991) – *Livets ax* · man
+  - kategori: före 1992 delades bara ett Augustpris ut – boken räknas här som skönlitterär
+- **Sigrid Combüchen** (2010) – *Spill* · kvinna
+  - titel: förkortad i spelet, hela titeln är ”Spill: en damroman”
+- **Lena Andersson** (2013) – *Egenmäktigt förfarande* · kvinna
+  - titel: förkortad i spelet, hela titeln är ”Egenmäktigt förfarande - en roman om kärlek”
+- **Elin Cullhed** (2021) – *Eufori* · kvinna
+  - titel: förkortad i spelet, hela titeln är ”Eufori. En roman om Sylvia Plath”
+
 ## Faktafrågor
 
 625 frågor. Varje fråga har ett citat ur artikeln som belägg – läs dem i appen under Kontroll → Faktafrågor.
