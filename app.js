@@ -368,22 +368,20 @@ const KLURIGA = [
       giltiga, person: p, statTyp: 'initialer' };
   },
   function kvinna(ups) {
+    // Bara skrivfrågor: i flerval avslöjar namnen oftast svaret
     const kv = P.filter(p => p.kön === 'kvinna');
-    if (!S.fakta.includes('språk') && Math.random() < .5) {
-      const dec = Math.floor(slump(kv).år / 10) * 10;
-      const giltiga = kv.filter(p => Math.floor(p.år / 10) * 10 === dec);
-      return { rubrik: 'Kvinnliga pristagare', läge: 'skriv', text: `Nämn en kvinna som fick ${S.pris} under åren ${dec}–${dec + 9}.`,
-        giltiga, statTyp: 'kvinnor', tips: giltiga.length > 1 ? `Det finns ${giltiga.length} möjliga svar.` : '' };
-    }
+    if (!kv.length) return null;
+    const bas = kv.filter(x => ups.includes(x.nivå)).length ? kv.filter(x => ups.includes(x.nivå)) : kv;
     if (S.fakta.includes('språk') && Math.random() < .5) {
-      const sprak = slump(unika(kv.flatMap(p => p.språk)));
+      const sprak = slump(unika(bas.flatMap(p => p.språk)));
       const giltiga = kv.filter(p => p.språk.includes(sprak));
       return { rubrik: 'Kvinnliga pristagare', läge: 'skriv', text: `Nämn en kvinnlig pristagare som skrev på ${sprak.toLowerCase()}.`,
-        giltiga, statTyp: 'kvinnor', tips: giltiga.length > 1 ? `Det finns ${giltiga.length} möjliga svar.` : '' };
+        giltiga, statTyp: 'kvinnor', tips: giltiga.length > 1 ? `Det finns ${giltiga.length} möjliga svar.` : 'Det finns ett möjligt svar.' };
     }
-    const p = slump(kv.filter(x => ups.includes(x.nivå)).length ? kv.filter(x => ups.includes(x.nivå)) : kv);
-    const fel = liknandePersoner(p, 3, x => x.kön !== 'kvinna');
-    return ettval('Kvinnliga pristagare', 'Vem av dessa är kvinna?', p.namn, fel.map(x => x.namn), { person: p, statTyp: 'kvinnor' });
+    const dec = Math.floor(slump(bas).år / 10) * 10;
+    const giltiga = kv.filter(p => Math.floor(p.år / 10) * 10 === dec);
+    return { rubrik: 'Kvinnliga pristagare', läge: 'skriv', text: `Nämn en kvinna som fick ${S.pris} under åren ${dec}–${dec + 9}.`,
+      giltiga, statTyp: 'kvinnor', tips: giltiga.length > 1 ? `Det finns ${giltiga.length} möjliga svar.` : 'Det finns ett möjligt svar.' };
   },
   function delat(ups) {
     const ar = unika(P.map(p => p.år)).filter(y => P.filter(p => p.år === y).length > 1 && P.some(p => p.år === y && ups.includes(p.nivå)));

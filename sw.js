@@ -1,6 +1,6 @@
 // Service worker: sparar appen i telefonen så att den fungerar utan internet.
 // Ändra VERSION när filerna uppdateras, så hämtar telefonen den nya versionen.
-const VERSION = 'nobelquiz-3';
+const VERSION = 'nobelquiz-4';
 const FILER = ['./', 'index.html', 'stil.css', 'app.js', 'data.json', 'data-august.json', 'manifest.webmanifest',
   'ikoner/ikon.svg', 'ikoner/ikon-180.png', 'ikoner/ikon-192.png', 'ikoner/ikon-512.png'];
 
