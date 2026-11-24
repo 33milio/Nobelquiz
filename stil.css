@@ -1,0 +1,170 @@
+:root {
+  --bg: #f6f3ec;
+  --kort: #ffffff;
+  --text: #1d1d1f;
+  --svag: #6b6b70;
+  --linje: #e2ddd2;
+  --accent: #1f3a5f;
+  --accent-text: #ffffff;
+  --guld: #b8862b;
+  --ratt: #1e7a46;
+  --ratt-bg: #e3f3ea;
+  --fel: #b3261e;
+  --fel-bg: #fbe7e5;
+  --delvis: #9a6700;
+  --delvis-bg: #fff4d6;
+  --vald: #dbe6f5;
+  --skugga: 0 1px 3px rgba(0,0,0,.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a;
+    --kort: #1f2226;
+    --text: #f1f1f3;
+    --svag: #a2a4aa;
+    --linje: #33373d;
+    --accent: #8fb3e6;
+    --accent-text: #0e1a2b;
+    --guld: #e0b25a;
+    --ratt: #6fd39a;
+    --ratt-bg: #17342a;
+    --fel: #ff8a80;
+    --fel-bg: #3d1d1b;
+    --delvis: #f0c35a;
+    --delvis-bg: #3a2f12;
+    --vald: #243a59;
+    --skugga: none;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body {
+  font: 18px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+#app {
+  max-width: 560px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+}
+h1 { font-size: 1.6rem; margin: 8px 0 4px; }
+h2 { font-size: 1.2rem; margin: 20px 0 8px; }
+h3 { font-size: 1.05rem; margin: 16px 0 6px; }
+p { margin: 6px 0; }
+.svag { color: var(--svag); font-size: .9rem; }
+.laddar { margin: auto; color: var(--svag); }
+
+/* Knappar */
+button, .knapp {
+  font: inherit;
+  border: 0;
+  border-radius: 14px;
+  min-height: 56px;
+  padding: 12px 16px;
+  width: 100%;
+  cursor: pointer;
+  background: var(--kort);
+  color: var(--text);
+  box-shadow: var(--skugga);
+  border: 1px solid var(--linje);
+  text-align: left;
+  touch-action: manipulation;
+}
+button:active { transform: scale(.985); }
+button:disabled { opacity: .5; }
+.primar {
+  background: var(--accent);
+  color: var(--accent-text);
+  border-color: transparent;
+  text-align: center;
+  font-weight: 600;
+}
+.liten { min-height: 44px; padding: 8px 12px; font-size: .95rem; width: auto; text-align: center; }
+.rad { display: flex; gap: 8px; flex-wrap: wrap; }
+.rad > * { flex: 1 1 0; }
+.stapel { display: flex; flex-direction: column; gap: 10px; }
+.botten { margin-top: auto; padding-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+
+/* Startsida */
+.niva {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--kort); border: 1px solid var(--linje);
+  border-radius: 14px; padding: 12px 14px; box-shadow: var(--skugga);
+}
+.niva.last { opacity: .55; }
+.niva .nr {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center; font-weight: 700;
+  background: var(--accent); color: var(--accent-text); flex: none;
+}
+.niva .info { flex: 1; min-width: 0; }
+.mätare { height: 8px; background: var(--linje); border-radius: 4px; overflow: hidden; margin-top: 6px; }
+.mätare > div { height: 100%; background: var(--guld); border-radius: 4px; }
+.mätare.ratt > div { background: var(--ratt); }
+
+/* Quiz */
+.topprad { display: flex; align-items: center; gap: 10px; }
+.topprad .mätare { flex: 1; margin: 0; }
+.stang { width: auto; min-height: 44px; padding: 6px 14px; }
+.fraga {
+  background: var(--kort); border: 1px solid var(--linje);
+  border-radius: 18px; padding: 18px; margin-top: 14px; box-shadow: var(--skugga);
+}
+.fraga .typ { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--svag); }
+.fraga .text { font-size: 1.3rem; font-weight: 600; margin-top: 6px; }
+.fraga .tips { color: var(--svag); font-size: .95rem; margin-top: 6px; }
+.svar { display: flex; flex-direction: column; gap: 10px; }
+.svar button.vald { background: var(--vald); border-color: var(--accent); }
+.svar button.ratt { background: var(--ratt-bg); border-color: var(--ratt); color: var(--text); }
+.svar button.fel { background: var(--fel-bg); border-color: var(--fel); color: var(--text); }
+.svar button.missad { border: 2px dashed var(--ratt); }
+.svar button .ordning {
+  display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: var(--accent-text); font-weight: 700; margin-right: 8px; font-size: .9rem;
+}
+input[type=text], input[type=number], textarea {
+  font: inherit; width: 100%; min-height: 56px; padding: 12px 14px;
+  border-radius: 14px; border: 1px solid var(--linje); background: var(--kort); color: var(--text);
+}
+textarea { min-height: 120px; font-size: .9rem; }
+.aterkoppling {
+  border-radius: 14px; padding: 14px; margin-top: 12px;
+}
+.aterkoppling.ratt { background: var(--ratt-bg); }
+.aterkoppling.fel { background: var(--fel-bg); }
+.aterkoppling.delvis { background: var(--delvis-bg); }
+.aterkoppling .rubrik { font-weight: 700; font-size: 1.1rem; }
+.aterkoppling.ratt .rubrik { color: var(--ratt); }
+.aterkoppling.fel .rubrik { color: var(--fel); }
+.aterkoppling.delvis .rubrik { color: var(--delvis); }
+.fakta { font-size: .95rem; margin-top: 6px; }
+.kalla { font-size: .8rem; color: var(--svag); margin-top: 6px; }
+
+/* Listor */
+.lista { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.lista li {
+  background: var(--kort); border: 1px solid var(--linje); border-radius: 12px; padding: 10px 12px;
+}
+.lista li .namn { font-weight: 600; }
+.etikett {
+  display: inline-block; font-size: .75rem; padding: 2px 8px; border-radius: 999px;
+  background: var(--linje); color: var(--text); margin: 2px 4px 2px 0;
+}
+.etikett.ok { background: var(--ratt-bg); color: var(--ratt); }
+.etikett.varning { background: var(--delvis-bg); color: var(--delvis); }
+.flikar { display: flex; gap: 6px; margin: 10px 0; }
+.flikar button { flex: 1; text-align: center; min-height: 44px; font-size: .95rem; padding: 6px; }
+.flikar button.aktiv { background: var(--accent); color: var(--accent-text); }
+.siffror { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.siffror div {
+  background: var(--kort); border: 1px solid var(--linje); border-radius: 12px; padding: 10px; text-align: center;
+}
+.siffror b { display: block; font-size: 1.4rem; }
+.siffror span { font-size: .8rem; color: var(--svag); }
+label.falt { display: block; font-size: .85rem; color: var(--svag); margin-top: 8px; }
+label.falt input { margin-top: 4px; min-height: 48px; }
+details summary { cursor: pointer; padding: 8px 0; font-weight: 600; }

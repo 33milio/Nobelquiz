@@ -1,0 +1,2561 @@
+{
+ "version": "2026-11-24",
+ "hämtad": "2026-11-24",
+ "källa": "Svenska Wikipedia: ”Nobelpriset i litteratur” och respektive författares artikel",
+ "senasteÅr": 2026,
+ "pristagare": [
+  {
+   "id": "sully-prudhomme",
+   "namn": "Sully Prudhomme",
+   "alias": [],
+   "efternamn": "Prudhomme",
+   "år": 1901,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Sully Prudhomme",
+   "artikellängd": 5238,
+   "motivering": "såsom ett erkännande av hans utmärkta, jämväl under senare år ådagalagda förtjänster som författare och särskilt av hans om hög idealitet, konstnärlig fulländning samt sällspord förening av hjärtats och snillets egenskaper vittnande diktning",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "theodor-mommsen",
+   "namn": "Theodor Mommsen",
+   "alias": [],
+   "efternamn": "Mommsen",
+   "år": 1902,
+   "land": [
+    "Tyskland"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Theodor Mommsen",
+   "artikellängd": 8187,
+   "motivering": "nutidens störste levande mästare i den historiska framställningens konst, med särskilt fäst avseende å hans monumentala verk Römische Geschichte",
+   "osäkert": [
+    "land: Tabellen anger Kejsardömet Tyskland – i spelet: Tyskland"
+   ],
+   "nivå": 4
+  },
+  {
+   "id": "bjornstjerne-bjornson",
+   "namn": "Bjørnstjerne Bjørnson",
+   "alias": [],
+   "efternamn": "Bjørnson",
+   "år": 1903,
+   "land": [
+    "Norge"
+   ],
+   "språk": [
+    "Norska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Bjørnstjerne Bjørnson",
+   "artikellängd": 20305,
+   "motivering": "såsom en gärd av erkännande åt hans ädla, storartade och mångsidiga skaldeverksamhet, som alltid varit utmärkt på en gång av ingivelsens friskhet och av en sällsynt själsrenhet",
+   "osäkert": [
+    "språk: faktarutan på författarsidan anger också Danska"
+   ],
+   "nivå": 2
+  },
+  {
+   "id": "frederic-mistral",
+   "namn": "Frédéric Mistral",
+   "alias": [],
+   "efternamn": "Mistral",
+   "år": 1904,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Occitanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Frédéric Mistral",
+   "artikellängd": 5206,
+   "motivering": "med avseende fäst å det ursprungsfriska, snillrika och sant konstnärliga i hans diktning, som troget avspeglar hans hembygds natur och folkliv, samt å hans betydelsefulla verksamhet som provençalsk filolog",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "jose-echegaray",
+   "namn": "José Echegaray",
+   "alias": [],
+   "efternamn": "Echegaray",
+   "år": 1904,
+   "land": [
+    "Spanien"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "José Echegaray",
+   "artikellängd": 4330,
+   "motivering": "med avseende fäst å hans omfattande och snillrika författarskap, som på självständigt och originellt sätt återupplivat det spanska skådespelets stora traditioner",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "henryk-sienkiewicz",
+   "namn": "Henryk Sienkiewicz",
+   "alias": [],
+   "efternamn": "Sienkiewicz",
+   "år": 1905,
+   "land": [
+    "Polen"
+   ],
+   "språk": [
+    "Polska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Henryk Sienkiewicz",
+   "artikellängd": 13621,
+   "motivering": "på grund av hans storartade förtjänster som episk författare",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "giosue-carducci",
+   "namn": "Giosuè Carducci",
+   "alias": [],
+   "efternamn": "Carducci",
+   "år": 1906,
+   "land": [
+    "Italien"
+   ],
+   "språk": [
+    "Italienska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Giosuè Carducci",
+   "artikellängd": 5119,
+   "motivering": "i betraktande ej blott av hans rika lärdom och kritiska forskningar, utan främst som en hyllning åt den plastiska energi, den stilens friskhet och den lyriska styrka, som utmärka hans poetiska mästerverk",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "rudyard-kipling",
+   "namn": "Rudyard Kipling",
+   "alias": [],
+   "efternamn": "Kipling",
+   "år": 1907,
+   "land": [
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Rudyard Kipling",
+   "artikellängd": 19345,
+   "motivering": "i betraktande av den iakttagelseförmåga, den ursprungliga inbillningskraft samt den manliga styrka i uppfattning och skildringskonst, som utmärka denna världsberömde författares skapelser",
+   "osäkert": [
+    "land: Tabellen anger Storbritannien och Irland – i spelet: Storbritannien"
+   ],
+   "nivå": 2
+  },
+  {
+   "id": "rudolf-eucken",
+   "namn": "Rudolf Eucken",
+   "alias": [],
+   "efternamn": "Eucken",
+   "år": 1908,
+   "land": [
+    "Tyskland"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Rudolf Eucken",
+   "artikellängd": 5522,
+   "motivering": "på grund av det sanningssökande allvar, den genomträngande tankekraft och vidsynthet, den värme och styrka i framställningen, varmed han i talrika arbeten hävdat och utvecklat en ideal världsåskådning",
+   "osäkert": [
+    "land: Tabellen anger Kejsardömet Tyskland – i spelet: Tyskland"
+   ],
+   "nivå": 4
+  },
+  {
+   "id": "selma-lagerlof",
+   "namn": "Selma Lagerlöf",
+   "alias": [],
+   "efternamn": "Lagerlöf",
+   "år": 1909,
+   "land": [
+    "Sverige"
+   ],
+   "språk": [
+    "Svenska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Selma Lagerlöf",
+   "artikellängd": 48380,
+   "motivering": "på grund av den ädla idealitet, den fantasiens rikedom och den framställningens själfullhet, som prägla hennes diktning",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "paul-heyse",
+   "namn": "Paul Heyse",
+   "alias": [],
+   "efternamn": "Heyse",
+   "år": 1910,
+   "land": [
+    "Tyskland"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Paul Heyse",
+   "artikellängd": 6060,
+   "motivering": "såsom hyllningsgärd åt den fulländade och av ideal uppfattning präglade konstnärlighet han ådagalagt under en lång och betydande verksamhet såsom lyriker, dramaturg, romanförfattare och diktare av världsberömda noveller",
+   "osäkert": [
+    "land: Tabellen anger Kejsardömet Tyskland – i spelet: Tyskland"
+   ],
+   "nivå": 4
+  },
+  {
+   "id": "maurice-maeterlinck",
+   "namn": "Maurice Maeterlinck",
+   "alias": [],
+   "efternamn": "Maeterlinck",
+   "år": 1911,
+   "land": [
+    "Belgien"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Maurice Maeterlinck",
+   "artikellängd": 12477,
+   "motivering": "på grund av hans mångsidiga litterära verksamhet och särskilt hans dramatiska skapelser, som utmärka sig genom fantasirikedom och genom en poetisk idealitet, vilken, stundom i sagospelets slöjade form, röjer djup inlevelse samt på ett hemlighetsfullt sätt tilltalar läsarens känsla och aning",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "gerhart-hauptmann",
+   "namn": "Gerhart Hauptmann",
+   "alias": [],
+   "efternamn": "Hauptmann",
+   "år": 1912,
+   "land": [
+    "Tyskland"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Gerhart Hauptmann",
+   "artikellängd": 6141,
+   "motivering": "förnämligast för hans rika, mångsidiga, framstående verksamhet inom den dramatiska diktningens område",
+   "osäkert": [
+    "land: Tabellen anger Kejsardömet Tyskland – i spelet: Tyskland"
+   ],
+   "nivå": 4
+  },
+  {
+   "id": "rabindranath-tagore",
+   "namn": "Rabindranath Tagore",
+   "alias": [],
+   "efternamn": "Tagore",
+   "år": 1913,
+   "land": [
+    "Indien"
+   ],
+   "språk": [
+    "Bengali",
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Rabindranath Tagore",
+   "artikellängd": 14317,
+   "motivering": "på grund av hans dikters djup och höga syftning samt den skönhet och friskhet, som på ett lysande sätt införlivat hans skaldeskap i dess egen engelska dräkt även med den västerländska vitterheten",
+   "osäkert": [
+    "land: Tabellen anger Brittiska Indien – i spelet: Indien",
+    "språk: flera språk (Bengali, Engelska) – alla räknas som rätt"
+   ],
+   "nivå": 2
+  },
+  {
+   "id": "romain-rolland",
+   "namn": "Romain Rolland",
+   "alias": [],
+   "efternamn": "Rolland",
+   "år": 1915,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Romain Rolland",
+   "artikellängd": 10040,
+   "motivering": "såsom en hyllning åt den upphöjda idealismen i hans författarskap samt åt den medkänsla och den sanning med vilka han tecknat olika människotyper",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "verner-von-heidenstam",
+   "namn": "Verner von Heidenstam",
+   "alias": [],
+   "efternamn": "Heidenstam",
+   "år": 1916,
+   "land": [
+    "Sverige"
+   ],
+   "språk": [
+    "Svenska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Verner von Heidenstam",
+   "artikellängd": 82614,
+   "motivering": "såsom ett erkännande av hans betydelse som målsmannen för ett nytt skede i vår vitterhet",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "henrik-pontoppidan",
+   "namn": "Henrik Pontoppidan",
+   "alias": [],
+   "efternamn": "Pontoppidan",
+   "år": 1917,
+   "land": [
+    "Danmark"
+   ],
+   "språk": [
+    "Danska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Henrik Pontoppidan",
+   "artikellängd": 4321,
+   "motivering": "för hans fullödiga framställningar av nutida danskt liv",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "karl-gjellerup",
+   "namn": "Karl Gjellerup",
+   "alias": [],
+   "efternamn": "Gjellerup",
+   "år": 1917,
+   "land": [
+    "Danmark"
+   ],
+   "språk": [
+    "Danska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Karl Gjellerup",
+   "artikellängd": 6216,
+   "motivering": "för hans mångsidigt rika och av höga ideal burna diktning",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "carl-spitteler",
+   "namn": "Carl Spitteler",
+   "alias": [],
+   "efternamn": "Spitteler",
+   "år": 1919,
+   "land": [
+    "Schweiz"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Carl Spitteler",
+   "artikellängd": 8020,
+   "motivering": "med särskild tanke på hans mäktiga epos Olympischer Frühling",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "knut-hamsun",
+   "namn": "Knut Hamsun",
+   "alias": [],
+   "efternamn": "Hamsun",
+   "år": 1920,
+   "land": [
+    "Norge"
+   ],
+   "språk": [
+    "Norska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Knut Hamsun",
+   "artikellängd": 30096,
+   "motivering": "för hans monumentala verk Markens grøde",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "anatole-france",
+   "namn": "Anatole France",
+   "alias": [],
+   "efternamn": "France",
+   "år": 1921,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Anatole France",
+   "artikellängd": 15889,
+   "motivering": "såsom ett erkännande av hans lysande författarverksamhet, präglad av ädel stilkonst, av vidhjärtad humanitet, av behag och franskt lynne",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "jacinto-benavente",
+   "namn": "Jacinto Benavente",
+   "alias": [],
+   "efternamn": "Benavente",
+   "år": 1922,
+   "land": [
+    "Spanien"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Jacinto Benavente",
+   "artikellängd": 3457,
+   "motivering": "för det lyckliga sätt varpå han fullföljt den spanska dramatikens ärofulla traditioner",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "william-butler-yeats",
+   "namn": "William Butler Yeats",
+   "alias": [],
+   "efternamn": "Yeats",
+   "år": 1923,
+   "land": [
+    "Irland"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "William Butler Yeats",
+   "artikellängd": 39130,
+   "motivering": "för hans ständigt besjälade diktning, som i den strängaste konstnärliga form ger uttryck åt ett folks anda",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "wladyslaw-reymont",
+   "namn": "Władysław Reymont",
+   "alias": [],
+   "efternamn": "Reymont",
+   "år": 1924,
+   "land": [
+    "Polen"
+   ],
+   "språk": [
+    "Polska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Władysław Reymont",
+   "artikellängd": 5457,
+   "motivering": "för hans stora nationalepos Bönderna",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "george-bernard-shaw",
+   "namn": "George Bernard Shaw",
+   "alias": [],
+   "efternamn": "Shaw",
+   "år": 1925,
+   "land": [
+    "Irland",
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "George Bernard Shaw",
+   "artikellängd": 16167,
+   "motivering": "för hans av både idealitet och humanitet uppburna författarskap, vars friska satir ofta med sig förenar en egenartad poetisk skönhet",
+   "osäkert": [
+    "land: flera länder (Irland, Storbritannien) – alla räknas som rätt"
+   ],
+   "nivå": 2
+  },
+  {
+   "id": "grazia-deledda",
+   "namn": "Grazia Deledda",
+   "alias": [],
+   "efternamn": "Deledda",
+   "år": 1926,
+   "land": [
+    "Italien"
+   ],
+   "språk": [
+    "Italienska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Grazia Deledda",
+   "artikellängd": 5035,
+   "motivering": "för hennes av hög idealitet burna författarskap, som med plastisk åskådlighet skildrat livet på hennes fäderneö och med djup och värme behandlat allmänt mänskliga problem",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "henri-bergson",
+   "namn": "Henri Bergson",
+   "alias": [],
+   "efternamn": "Bergson",
+   "år": 1927,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Henri Bergson",
+   "artikellängd": 9122,
+   "motivering": "som ett erkännande åt hans rika och livgivande idéer och den glänsande konst varmed de framburits",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "sigrid-undset",
+   "namn": "Sigrid Undset",
+   "alias": [],
+   "efternamn": "Undset",
+   "år": 1928,
+   "land": [
+    "Norge"
+   ],
+   "språk": [
+    "Norska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Sigrid Undset",
+   "artikellängd": 24169,
+   "motivering": "förnämligast för hennes mäktiga skildringar ur Nordens medeltida liv",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "thomas-mann",
+   "namn": "Thomas Mann",
+   "alias": [],
+   "efternamn": "Mann",
+   "år": 1929,
+   "land": [
+    "Tyskland"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Thomas Mann",
+   "artikellängd": 63319,
+   "motivering": "förnämligast för hans stora roman Buddenbrooks, vilken under årens lopp vunnit alltmer stadgat erkännande som ett av den samtida litteraturens klassiska verk",
+   "osäkert": [
+    "land: Tabellen anger Weimarrepubliken – i spelet: Tyskland"
+   ],
+   "nivå": 1
+  },
+  {
+   "id": "sinclair-lewis",
+   "namn": "Sinclair Lewis",
+   "alias": [],
+   "efternamn": "Lewis",
+   "år": 1930,
+   "land": [
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Sinclair Lewis",
+   "artikellängd": 4905,
+   "motivering": "för hans starka och levande skildringskonst, med typskapande förmåga, med kvickhet och humor",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "erik-axel-karlfeldt",
+   "namn": "Erik Axel Karlfeldt",
+   "alias": [],
+   "efternamn": "Karlfeldt",
+   "år": 1931,
+   "land": [
+    "Sverige"
+   ],
+   "språk": [
+    "Svenska"
+   ],
+   "kön": "man",
+   "postumt": true,
+   "artikel": "Erik Axel Karlfeldt",
+   "artikellängd": 33115,
+   "motivering": "Erik Axel Karlfeldts diktning",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "john-galsworthy",
+   "namn": "John Galsworthy",
+   "alias": [],
+   "efternamn": "Galsworthy",
+   "år": 1932,
+   "land": [
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "John Galsworthy",
+   "artikellängd": 9169,
+   "motivering": "för den förnäma skildringskonst, som i The Forsyte Saga uppnått sitt högsta uttryck",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "ivan-bunin",
+   "namn": "Ivan Bunin",
+   "alias": [],
+   "efternamn": "Bunin",
+   "år": 1933,
+   "land": [
+    "Sovjetunionen"
+   ],
+   "språk": [
+    "Ryska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Ivan Bunin",
+   "artikellängd": 4083,
+   "motivering": "för det stränga konstnärskap, varmed han företrätt den klassiskt ryska linjen i prosadiktningen",
+   "osäkert": [
+    "land: tabellen anger Sovjetunionen (i exil)"
+   ],
+   "nivå": 5
+  },
+  {
+   "id": "luigi-pirandello",
+   "namn": "Luigi Pirandello",
+   "alias": [],
+   "efternamn": "Pirandello",
+   "år": 1934,
+   "land": [
+    "Italien"
+   ],
+   "språk": [
+    "Italienska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Luigi Pirandello",
+   "artikellängd": 8932,
+   "motivering": "för hans djärva och sinnrika nyskapelse av dramats och scenens konst",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "eugene-o-neill",
+   "namn": "Eugene O'Neill",
+   "alias": [],
+   "efternamn": "O'Neill",
+   "år": 1936,
+   "land": [
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Eugene O'Neill",
+   "artikellängd": 9776,
+   "motivering": "för hans av kraft, ärlighet och stark känsla samt självständig, tragisk uppfattning präglade dramatik",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "roger-martin-du-gard",
+   "namn": "Roger Martin du Gard",
+   "alias": [],
+   "efternamn": "Martin du Gard",
+   "år": 1937,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Roger Martin du Gard",
+   "artikellängd": 4828,
+   "motivering": "för den konstnärliga kraft och sanning, varmed han i romanserien Les Thibault har framställt mänskliga motsättningar och väsentliga sidor av samtida liv",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "pearl-s-buck",
+   "namn": "Pearl S. Buck",
+   "alias": [],
+   "efternamn": "Buck",
+   "år": 1938,
+   "land": [
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Pearl S. Buck",
+   "artikellängd": 30099,
+   "motivering": "för rika och äkta episka skildringar ur kinesiskt bondeliv och för biografiska mästerverk",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "frans-eemil-sillanpaa",
+   "namn": "Frans Eemil Sillanpää",
+   "alias": [],
+   "efternamn": "Sillanpää",
+   "år": 1939,
+   "land": [
+    "Finland"
+   ],
+   "språk": [
+    "Finska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Frans Eemil Sillanpää",
+   "artikellängd": 8027,
+   "motivering": "för den djupa uppfattning och den utsökta stilkonst, varmed han skildrat sitt hemlands allmogeliv och natur i deras inbördes sammanhang",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "johannes-v-jensen",
+   "namn": "Johannes V. Jensen",
+   "alias": [],
+   "efternamn": "Jensen",
+   "år": 1944,
+   "land": [
+    "Danmark"
+   ],
+   "språk": [
+    "Danska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Johannes V. Jensen",
+   "artikellängd": 5959,
+   "motivering": "för den sällsynta kraften och frodigheten i hans diktarfantasi, förenad med vittfamnande intellektualitet och djärv, nyskapande stilkonst",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "gabriela-mistral",
+   "namn": "Gabriela Mistral",
+   "alias": [],
+   "efternamn": "Mistral",
+   "år": 1945,
+   "land": [
+    "Chile"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Gabriela Mistral",
+   "artikellängd": 13117,
+   "motivering": "för den av mäktig känsla inspirerade lyrik, som gjort hennes diktarnamn till en symbol för hela den latinamerikanska världens ideella strävanden",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "hermann-hesse",
+   "namn": "Hermann Hesse",
+   "alias": [],
+   "efternamn": "Hesse",
+   "år": 1946,
+   "land": [
+    "Tyskland",
+    "Schweiz"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Hermann Hesse",
+   "artikellängd": 20806,
+   "motivering": "för hans inspirerande författarskap, som i sin utveckling mot djärvhet och djup tillika företräder klassiska humanistideal och höga stilvärden",
+   "osäkert": [
+    "land: flera länder (Tyskland, Schweiz) – alla räknas som rätt"
+   ],
+   "nivå": 1
+  },
+  {
+   "id": "andre-gide",
+   "namn": "André Gide",
+   "alias": [],
+   "efternamn": "Gide",
+   "år": 1947,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "André Gide",
+   "artikellängd": 7919,
+   "motivering": "för hans vittomfattande och betydelsefulla författarskap, i vilket mänsklighetens frågor och villkor ha framställts med oförskräckt sanningskärlek och psykologisk skarpsyn",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "t-s-eliot",
+   "namn": "T.S. Eliot",
+   "alias": [],
+   "efternamn": "Eliot",
+   "år": 1948,
+   "land": [
+    "USA",
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "T.S. Eliot",
+   "artikellängd": 13227,
+   "motivering": "för hans märkliga insats som banbrytare inom nutida poesi",
+   "osäkert": [
+    "land: flera länder (USA, Storbritannien) – alla räknas som rätt"
+   ],
+   "nivå": 2
+  },
+  {
+   "id": "william-faulkner",
+   "namn": "William Faulkner",
+   "alias": [],
+   "efternamn": "Faulkner",
+   "år": 1949,
+   "land": [
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "William Faulkner",
+   "artikellängd": 7775,
+   "motivering": "för hans kraftfulla och självständigt konstnärliga insats i Amerikas nya romanlitteratur",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "bertrand-russell",
+   "namn": "Bertrand Russell",
+   "alias": [],
+   "efternamn": "Russell",
+   "år": 1950,
+   "land": [
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Bertrand Russell",
+   "artikellängd": 18572,
+   "motivering": "som ett erkännande åt hans mångsidiga och betydelsefulla författarskap, vari han framträtt som en humanitetens och tankefrihetens förkämpe",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "par-lagerkvist",
+   "namn": "Pär Lagerkvist",
+   "alias": [],
+   "efternamn": "Lagerkvist",
+   "år": 1951,
+   "land": [
+    "Sverige"
+   ],
+   "språk": [
+    "Svenska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Pär Lagerkvist",
+   "artikellängd": 23080,
+   "motivering": "för den konstnärliga kraft och djupa självständighet, varmed han i sin diktning söker svar på människans eviga frågor",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "francois-mauriac",
+   "namn": "François Mauriac",
+   "alias": [],
+   "efternamn": "Mauriac",
+   "år": 1952,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "François Mauriac",
+   "artikellängd": 7201,
+   "motivering": "för den genomträngande själskunskap och konstnärliga intensitet, varmed han i romanens form tolkat det mänskliga livsdramat",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "winston-churchill",
+   "namn": "Winston Churchill",
+   "alias": [],
+   "efternamn": "Churchill",
+   "år": 1953,
+   "land": [
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Winston Churchill",
+   "artikellängd": 55809,
+   "motivering": "för hans mästerskap i historisk och biografisk framställning samt för den lysande talekonst, med vilken han framträtt som försvarare av höga mänskliga värden",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "ernest-hemingway",
+   "namn": "Ernest Hemingway",
+   "alias": [],
+   "efternamn": "Hemingway",
+   "år": 1954,
+   "land": [
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Ernest Hemingway",
+   "artikellängd": 50986,
+   "motivering": "för hans kraftfulla och inom nutida berättarkonst stilbildande mästerskap, senast ådagalagt i The Old Man and the Sea",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "halldor-laxness",
+   "namn": "Halldór Laxness",
+   "alias": [],
+   "efternamn": "Laxness",
+   "år": 1955,
+   "land": [
+    "Island"
+   ],
+   "språk": [
+    "Isländska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Halldór Laxness",
+   "artikellängd": 20764,
+   "motivering": "för hans målande epik, som förnyat den stora isländska berättarkonsten",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "juan-ramon-jimenez",
+   "namn": "Juan Ramón Jiménez",
+   "alias": [],
+   "efternamn": "Jiménez",
+   "år": 1956,
+   "land": [
+    "Spanien"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Juan Ramón Jiménez",
+   "artikellängd": 3487,
+   "motivering": "för hans lyriska diktning som på spanskt språk bildar ett föredöme av hög andlighet och konstnärlig renhet",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "albert-camus",
+   "namn": "Albert Camus",
+   "alias": [],
+   "efternamn": "Camus",
+   "år": 1957,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Albert Camus",
+   "artikellängd": 12094,
+   "motivering": "för hans betydelsefulla författarskap, som med skarpsynt allvar belyser mänskliga samvetsproblem i vår tid",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "boris-pasternak",
+   "namn": "Boris Pasternak",
+   "alias": [],
+   "efternamn": "Pasternak",
+   "år": 1958,
+   "land": [
+    "Sovjetunionen"
+   ],
+   "språk": [
+    "Ryska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Boris Pasternak",
+   "artikellängd": 11790,
+   "motivering": "för hans betydande insats såväl inom den samtida lyriken som på den stora ryska berättartraditionens område",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "salvatore-quasimodo",
+   "namn": "Salvatore Quasimodo",
+   "alias": [],
+   "efternamn": "Quasimodo",
+   "år": 1959,
+   "land": [
+    "Italien"
+   ],
+   "språk": [
+    "Italienska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Salvatore Quasimodo",
+   "artikellängd": 4684,
+   "motivering": "för hans lyriska diktning, som med klassisk eld uttrycker samtidens tragiska livskänsla",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "saint-john-perse",
+   "namn": "Saint-John Perse",
+   "alias": [],
+   "efternamn": "Perse",
+   "år": 1960,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Saint-John Perse",
+   "artikellängd": 7005,
+   "motivering": "för den höga flykten och den bildskapande fantasien i hans diktning, som visionärt avspeglar tidsläget",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "ivo-andric",
+   "namn": "Ivo Andrić",
+   "alias": [],
+   "efternamn": "Andrić",
+   "år": 1961,
+   "land": [
+    "Jugoslavien"
+   ],
+   "språk": [
+    "Serbokroatiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Ivo Andrić",
+   "artikellängd": 16437,
+   "motivering": "för den episka kraft varmed han gestaltat motiv och öden ur sitt lands historia",
+   "osäkert": [
+    "land: Tabellen anger SFR Jugoslavien – i spelet: Jugoslavien"
+   ],
+   "nivå": 2
+  },
+  {
+   "id": "john-steinbeck",
+   "namn": "John Steinbeck",
+   "alias": [],
+   "efternamn": "Steinbeck",
+   "år": 1962,
+   "land": [
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "John Steinbeck",
+   "artikellängd": 20608,
+   "motivering": "för hans på en gång realistiska och fantasifulla berättarkonst, utmärkt av medkännande humor och social skarpsyn",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "giorgos-seferis",
+   "namn": "Giorgos Seferis",
+   "alias": [],
+   "efternamn": "Seferis",
+   "år": 1963,
+   "land": [
+    "Grekland"
+   ],
+   "språk": [
+    "Grekiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Giorgos Seferis",
+   "artikellängd": 5060,
+   "motivering": "för hans framstående lyriska diktning, inspirerad av djup känsla för den hellenska kulturvärlden",
+   "osäkert": [
+    "språk: Tabellen anger nygrekiska – i spelet: Grekiska"
+   ],
+   "nivå": 5
+  },
+  {
+   "id": "jean-paul-sartre",
+   "namn": "Jean-Paul Sartre",
+   "alias": [],
+   "efternamn": "Sartre",
+   "år": 1964,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Jean-Paul Sartre",
+   "artikellängd": 18089,
+   "motivering": "för hans idérika författarskap, som genom sin frihetsanda och sanningssträvan har utövat ett vidsträckt inflytande i vår samtid",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "michail-sjolochov",
+   "namn": "Michail Sjolochov",
+   "alias": [],
+   "efternamn": "Sjolochov",
+   "år": 1965,
+   "land": [
+    "Sovjetunionen"
+   ],
+   "språk": [
+    "Ryska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Michail Sjolochov",
+   "artikellängd": 5917,
+   "motivering": "för den konstnärliga kraft och ärlighet, varmed han i sitt Donska epos har gestaltat ett historiskt skede i ryska folkets liv",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "nelly-sachs",
+   "namn": "Nelly Sachs",
+   "alias": [],
+   "efternamn": "Sachs",
+   "år": 1966,
+   "land": [
+    "Tyskland",
+    "Sverige"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Nelly Sachs",
+   "artikellängd": 21211,
+   "motivering": "för hennes framstående lyriska och dramatiska diktning, som med gripande styrka tolkar Israels öde",
+   "osäkert": [
+    "land: Tabellen anger Kejsardömet Tyskland – i spelet: Tyskland",
+    "land: flera länder (Tyskland, Sverige) – alla räknas som rätt"
+   ],
+   "nivå": 1
+  },
+  {
+   "id": "shmuel-josef-agnon",
+   "namn": "Shmuel Josef Agnon",
+   "alias": [
+    "Samuel Agnon"
+   ],
+   "efternamn": "Agnon",
+   "år": 1966,
+   "land": [
+    "Israel"
+   ],
+   "språk": [
+    "Hebreiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Shmuel Josef Agnon",
+   "artikellängd": 3596,
+   "motivering": "för hans djupt karaktärsfulla berättarkonst med motiv från det judiska folkets liv",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "miguel-angel-asturias",
+   "namn": "Miguel Ángel Asturias",
+   "alias": [],
+   "efternamn": "Asturias",
+   "år": 1967,
+   "land": [
+    "Guatemala"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Miguel Ángel Asturias",
+   "artikellängd": 7898,
+   "motivering": "för hans färgstarka diktning med rötter i folklig egenart och indianska traditioner",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "yasunari-kawabata",
+   "namn": "Yasunari Kawabata",
+   "alias": [],
+   "efternamn": "Kawabata",
+   "år": 1968,
+   "land": [
+    "Japan"
+   ],
+   "språk": [
+    "Japanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Yasunari Kawabata",
+   "artikellängd": 5911,
+   "motivering": "för hans berättarkonst, som med fin känsla uttrycker japanskt väsen i dess egenart",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "samuel-beckett",
+   "namn": "Samuel Beckett",
+   "alias": [],
+   "efternamn": "Beckett",
+   "år": 1969,
+   "land": [
+    "Irland"
+   ],
+   "språk": [
+    "Franska",
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Samuel Beckett",
+   "artikellängd": 13412,
+   "motivering": "för en diktning som i nya former för roman och drama ur nutidsmänniskans blottställdhet hämtar sin konstnärliga resning",
+   "osäkert": [
+    "språk: flera språk (Franska, Engelska) – alla räknas som rätt"
+   ],
+   "nivå": 2
+  },
+  {
+   "id": "aleksandr-solzjenitsyn",
+   "namn": "Aleksandr Solzjenitsyn",
+   "alias": [],
+   "efternamn": "Solzjenitsyn",
+   "år": 1970,
+   "land": [
+    "Sovjetunionen"
+   ],
+   "språk": [
+    "Ryska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Aleksandr Solzjenitsyn",
+   "artikellängd": 16170,
+   "motivering": "för den etiska kraft varmed han fullföljt den ryska litteraturens omistliga traditioner",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "pablo-neruda",
+   "namn": "Pablo Neruda",
+   "alias": [],
+   "efternamn": "Neruda",
+   "år": 1971,
+   "land": [
+    "Chile"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Pablo Neruda",
+   "artikellängd": 17165,
+   "motivering": "för en poesi, som med verkan av en naturkraft levandegör en världsdels öden och drömmar",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "heinrich-boll",
+   "namn": "Heinrich Böll",
+   "alias": [],
+   "efternamn": "Böll",
+   "år": 1972,
+   "land": [
+    "Tyskland"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Heinrich Böll",
+   "artikellängd": 20033,
+   "motivering": "för en diktning som genom sin förening av tidshistorisk vidsyn och ömsint gestaltningsförmåga verkat förnyande inom tysk litteratur",
+   "osäkert": [
+    "land: Tabellen anger Västtyskland – i spelet: Tyskland"
+   ],
+   "nivå": 2
+  },
+  {
+   "id": "patrick-white",
+   "namn": "Patrick White",
+   "alias": [],
+   "efternamn": "White",
+   "år": 1973,
+   "land": [
+    "Australien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Patrick White",
+   "artikellängd": 4196,
+   "motivering": "för en episk och psykologisk berättarkonst som infört en ny världsdel i litteraturen",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "eyvind-johnson",
+   "namn": "Eyvind Johnson",
+   "alias": [],
+   "efternamn": "Johnson",
+   "år": 1974,
+   "land": [
+    "Sverige"
+   ],
+   "språk": [
+    "Svenska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Eyvind Johnson",
+   "artikellängd": 51026,
+   "motivering": "för en i länder och tider vittskådande berättarkonst i frihetens tjänst",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "harry-martinson",
+   "namn": "Harry Martinson",
+   "alias": [],
+   "efternamn": "Martinson",
+   "år": 1974,
+   "land": [
+    "Sverige"
+   ],
+   "språk": [
+    "Svenska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Harry Martinson",
+   "artikellängd": 27790,
+   "motivering": "för ett författarskap som fångar daggdroppen och speglar kosmos",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "eugenio-montale",
+   "namn": "Eugenio Montale",
+   "alias": [],
+   "efternamn": "Montale",
+   "år": 1975,
+   "land": [
+    "Italien"
+   ],
+   "språk": [
+    "Italienska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Eugenio Montale",
+   "artikellängd": 3040,
+   "motivering": "för hans särpräglade diktning som med stor konstnärlig känslighet tolkat humana värden i tecknet av en illusionsfri livssyn",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "saul-bellow",
+   "namn": "Saul Bellow",
+   "alias": [],
+   "efternamn": "Bellow",
+   "år": 1976,
+   "land": [
+    "Kanada",
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Saul Bellow",
+   "artikellängd": 6276,
+   "motivering": "för den mänskliga förståelse och subtila kulturanalys, som förenas i hans verk",
+   "osäkert": [
+    "land: flera länder (Kanada, USA) – alla räknas som rätt"
+   ],
+   "nivå": 4
+  },
+  {
+   "id": "vicente-aleixandre",
+   "namn": "Vicente Aleixandre",
+   "alias": [],
+   "efternamn": "Aleixandre",
+   "år": 1977,
+   "land": [
+    "Spanien"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Vicente Aleixandre",
+   "artikellängd": 5345,
+   "motivering": "för en nyskapande diktning som belyser människans villkor i kosmos och i dagens samhälle samtidigt som den företräder mellankrigstidens stora förnyelse av den spanska poesins traditioner",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "isaac-bashevis-singer",
+   "namn": "Isaac Bashevis Singer",
+   "alias": [],
+   "efternamn": "Singer",
+   "år": 1978,
+   "land": [
+    "Polen",
+    "USA"
+   ],
+   "språk": [
+    "Jiddisch"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Isaac Bashevis Singer",
+   "artikellängd": 9157,
+   "motivering": "för hans intensiva berättarkonst, som med rötter i en polsk-judisk berättartradition levandegör universella mänskliga villkor",
+   "osäkert": [
+    "land: flera länder (Polen, USA) – alla räknas som rätt"
+   ],
+   "nivå": 3
+  },
+  {
+   "id": "odysseas-elytis",
+   "namn": "Odysseas Elytis",
+   "alias": [
+    "Odysseus Elytis"
+   ],
+   "efternamn": "Elytis",
+   "år": 1979,
+   "land": [
+    "Grekland"
+   ],
+   "språk": [
+    "Grekiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Odysseas Elytis",
+   "artikellängd": 3850,
+   "motivering": "för hans poesi som mot bakgrund av grekisk tradition med sinnlig styrka och intellektuell klarsyn levandegör en modern människas kamp för frihet och skapande",
+   "osäkert": [
+    "språk: Tabellen anger nygrekiska – i spelet: Grekiska"
+   ],
+   "nivå": 5
+  },
+  {
+   "id": "czeslaw-milosz",
+   "namn": "Czesław Miłosz",
+   "alias": [],
+   "efternamn": "Miłosz",
+   "år": 1980,
+   "land": [
+    "Polen",
+    "USA"
+   ],
+   "språk": [
+    "Polska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Czesław Miłosz",
+   "artikellängd": 9053,
+   "motivering": "som med kompromisslös klarsyn tolkar människans utsatthet i en värld av starka konflikter",
+   "osäkert": [
+    "land: flera länder (Polen, USA) – alla räknas som rätt"
+   ],
+   "nivå": 3
+  },
+  {
+   "id": "elias-canetti",
+   "namn": "Elias Canetti",
+   "alias": [],
+   "efternamn": "Canetti",
+   "år": 1981,
+   "land": [
+    "Bulgarien",
+    "Storbritannien",
+    "Schweiz"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Elias Canetti",
+   "artikellängd": 5174,
+   "motivering": "för ett författarskap präglat av vid utblick, idérikedom och konstnärlig kraft",
+   "osäkert": [
+    "land: flera länder (Bulgarien, Storbritannien, Schweiz) – alla räknas som rätt"
+   ],
+   "nivå": 5
+  },
+  {
+   "id": "gabriel-garcia-marquez",
+   "namn": "Gabriel García Márquez",
+   "alias": [],
+   "efternamn": "García Márquez",
+   "år": 1982,
+   "land": [
+    "Colombia"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Gabriel García Márquez",
+   "artikellängd": 17354,
+   "motivering": "för hans romaner och noveller, där det fantastiska och det realistiska förenas i en rikt sammansatt diktvärld, som speglar en kontinents liv och konflikter",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "william-golding",
+   "namn": "William Golding",
+   "alias": [],
+   "efternamn": "Golding",
+   "år": 1983,
+   "land": [
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "William Golding",
+   "artikellängd": 6842,
+   "motivering": "för hans romaner som med den realistiska berättarkonstens åskådlighet och med mytens mångtydiga allmängiltighet belyser mänskliga villkor i dagens värld",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "jaroslav-seifert",
+   "namn": "Jaroslav Seifert",
+   "alias": [],
+   "efternamn": "Seifert",
+   "år": 1984,
+   "land": [
+    "Tjeckoslovakien"
+   ],
+   "språk": [
+    "Tjeckiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Jaroslav Seifert",
+   "artikellängd": 4592,
+   "motivering": "för hans poesi som med frisk sinnlighet och rik uppfinningsförmåga ger en befriande bild av mänsklig okuvlighet och mångfald",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "claude-simon",
+   "namn": "Claude Simon",
+   "alias": [],
+   "efternamn": "Simon",
+   "år": 1985,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Claude Simon",
+   "artikellängd": 5431,
+   "motivering": "som i sina romaner förenar poetens och målarens skapande med ett fördjupat tidsmedvetande i skildringen av mänskliga villkor",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "wole-soyinka",
+   "namn": "Wole Soyinka",
+   "alias": [],
+   "efternamn": "Soyinka",
+   "år": 1986,
+   "land": [
+    "Nigeria"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Wole Soyinka",
+   "artikellängd": 5688,
+   "motivering": "som i ett brett kulturellt perspektiv och med poetiska övertoner gestaltar tillvarons drama",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "joseph-brodsky",
+   "namn": "Joseph Brodsky",
+   "alias": [],
+   "efternamn": "Brodsky",
+   "år": 1987,
+   "land": [
+    "Sovjetunionen",
+    "USA"
+   ],
+   "språk": [
+    "Ryska",
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Joseph Brodsky",
+   "artikellängd": 8021,
+   "motivering": "för ett vittfamnande författarskap, präglat av tankeskärpa och poetisk intensitet",
+   "osäkert": [
+    "land: flera länder (Sovjetunionen, USA) – alla räknas som rätt",
+    "språk: flera språk (Ryska, Engelska) – alla räknas som rätt"
+   ],
+   "nivå": 4
+  },
+  {
+   "id": "naguib-mahfouz",
+   "namn": "Naguib Mahfouz",
+   "alias": [],
+   "efternamn": "Mahfouz",
+   "år": 1988,
+   "land": [
+    "Egypten"
+   ],
+   "språk": [
+    "Arabiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Naguib Mahfouz",
+   "artikellängd": 10947,
+   "motivering": "som genom valörrika verk - ömsom skarpsynt verklighetsnära, ömsom suggestivt mångtydiga - har format en arabisk romankonst med allmänmänsklig giltighet",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "camilo-jose-cela",
+   "namn": "Camilo José Cela",
+   "alias": [],
+   "efternamn": "Cela",
+   "år": 1989,
+   "land": [
+    "Spanien"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Camilo José Cela",
+   "artikellängd": 5171,
+   "motivering": "för en rik och intensiv prosakonst, som med återhållen medkänsla gestaltar en utmanande vision av människans utsatthet",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "octavio-paz",
+   "namn": "Octavio Paz",
+   "alias": [],
+   "efternamn": "Paz",
+   "år": 1990,
+   "land": [
+    "Mexiko"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Octavio Paz",
+   "artikellängd": 6776,
+   "motivering": "för en lidelsefull diktning med vida horisonter, präglad av sinnlig intelligens och humanistisk integritet",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "nadine-gordimer",
+   "namn": "Nadine Gordimer",
+   "alias": [],
+   "efternamn": "Gordimer",
+   "år": 1991,
+   "land": [
+    "Sydafrika"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Nadine Gordimer",
+   "artikellängd": 6867,
+   "motivering": "som genom storartad episk diktning har - med Alfred Nobels ord - gjort mänskligheten den största nytta",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "derek-walcott",
+   "namn": "Derek Walcott",
+   "alias": [],
+   "efternamn": "Walcott",
+   "år": 1992,
+   "land": [
+    "Saint Lucia"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Derek Walcott",
+   "artikellängd": 4706,
+   "motivering": "för en diktning med stor lyskraft, buren av en historisk vision som vuxit fram ur ett mångkulturellt engagemang",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "toni-morrison",
+   "namn": "Toni Morrison",
+   "alias": [],
+   "efternamn": "Morrison",
+   "år": 1993,
+   "land": [
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Toni Morrison",
+   "artikellängd": 9440,
+   "motivering": "som genom en romankonst präglad av visionär kraft och poetisk pregnans levandegör en väsentlig sida av amerikansk verklighet",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "kenzaburo-oe",
+   "namn": "Kenzaburo Oe",
+   "alias": [],
+   "efternamn": "Oe",
+   "år": 1994,
+   "land": [
+    "Japan"
+   ],
+   "språk": [
+    "Japanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Kenzaburo Oe",
+   "artikellängd": 3358,
+   "motivering": "som med poetisk kraft skapar en imaginär värld, där liv och myt förtätas till en skakande bild av människans belägenhet i nutiden",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "seamus-heaney",
+   "namn": "Seamus Heaney",
+   "alias": [],
+   "efternamn": "Heaney",
+   "år": 1995,
+   "land": [
+    "Irland",
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Seamus Heaney",
+   "artikellängd": 10269,
+   "motivering": "för ett författarskap av lyrisk skönhet och etiskt djup, som lyfter fram vardagens mirakler och det levande förflutna",
+   "osäkert": [
+    "land: flera länder (Irland, Storbritannien) – alla räknas som rätt"
+   ],
+   "nivå": 3
+  },
+  {
+   "id": "wislawa-szymborska",
+   "namn": "Wisława Szymborska",
+   "alias": [],
+   "efternamn": "Szymborska",
+   "år": 1996,
+   "land": [
+    "Polen"
+   ],
+   "språk": [
+    "Polska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Wisława Szymborska",
+   "artikellängd": 16205,
+   "motivering": "för en poesi som med ironisk precision låter det historiska och biologiska sammanhanget träda fram i fragment av mänsklig verklighet",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "dario-fo",
+   "namn": "Dario Fo",
+   "alias": [],
+   "efternamn": "Fo",
+   "år": 1997,
+   "land": [
+    "Italien"
+   ],
+   "språk": [
+    "Italienska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Dario Fo",
+   "artikellängd": 11157,
+   "motivering": "som i medeltida gycklares efterföljd gisslar makten och upprättar de utsattas värdighet",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "jose-saramago",
+   "namn": "José Saramago",
+   "alias": [],
+   "efternamn": "Saramago",
+   "år": 1998,
+   "land": [
+    "Portugal"
+   ],
+   "språk": [
+    "Portugisiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "José Saramago",
+   "artikellängd": 6754,
+   "motivering": "som med liknelser burna av fantasi, medkänsla och ironi ständigt på nytt gör en undflyende verklighet gripbar",
+   "osäkert": [],
+   "nivå": 4
+  },
+  {
+   "id": "gunter-grass",
+   "namn": "Günter Grass",
+   "alias": [],
+   "efternamn": "Grass",
+   "år": 1999,
+   "land": [
+    "Tyskland"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Günter Grass",
+   "artikellängd": 38250,
+   "motivering": "För att i muntert svarta fabler ha tecknat historiens glömda ansikte",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "gao-xingjian",
+   "namn": "Gao Xingjian",
+   "alias": [],
+   "efternamn": "Gao",
+   "år": 2000,
+   "land": [
+    "Kina",
+    "Frankrike"
+   ],
+   "språk": [
+    "Kinesiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Gao Xingjian",
+   "artikellängd": 6348,
+   "motivering": "för ett verk av universell giltighet, bitter insikt och språklig sinnrikhet, som öppnat nya vägar för kinesisk romankonst och dramatik”.",
+   "osäkert": [
+    "land: flera länder (Kina, Frankrike) – alla räknas som rätt"
+   ],
+   "nivå": 4
+  },
+  {
+   "id": "v-s-naipaul",
+   "namn": "V. S. Naipaul",
+   "alias": [
+    "V.S. Naipaul"
+   ],
+   "efternamn": "Naipaul",
+   "år": 2001,
+   "land": [
+    "Trinidad och Tobago",
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "V. S. Naipaul",
+   "artikellängd": 9000,
+   "motivering": "för att ha förenat lyhört berättande och omutlig iakttagelse i verk som dömer oss att se den bortträngda historiens närvaro",
+   "osäkert": [
+    "land: flera länder (Trinidad och Tobago, Storbritannien) – alla räknas som rätt"
+   ],
+   "nivå": 3
+  },
+  {
+   "id": "imre-kertesz",
+   "namn": "Imre Kertész",
+   "alias": [],
+   "efternamn": "Kertész",
+   "år": 2002,
+   "land": [
+    "Ungern"
+   ],
+   "språk": [
+    "Ungerska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Imre Kertész",
+   "artikellängd": 5264,
+   "motivering": "för ett författarskap som hävdar den enskildes bräckliga erfarenhet mot historiens barbariska godtycke",
+   "osäkert": [],
+   "nivå": 5
+  },
+  {
+   "id": "j-m-coetzee",
+   "namn": "J.M. Coetzee",
+   "alias": [],
+   "efternamn": "Coetzee",
+   "år": 2003,
+   "land": [
+    "Sydafrika"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "J.M. Coetzee",
+   "artikellängd": 12475,
+   "motivering": "som i talrika förklädnader framställer utanförskapets överrumplande delaktighet",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "elfriede-jelinek",
+   "namn": "Elfriede Jelinek",
+   "alias": [],
+   "efternamn": "Jelinek",
+   "år": 2004,
+   "land": [
+    "Österrike"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Elfriede Jelinek",
+   "artikellängd": 43515,
+   "motivering": "för hennes musikaliska flöde av röster och motröster i romaner och dramer som med enastående språklig lidelse blottar de sociala klichéernas absurditet och tvingande makt",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "harold-pinter",
+   "namn": "Harold Pinter",
+   "alias": [],
+   "efternamn": "Pinter",
+   "år": 2005,
+   "land": [
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Harold Pinter",
+   "artikellängd": 14035,
+   "motivering": "som i sina dramer frilägger avgrunden under vardagspratet och bryter sig in i förtryckets slutna rum",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "orhan-pamuk",
+   "namn": "Orhan Pamuk",
+   "alias": [],
+   "efternamn": "Pamuk",
+   "år": 2006,
+   "land": [
+    "Turkiet"
+   ],
+   "språk": [
+    "Turkiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Orhan Pamuk",
+   "artikellängd": 8695,
+   "motivering": "som på spaning efter sin hemstads melankoliska själ har funnit nya sinnebilder för kulturernas strid och sammanflätning",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "doris-lessing",
+   "namn": "Doris Lessing",
+   "alias": [],
+   "efternamn": "Lessing",
+   "år": 2007,
+   "land": [
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Doris Lessing",
+   "artikellängd": 21972,
+   "motivering": "den kvinnliga erfarenhetens epiker, som med skepsis, hetta och visionär kraft har tagit en splittrad civilisation till granskning",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "jean-marie-gustave-le-clezio",
+   "namn": "Jean-Marie Gustave Le Clézio",
+   "alias": [],
+   "efternamn": "Le Clézio",
+   "år": 2008,
+   "land": [
+    "Frankrike",
+    "Mauritius"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Jean-Marie Gustave Le Clézio",
+   "artikellängd": 16481,
+   "motivering": "uppbrottets, det poetiska äventyrets och den sinnliga extasens författare, utforskare av en mänsklighet utanför och nedanför den härskande civilisationen",
+   "osäkert": [
+    "land: flera länder (Frankrike, Mauritius) – alla räknas som rätt"
+   ],
+   "nivå": 2
+  },
+  {
+   "id": "herta-muller",
+   "namn": "Herta Müller",
+   "alias": [],
+   "efternamn": "Müller",
+   "år": 2009,
+   "land": [
+    "Rumänien",
+    "Tyskland"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Herta Müller",
+   "artikellängd": 20560,
+   "motivering": "som med poesins förtätning och prosans saklighet tecknar hemlöshetens landskap",
+   "osäkert": [
+    "land: flera länder (Rumänien, Tyskland) – alla räknas som rätt"
+   ],
+   "nivå": 1
+  },
+  {
+   "id": "mario-vargas-llosa",
+   "namn": "Mario Vargas Llosa",
+   "alias": [],
+   "efternamn": "Vargas Llosa",
+   "år": 2010,
+   "land": [
+    "Peru",
+    "Spanien"
+   ],
+   "språk": [
+    "Spanska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Mario Vargas Llosa",
+   "artikellängd": 75577,
+   "motivering": "för hans kartläggning av maktens strukturer och knivskarpa bilder av individens motstånd, revolt och nederlag",
+   "osäkert": [
+    "land: flera länder (Peru, Spanien) – alla räknas som rätt"
+   ],
+   "nivå": 1
+  },
+  {
+   "id": "tomas-transtromer",
+   "namn": "Tomas Tranströmer",
+   "alias": [],
+   "efternamn": "Tranströmer",
+   "år": 2011,
+   "land": [
+    "Sverige"
+   ],
+   "språk": [
+    "Svenska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Tomas Tranströmer",
+   "artikellängd": 31187,
+   "motivering": "för att han i förtätade, genomlysta bilder ger oss ny tillgång till det verkliga",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "mo-yan",
+   "namn": "Mo Yan",
+   "alias": [],
+   "efternamn": "Mo",
+   "år": 2012,
+   "land": [
+    "Kina"
+   ],
+   "språk": [
+    "Kinesiska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Mo Yan",
+   "artikellängd": 10996,
+   "motivering": "som med hallucinatorisk skärpa förenar saga, historia och samtid",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "alice-munro",
+   "namn": "Alice Munro",
+   "alias": [],
+   "efternamn": "Munro",
+   "år": 2013,
+   "land": [
+    "Kanada"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Alice Munro",
+   "artikellängd": 9593,
+   "motivering": "den samtida novellkonstens mästare",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "patrick-modiano",
+   "namn": "Patrick Modiano",
+   "alias": [],
+   "efternamn": "Modiano",
+   "år": 2014,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Patrick Modiano",
+   "artikellängd": 14076,
+   "motivering": "för den minneskonst varmed han frammanat de ogripbaraste levnadsöden och avtäckt ockupationsårens livsvärld",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "svetlana-aleksijevitj",
+   "namn": "Svetlana Aleksijevitj",
+   "alias": [],
+   "efternamn": "Aleksijevitj",
+   "år": 2015,
+   "land": [
+    "Belarus"
+   ],
+   "språk": [
+    "Ryska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Svetlana Aleksijevitj",
+   "artikellängd": 16823,
+   "motivering": "för hennes mångstämmiga verk, ett monument över lidande och mod i vår tid",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "bob-dylan",
+   "namn": "Bob Dylan",
+   "alias": [],
+   "efternamn": "Dylan",
+   "år": 2016,
+   "land": [
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Bob Dylan",
+   "artikellängd": 46996,
+   "motivering": "som skapat nya poetiska uttryck inom den stora amerikanska sångtraditionen",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "kazuo-ishiguro",
+   "namn": "Kazuo Ishiguro",
+   "alias": [],
+   "efternamn": "Ishiguro",
+   "år": 2017,
+   "land": [
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Kazuo Ishiguro",
+   "artikellängd": 8422,
+   "motivering": "som i romaner med stark känslomässig verkan har blottat avgrunden under vår skenbara hemhörighet i världen",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "olga-tokarczuk",
+   "namn": "Olga Tokarczuk",
+   "alias": [],
+   "efternamn": "Tokarczuk",
+   "år": 2018,
+   "land": [
+    "Polen"
+   ],
+   "språk": [
+    "Polska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Olga Tokarczuk",
+   "artikellängd": 19629,
+   "motivering": "för en berättarkonst som med encyklopedisk lust gestaltar gränsöverskridandet som livsform",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "peter-handke",
+   "namn": "Peter Handke",
+   "alias": [],
+   "efternamn": "Handke",
+   "år": 2019,
+   "land": [
+    "Österrike"
+   ],
+   "språk": [
+    "Tyska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Peter Handke",
+   "artikellängd": 17125,
+   "motivering": "för ett inflytelserikt författarskap som med stor språkkonst har utforskat periferin och människans konkreta erfarenhet",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "louise-gluck",
+   "namn": "Louise Glück",
+   "alias": [],
+   "efternamn": "Glück",
+   "år": 2020,
+   "land": [
+    "USA"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Louise Glück",
+   "artikellängd": 18504,
+   "motivering": "för hennes omisskännliga poetiska röst, som med sträng skönhet gör den enskilda människans existens universell",
+   "osäkert": [],
+   "nivå": 2
+  },
+  {
+   "id": "abdulrazak-gurnah",
+   "namn": "Abdulrazak Gurnah",
+   "alias": [],
+   "efternamn": "Gurnah",
+   "år": 2021,
+   "land": [
+    "Tanzania",
+    "Storbritannien"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Abdulrazak Gurnah",
+   "artikellängd": 8544,
+   "motivering": "för att kompromisslöst och med stor medkänsla ha genomlyst kolonialismens verkningar och flyktingens öde i klyftan mellan kulturer och kontinenter",
+   "osäkert": [
+    "land: flera länder (Tanzania, Storbritannien) – alla räknas som rätt"
+   ],
+   "nivå": 3
+  },
+  {
+   "id": "annie-ernaux",
+   "namn": "Annie Ernaux",
+   "alias": [],
+   "efternamn": "Ernaux",
+   "år": 2022,
+   "land": [
+    "Frankrike"
+   ],
+   "språk": [
+    "Franska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Annie Ernaux",
+   "artikellängd": 22380,
+   "motivering": "för det mod och den kliniska skärpa varmed hon avtäcker det personliga minnets rötter, främlingskap och kollektiva ramar",
+   "osäkert": [],
+   "nivå": 1
+  },
+  {
+   "id": "jon-fosse",
+   "namn": "Jon Fosse",
+   "alias": [],
+   "efternamn": "Fosse",
+   "år": 2023,
+   "land": [
+    "Norge"
+   ],
+   "språk": [
+    "Norska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "Jon Fosse",
+   "artikellängd": 11775,
+   "motivering": "för hans nyskapande dramatik och prosa som ger röst åt det osägbara",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "han-kang",
+   "namn": "Han Kang",
+   "alias": [],
+   "efternamn": "Han",
+   "år": 2024,
+   "land": [
+    "Sydkorea"
+   ],
+   "språk": [
+    "Koreanska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Han Kang",
+   "artikellängd": 11947,
+   "motivering": "för hennes intensiva poetiska prosa, som konfronterar historiens trauman och blottlägger människans sårbarhet",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "laszlo-krasznahorkai",
+   "namn": "László Krasznahorkai",
+   "alias": [],
+   "efternamn": "Krasznahorkai",
+   "år": 2025,
+   "land": [
+    "Ungern"
+   ],
+   "språk": [
+    "Ungerska"
+   ],
+   "kön": "man",
+   "postumt": false,
+   "artikel": "László Krasznahorkai",
+   "artikellängd": 12448,
+   "motivering": "för hans visionära och kraftfulla författarskap som mitt i undergångens fasa upprätthåller tron på konstens möjligheter",
+   "osäkert": [],
+   "nivå": 3
+  },
+  {
+   "id": "anne-carson",
+   "namn": "Anne Carson",
+   "alias": [],
+   "efternamn": "Carson",
+   "år": 2026,
+   "land": [
+    "Kanada",
+    "Island"
+   ],
+   "språk": [
+    "Engelska"
+   ],
+   "kön": "kvinna",
+   "postumt": false,
+   "artikel": "Anne Carson",
+   "artikellängd": 15652,
+   "motivering": "för hennes djärva och infallsrika verk, som i lekfull dialog med den klassiska traditionen har skapat nya former för den samtida litteraturen",
+   "osäkert": [
+    "land: flera länder (Kanada, Island) – alla räknas som rätt"
+   ],
+   "nivå": 2
+  }
+ ],
+ "faktafrågor": []
+}

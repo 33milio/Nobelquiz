@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#1f3a5f"/>
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#d9a441" stroke-width="14"/>
+  <path d="M150 330 Q120 250 165 175" fill="none" stroke="#d9a441" stroke-width="10" stroke-linecap="round"/>
+  <path d="M362 330 Q392 250 347 175" fill="none" stroke="#d9a441" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#d9a441">
+    <ellipse cx="140" cy="300" rx="16" ry="8" transform="rotate(-60 140 300)"/>
+    <ellipse cx="136" cy="255" rx="16" ry="8" transform="rotate(-85 136 255)"/>
+    <ellipse cx="146" cy="210" rx="16" ry="8" transform="rotate(-110 146 210)"/>
+    <ellipse cx="372" cy="300" rx="16" ry="8" transform="rotate(60 372 300)"/>
+    <ellipse cx="376" cy="255" rx="16" ry="8" transform="rotate(85 376 255)"/>
+    <ellipse cx="366" cy="210" rx="16" ry="8" transform="rotate(110 366 210)"/>
+  </g>
+  <text x="256" y="300" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="150" font-weight="700" fill="#f6f3ec">N</text>
+</svg>

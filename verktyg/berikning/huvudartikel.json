@@ -1,0 +1,117 @@
+[
+  {
+    "id": "_huvudartikel",
+    "frågor": [
+      {
+        "fråga": "Vem är den yngsta person som har fått Nobelpriset i litteratur?",
+        "svar": "Rudyard Kipling",
+        "fel": [
+          "Albert Camus",
+          "Joseph Brodsky",
+          "Bjørnstjerne Bjørnson"
+        ],
+        "förklaring": "Kipling fick 1907 års pris och var då bara 41 år gammal.",
+        "citat": "Den yngsta pristagaren är Rudyard Kipling som var 41 år när han tilldelades priset."
+      },
+      {
+        "fråga": "Vem är den äldsta person som har tilldelats Nobelpriset i litteratur?",
+        "svar": "Doris Lessing",
+        "fel": [
+          "Theodor Mommsen",
+          "Paul Heyse",
+          "Louise Glück"
+        ],
+        "förklaring": "Lessing fick 2007 års pris och var 87 år när hon tilldelades det; vid prisutdelningen hade hon hunnit fylla 88.",
+        "citat": "Doris Lessing var med sina 87 år den äldsta som tilldelats litteraturpriset."
+      },
+      {
+        "fråga": "Vem var den första kvinnan som fick Nobelpriset i litteratur?",
+        "svar": "Selma Lagerlöf",
+        "fel": [
+          "Grazia Deledda",
+          "Sigrid Undset",
+          "Pearl S. Buck"
+        ],
+        "förklaring": "Lagerlöf fick priset 1909 och var samtidigt den första svenska litteraturpristagaren.",
+        "citat": "Selma Lagerlöf var både den första kvinnan och den första svenska Nobelpristagaren i litteratur, 1909."
+      },
+      {
+        "fråga": "Vilken författare tackade nej till Nobelpriset i litteratur 1964?",
+        "svar": "Jean-Paul Sartre",
+        "fel": [
+          "Albert Camus",
+          "Samuel Beckett",
+          "Saint-John Perse"
+        ],
+        "förklaring": "Sartre tackade själv nej, medan Boris Pasternak 1958 tvingades tacka nej.",
+        "citat": "Jean-Paul Sartre tackade nej 1964."
+      },
+      {
+        "fråga": "Vilken svensk författare fick Nobelpriset i litteratur postumt, år 1931?",
+        "svar": "Erik Axel Karlfeldt",
+        "fel": [
+          "Verner von Heidenstam",
+          "Pär Lagerkvist",
+          "Harry Martinson"
+        ],
+        "förklaring": "Karlfeldts motivering var kort och gott ”Erik Axel Karlfeldts diktning”.",
+        "citat": "Erik Axel Karlfeldt (postumt)"
+      },
+      {
+        "fråga": "Hur många gånger har Nobelpriset i litteratur inte delats ut alls?",
+        "svar": "Sju gånger",
+        "fel": [
+          "Tre gånger",
+          "Fem gånger",
+          "Nio gånger"
+        ],
+        "förklaring": "Uppehållen inföll under de båda världskrigen och 1935; 1940–1943 delades inget pris ut fyra år i rad.",
+        "citat": "Vid sju tillfällen har priset inte delats ut: 1914, 1918, 1935, 1940, 1941, 1942 och 1943."
+      },
+      {
+        "fråga": "Vilket år delades Nobelpriset i litteratur senast mellan två pristagare?",
+        "svar": "1974",
+        "fel": [
+          "1966",
+          "1917",
+          "1904"
+        ],
+        "förklaring": "Det året delade svenskarna Eyvind Johnson och Harry Martinson priset, vilket kritiserades eftersom båda satt i Svenska Akademien.",
+        "citat": "Efter det delade Nobelpriset till Eyvind Johnson och Harry Martinson 1974 har det aldrig hänt att priset delats mellan två kandidater."
+      },
+      {
+        "fråga": "Vilken författare ansåg Strindberg och stora delar av den svenska kultureliten borde ha fått det första Nobelpriset i litteratur 1901 i stället för Sully Prudhomme?",
+        "svar": "Lev Tolstoj",
+        "fel": [
+          "Henrik Ibsen",
+          "Anton Tjechov",
+          "Émile Zola"
+        ],
+        "förklaring": "Protesten undertecknades bland andra av Strindberg, Selma Lagerlöf och Anders Zorn, men Tolstoj fick aldrig priset.",
+        "citat": "kritiserade Akademien för att inte den ryske författaren Lev Tolstoj tilldelades det första priset"
+      },
+      {
+        "fråga": "Vilken akademiledamot lämnade sin plats i Svenska Akademien i protest mot priset till Elfriede Jelinek 2004?",
+        "svar": "Knut Ahnlund",
+        "fel": [
+          "Artur Lundkvist",
+          "Horace Engdahl",
+          "Per Wästberg"
+        ],
+        "förklaring": "Ahnlund menade att Jelinek var en ovärdig pristagare och att beslutet skadade prisets anseende.",
+        "citat": "Priset till Elfriede Jelinek 2004 ledde till att Knut Ahnlund lämnade sin plats i Svenska Akademien i protest."
+      },
+      {
+        "fråga": "Hur stor var prissumman för Nobelpriset i litteratur år 2026?",
+        "svar": "12 miljoner kronor",
+        "fel": [
+          "8 miljoner kronor",
+          "10 miljoner kronor",
+          "15 miljoner kronor"
+        ],
+        "förklaring": "Utöver penningsumman får pristagaren en medalj, som delas ut av kungen den 10 december i Stockholms konserthus.",
+        "citat": "består av medalj och en penningsumma (12 miljoner kronor år 2026)"
+      }
+    ]
+  }
+]
