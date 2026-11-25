@@ -11709,6 +11709,937 @@
    "citat": "består av medalj och en penningsumma (12 miljoner kronor år 2026)",
    "källa": "Nobelpriset i litteratur",
    "person": null
+  },
+  {
+   "id": "nobel-kopplingar-1",
+   "fråga": "Vilken pristagare hjälpte Nelly Sachs att fly till Sverige?",
+   "svar": "Selma Lagerlöf",
+   "fel": [
+    "Verner von Heidenstam",
+    "Erik Axel Karlfeldt",
+    "Pär Lagerkvist"
+   ],
+   "förklaring": "Selma Lagerlöf tog avstånd från judeförföljelserna i Tyskland och hjälpte Nelly Sachs och hennes mor att få uppehållstillstånd i Sverige 1940.",
+   "citat": "Hon hjälpte Nelly Sachs att fly till Sverige och skänkte en novell till arbetet för förföljda i det nazistiska Tyskland.",
+   "källa": "Selma Lagerlöf",
+   "person": "selma-lagerlof",
+   "personer": [
+    "selma-lagerlof",
+    "nelly-sachs"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-2",
+   "fråga": "Vilken tysk pristagare vände sig den unga Nelly Sachs till, vid sidan av Selma Lagerlöf, för att få råd i sitt skrivande?",
+   "svar": "Hermann Hesse",
+   "fel": [
+    "Thomas Mann",
+    "Gerhart Hauptmann",
+    "Paul Heyse"
+   ],
+   "förklaring": "Nelly Sachs författarambitioner väcktes tidigt, och hon sökte råd hos förebilderna Selma Lagerlöf och Hermann Hesse.",
+   "citat": "hon vände sig till förebilder som Selma Lagerlöf och Hermann Hesse för att få råd i sitt skrivande.",
+   "källa": "Nelly Sachs",
+   "person": "hermann-hesse",
+   "personer": [
+    "hermann-hesse",
+    "nelly-sachs"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-3",
+   "fråga": "Vilken tysk pristagare skrev versdramat Vinterballaden, som bygger på Selma Lagerlöfs Herr Arnes penningar och som Lagerlöf själv översatte till svenska?",
+   "svar": "Gerhart Hauptmann",
+   "fel": [
+    "Paul Heyse",
+    "Thomas Mann",
+    "Rudolf Eucken"
+   ],
+   "förklaring": "Hauptmanns Winterballade (1917) bygger på Herr Arnes penningar, och den svenska översättningen 1919 gjordes av Selma Lagerlöf.",
+   "citat": "Vinterballaden: dramatisk dikt (översättning Selma Lagerlöf, Bonnier, 1919)",
+   "källa": "Gerhart Hauptmann",
+   "person": "gerhart-hauptmann",
+   "personer": [
+    "gerhart-hauptmann",
+    "selma-lagerlof"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-4",
+   "fråga": "Vilken pristagare fick i uppdrag att skriva Svenskarna och deras hövdingar, en historiebok tänkt som motsvarighet till Selma Lagerlöfs Nils Holgersson?",
+   "svar": "Verner von Heidenstam",
+   "fel": [
+    "Erik Axel Karlfeldt",
+    "Pär Lagerkvist",
+    "Harry Martinson"
+   ],
+   "förklaring": "Nils Holgersson blev en stor succé som skolbok i geografi, och initiativtagarna ville ha en motsvarande bok om svensk historia. Uppdraget gick till Heidenstam.",
+   "citat": "ville att förlaget skulle ge ut en motsvarande bok om svensk historia, Svenskarna och deras hövdingar. Uppdraget gick till Heidenstam",
+   "källa": "Verner von Heidenstam",
+   "person": "verner-von-heidenstam",
+   "personer": [
+    "verner-von-heidenstam",
+    "selma-lagerlof"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-5",
+   "fråga": "Vem räknades som främst bland Rabindranath Tagores europeiska beundrare?",
+   "svar": "William Butler Yeats",
+   "fel": [
+    "George Bernard Shaw",
+    "Rudyard Kipling",
+    "John Galsworthy"
+   ],
+   "förklaring": "Genom sina kontakter och resor fick Tagore många europeiska beundrare, främst bland dem den irländske poeten Yeats.",
+   "citat": "Genom sina kontakter och resor fick han också en stor skara europeiska beundrare, främst bland dem Yeats.",
+   "källa": "Rabindranath Tagore",
+   "person": "william-butler-yeats",
+   "personer": [
+    "william-butler-yeats",
+    "rabindranath-tagore"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-6",
+   "fråga": "Vilken pristagare var förebild för Knut Hamsuns tidiga berättelse Bjørger (1879)?",
+   "svar": "Bjørnstjerne Bjørnson",
+   "fel": [
+    "Henrik Pontoppidan",
+    "Karl Gjellerup",
+    "Sigrid Undset"
+   ],
+   "förklaring": "Hamsuns tidiga Bjørger skrevs med Bjørnson som förebild. Senare angrep Hamsun de stora norska diktarna, men Bjørnson uppskattade han fortfarande delvis.",
+   "citat": "Den Gaadefulde. En Kjærlighedshistorie fra Nordland (1877), senare med Bjørnstjerne Bjørnson som förebild (Bjørger. Fortælling (1879).",
+   "källa": "Knut Hamsun",
+   "person": "bjornstjerne-bjornson",
+   "personer": [
+    "bjornstjerne-bjornson",
+    "knut-hamsun"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-7",
+   "fråga": "Vilken pristagare stod i spetsen för de 33 författare som 1935 tog avstånd från Knut Hamsuns angrepp på fredspristagaren Carl von Ossietzky?",
+   "svar": "Sigrid Undset",
+   "fel": [
+    "Selma Lagerlöf",
+    "Johannes V. Jensen",
+    "Henrik Pontoppidan"
+   ],
+   "förklaring": "Hamsun angrep fredspriset till den fängslade Ossietzky; trettiotre norska författare med Sigrid Undset i spetsen tog offentligt avstånd från honom.",
+   "citat": "Trettiotre andra författare, med Sigrid Undset i spetsen, markerade sitt avståndstagande från Hamsuns och den norska högerns angrepp mot Ossietzky.",
+   "källa": "Knut Hamsun",
+   "person": "sigrid-undset",
+   "personer": [
+    "sigrid-undset",
+    "knut-hamsun"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-8",
+   "fråga": "Vilken pristagare skickade 1943 sin Nobelprismedalj som gåva till Joseph Goebbels?",
+   "svar": "Knut Hamsun",
+   "fel": [
+    "Johannes V. Jensen",
+    "Frans Eemil Sillanpää",
+    "Gerhart Hauptmann"
+   ],
+   "förklaring": "Det skedde efter att Sigrid Undset under en USA-turné sagt att alla skandinaviska Nobelpristagare utom Hamsun hade skänkt sina medaljer till Finlandshjälpen.",
+   "citat": "Efter ett möte med Joseph Goebbels 1943 sände Hamsun sin Nobelprismedalj som gåva till honom.",
+   "källa": "Knut Hamsun",
+   "person": "knut-hamsun",
+   "personer": [
+    "knut-hamsun",
+    "sigrid-undset"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-9",
+   "fråga": "Vilken pristagare skrev 1967 att Knut Hamsun var ”den moderna skönlitterära prosalitteraturens fader”?",
+   "svar": "Isaac Bashevis Singer",
+   "fel": [
+    "Saul Bellow",
+    "Elias Canetti",
+    "Joseph Brodsky"
+   ],
+   "förklaring": "Den rysk-amerikanske författaren Isaac Bashevis Singer gav Hamsun detta erkännande 1967.",
+   "citat": "Den rysk-amerikanske författaren och Nobelpristagaren Isaac Bashevis Singer skrev 1967 att Hamsun var ”den moderna skönlitterära prosalitteraturens fader”.",
+   "källa": "Knut Hamsun",
+   "person": "isaac-bashevis-singer",
+   "personer": [
+    "isaac-bashevis-singer",
+    "knut-hamsun"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-10",
+   "fråga": "Vilken pristagare sade att ”Hamsun lärde mig att skriva”?",
+   "svar": "Ernest Hemingway",
+   "fel": [
+    "William Faulkner",
+    "John Steinbeck",
+    "Sinclair Lewis"
+   ],
+   "förklaring": "Hemingway hör till de många författare som stod i skuld till Knut Hamsuns prosa.",
+   "citat": "Ernest Hemingway sade att ”Hamsun lärde mig att skriva”",
+   "källa": "Knut Hamsun",
+   "person": "ernest-hemingway",
+   "personer": [
+    "ernest-hemingway",
+    "knut-hamsun"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-11",
+   "fråga": "Vilken tysk pristagare kallade Knut Hamsun sin favoritförfattare?",
+   "svar": "Hermann Hesse",
+   "fel": [
+    "Gerhart Hauptmann",
+    "Paul Heyse",
+    "Heinrich Böll"
+   ],
+   "förklaring": "Hesse kallade Hamsun sin favoritförfattare; även Thomas Mann, Kafka och Gorkij har sagt att de stod i skuld till honom.",
+   "citat": "Hermann Hesse kallade Hamsun sin favoritförfattare.",
+   "källa": "Knut Hamsun",
+   "person": "hermann-hesse",
+   "personer": [
+    "hermann-hesse",
+    "knut-hamsun"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-12",
+   "fråga": "Vilken svensk pristagare översatte Anatole Frances Bokvännerna till svenska 1945?",
+   "svar": "Eyvind Johnson",
+   "fel": [
+    "Harry Martinson",
+    "Pär Lagerkvist",
+    "Erik Axel Karlfeldt"
+   ],
+   "förklaring": "Eyvind Johnson var en flitig översättare och introduktör av främst fransk litteratur.",
+   "citat": "Bokvännerna (Bibliophilie) (översättning Eyvind Johnson, teckningar av Karen Jacobsen, Wahlström & Widstrand, 1945)",
+   "källa": "Anatole France",
+   "person": "eyvind-johnson",
+   "personer": [
+    "eyvind-johnson",
+    "anatole-france"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-13",
+   "fråga": "Eyvind Johnson fick 1965 Letterstedtska priset för sina översättningar av vilken pristagare?",
+   "svar": "Jean-Paul Sartre",
+   "fel": [
+    "Albert Camus",
+    "André Gide",
+    "François Mauriac"
+   ],
+   "förklaring": "Johnson översatte texter och dramatik av Sartre (bland annat Muren) och belönades för det med Letterstedtska priset.",
+   "citat": "1965 – Letterstedtska priset för översättningar av Sartre",
+   "källa": "Eyvind Johnson",
+   "person": "jean-paul-sartre",
+   "personer": [
+    "jean-paul-sartre",
+    "eyvind-johnson"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-14",
+   "fråga": "Vilken pristagare bjöd 1937 William Butler Yeats till Madrid mitt under spanska inbördeskriget?",
+   "svar": "Pablo Neruda",
+   "fel": [
+    "Gabriela Mistral",
+    "Juan Ramón Jiménez",
+    "Vicente Aleixandre"
+   ],
+   "förklaring": "Yeats svarade att han stödde republikanerna mot fascisterna, trots att han tidigare dragits till Mussolini.",
+   "citat": "När Pablo Neruda 1937 bjöd honom till Madrid svarade han emellertid att han stödde republikanerna mot fascisterna",
+   "källa": "William Butler Yeats",
+   "person": "pablo-neruda",
+   "personer": [
+    "pablo-neruda",
+    "william-butler-yeats"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-15",
+   "fråga": "Vilken svensk pristagares jordfästning bevistade Sigrid Undset när hon flytt till Sverige 1940?",
+   "svar": "Verner von Heidenstam",
+   "fel": [
+    "Selma Lagerlöf",
+    "Erik Axel Karlfeldt",
+    "Pär Lagerkvist"
+   ],
+   "förklaring": "Undset kom till Sverige över fjällen från Mo i Rana och var i Stockholm när Heidenstam begravdes, innan hon reste vidare till USA.",
+   "citat": "I Sverige bevistade hon Verner von Heidenstams jordfästning.",
+   "källa": "Sigrid Undset",
+   "person": "verner-von-heidenstam",
+   "personer": [
+    "verner-von-heidenstam",
+    "sigrid-undset"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-16",
+   "fråga": "Från vilken pristagare tog Gabriela Mistral sin pseudonyms efternamn?",
+   "svar": "Frédéric Mistral",
+   "fel": [
+    "Sully Prudhomme",
+    "Anatole France",
+    "Romain Rolland"
+   ],
+   "förklaring": "Namnet Gabriela Mistral kom från hennes två favoritpoeter, Gabriele D'Annunzio och provensalske Frédéric Mistral.",
+   "citat": "Namnet, Gabriela Mistral, tog hon från sina två favoritpoeter, italienaren Gabriele D'Annunzio och fransmannen Frédéric Mistral.",
+   "källa": "Gabriela Mistral",
+   "person": "frederic-mistral",
+   "personer": [
+    "frederic-mistral",
+    "gabriela-mistral"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-17",
+   "fråga": "Vilken pristagare nämnde Gabriela Mistral i förordet till Lecturas para mujeres som en som aktivt arbetade för kvinnliga författare i världen?",
+   "svar": "Selma Lagerlöf",
+   "fel": [
+    "Grazia Deledda",
+    "Sigrid Undset",
+    "Pearl S. Buck"
+   ],
+   "förklaring": "Mistral gav ut läseboken Lecturas para mujeres i Mexiko 1923 och lyfte där fram Selma Lagerlöf.",
+   "citat": "I förordet nämnde hon Selma Lagerlöf som aktivt arbetade för kvinnliga författare i världen.",
+   "källa": "Gabriela Mistral",
+   "person": "selma-lagerlof",
+   "personer": [
+    "selma-lagerlof",
+    "gabriela-mistral"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-18",
+   "fråga": "Vilken blivande pristagare förestod flickskolan i Pablo Nerudas hemort och stödde honom i skrivandet när hans far var emot det?",
+   "svar": "Gabriela Mistral",
+   "fel": [
+    "Juan Ramón Jiménez",
+    "Miguel Ángel Asturias",
+    "Octavio Paz"
+   ],
+   "förklaring": "Gabriela Mistral stödde den unge Neruda, och senare efterträdde han henne som Chiles konsul i Madrid.",
+   "citat": "han fick stöd från andra, bland annat från den framtida nobelpristagaren Gabriela Mistral, som förestod den lokala flickskolan.",
+   "källa": "Pablo Neruda",
+   "person": "gabriela-mistral",
+   "personer": [
+    "gabriela-mistral",
+    "pablo-neruda"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-19",
+   "fråga": "Verk av vilken pristagare gav André Gide ut i fransk tolkning, vid sidan av Shakespeare, Blake och Whitman?",
+   "svar": "Rabindranath Tagore",
+   "fel": [
+    "Rudyard Kipling",
+    "William Butler Yeats",
+    "T.S. Eliot"
+   ],
+   "förklaring": "Gide var även verksam som utgivare av tolkningar av bland andra Shakespeare, Blake, Whitman, Conrad, Tagore och Pusjkin.",
+   "citat": "samt som utgivare av tolkningar av William Shakespeare, William Blake, Walt Whitman, Joseph Conrad, Rabindranath Tagore och Aleksandr Pusjkin.",
+   "källa": "André Gide",
+   "person": "rabindranath-tagore",
+   "personer": [
+    "rabindranath-tagore",
+    "andre-gide"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-20",
+   "fråga": "Vilken pristagare och kollega skrev Roger Martin du Gard en hel bok om 1951?",
+   "svar": "André Gide",
+   "fel": [
+    "François Mauriac",
+    "Anatole France",
+    "Romain Rolland"
+   ],
+   "förklaring": "Roger Martin du Gard gav 1951 ut Notes sur André Gide om sin kollega och Nobelpristagare.",
+   "citat": "Notes sur André Gide (1951)",
+   "källa": "Roger Martin du Gard",
+   "person": "andre-gide",
+   "personer": [
+    "andre-gide",
+    "roger-martin-du-gard"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-21",
+   "fråga": "Hos vilken pristagare bodde T.S. Eliot och hans hustru Vivien en tid i England?",
+   "svar": "Bertrand Russell",
+   "fel": [
+    "Henri Bergson",
+    "George Bernard Shaw",
+    "John Galsworthy"
+   ],
+   "förklaring": "Eliot hade påverkats av Russell, som han träffat personligen, och bodde efter giftermålet 1915 med sin hustru hos honom.",
+   "citat": "Han försörjde sig som lärare och gjorde halvhjärtade försök att doktorera, och bodde med sin hustru hos Bertrand Russell.",
+   "källa": "T.S. Eliot",
+   "person": "bertrand-russell",
+   "personer": [
+    "bertrand-russell",
+    "t-s-eliot"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-22",
+   "fråga": "Med sina långa och komplexa meningar sågs William Faulkner som en motpol till vilken samtida pristagare?",
+   "svar": "Ernest Hemingway",
+   "fel": [
+    "John Steinbeck",
+    "Sinclair Lewis",
+    "Eugene O'Neill"
+   ],
+   "förklaring": "Hemingway var känd för sin kärva, korta prosa – Faulkner för det motsatta.",
+   "citat": "Med sina långa och komplexa meningar var han en motpol till den samtida författarikonen Ernest Hemingway.",
+   "källa": "William Faulkner",
+   "person": "ernest-hemingway",
+   "personer": [
+    "ernest-hemingway",
+    "william-faulkner"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-23",
+   "fråga": "Vilken pristagare fick enligt familjetraditionen ett telegram från Ernest Hemingway med texten ”Don't worry, you'll get it next time”?",
+   "svar": "Halldór Laxness",
+   "fel": [
+    "Juan Ramón Jiménez",
+    "Albert Camus",
+    "Boris Pasternak"
+   ],
+   "förklaring": "Laxness och Hemingway var huvudkandidaterna 1954. Hemingway fick priset – och Laxness fick det året därpå, 1955.",
+   "citat": "Hemingway efter att ha tilldelats priset skickade ett telegram till Laxness med texten: \"Don't worry, you'll get it next time.\"",
+   "källa": "Halldór Laxness",
+   "person": "halldor-laxness",
+   "personer": [
+    "halldor-laxness",
+    "ernest-hemingway"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-24",
+   "fråga": "Vilken pristagares roman Farväl till vapnen översatte Halldór Laxness till isländska 1941?",
+   "svar": "Ernest Hemingway",
+   "fel": [
+    "John Steinbeck",
+    "William Faulkner",
+    "Sinclair Lewis"
+   ],
+   "förklaring": "Laxness var en flitig översättare; Farväl till vapnen blev på isländska Vopnin kvödd.",
+   "citat": "Farväl till vapnen av Ernest Hemingway (isl. Vopnin kvödd), 1941",
+   "källa": "Halldór Laxness",
+   "person": "ernest-hemingway",
+   "personer": [
+    "ernest-hemingway",
+    "halldor-laxness"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-25",
+   "fråga": "Vilken spansk pristagare hade stort inflytande över diktarna i Generation 27, bland dem den senare pristagaren Vicente Aleixandre?",
+   "svar": "Juan Ramón Jiménez",
+   "fel": [
+    "Jacinto Benavente",
+    "José Echegaray",
+    "Camilo José Cela"
+   ],
+   "förklaring": "Jiménez spelade en dominerande roll i 1900-talets spanska poesi och påverkade bland andra Aleixandre, García Lorca och Guillén.",
+   "citat": "Han hade bland annat stort inflytande över flera av diktarna inom den betydelsefulla Generation 27, till exempel Vicente Aleixandre, Federico García Lorca",
+   "källa": "Juan Ramón Jiménez",
+   "person": "juan-ramon-jimenez",
+   "personer": [
+    "juan-ramon-jimenez",
+    "vicente-aleixandre"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-26",
+   "fråga": "Vilken pristagare bidrog starkt till Albert Camus genombrott genom att utpeka Främlingen som en representant för existentialismen?",
+   "svar": "Jean-Paul Sartre",
+   "fel": [
+    "André Gide",
+    "François Mauriac",
+    "Roger Martin du Gard"
+   ],
+   "förklaring": "Sartre och Camus var en tid existentialismens främsta banerförare – innan de blev oense.",
+   "citat": "Jean-Paul Sartre bidrog starkt till Camus genombrott genom att utpeka romanen Främlingen som en representant för existentialismen.",
+   "källa": "Albert Camus",
+   "person": "jean-paul-sartre",
+   "personer": [
+    "jean-paul-sartre",
+    "albert-camus"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-27",
+   "fråga": "Vilken pristagare jämförde Michail Sjolochov med Coloradoskalbaggar som borde utrotas?",
+   "svar": "Aleksandr Solzjenitsyn",
+   "fel": [
+    "Boris Pasternak",
+    "Joseph Brodsky",
+    "Ivan Bunin"
+   ],
+   "förklaring": "Sjolochov, regimtrogen sovjetförfattare, gick till angrepp mot dissidenter och liknade bland annat Solzjenitsyn vid skadeinsekter.",
+   "citat": "Senare liknade han vissa enskilda författare, med adress Solsjenitsyn, vid Coloradoskalbaggar, vilka borde utrotas.",
+   "källa": "Michail Sjolochov",
+   "person": "aleksandr-solzjenitsyn",
+   "personer": [
+    "aleksandr-solzjenitsyn",
+    "michail-sjolochov"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-28",
+   "fråga": "Hemma hos vilken tysk pristagare var de sovjetiska dissidenterna Aleksandr Solzjenitsyn och Lev Kopelev gäster?",
+   "svar": "Heinrich Böll",
+   "fel": [
+    "Günter Grass",
+    "Thomas Mann",
+    "Hermann Hesse"
+   ],
+   "förklaring": "Böll kritiserade Sovjetunionen hårt och tog emot dissidenterna Solzjenitsyn och Kopelev i sitt hem.",
+   "citat": "De sovjetiska dissidenterna Aleksandr Solzjenitsyn och Lev Kopelev var gäster hemma hos Böll.",
+   "källa": "Heinrich Böll",
+   "person": "heinrich-boll",
+   "personer": [
+    "heinrich-boll",
+    "aleksandr-solzjenitsyn"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-29",
+   "fråga": "Under inflytande av vilken pristagare skrev Nelly Sachs en rad dramatiska scener?",
+   "svar": "Samuel Beckett",
+   "fel": [
+    "Harold Pinter",
+    "Eugene O'Neill",
+    "Luigi Pirandello"
+   ],
+   "förklaring": "Under 1950-talet skrev Sachs dramatiska scener påverkade av Beckett och lärde samtidigt känna Paul Celan.",
+   "citat": "Hon skrev också en lång rad dramatiska scener, bland annat under inflytande av Samuel Beckett",
+   "källa": "Nelly Sachs",
+   "person": "samuel-beckett",
+   "personer": [
+    "samuel-beckett",
+    "nelly-sachs"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-30",
+   "fråga": "Vilken pristagare var Nobelkommitténs förslag 1966, men Svenska Akademien gav i stället priset till Nelly Sachs och Shmuel Josef Agnon?",
+   "svar": "Yasunari Kawabata",
+   "fel": [
+    "Kenzaburo Oe",
+    "Pablo Neruda",
+    "Samuel Beckett"
+   ],
+   "förklaring": "Akademien körde ovanligt nog över kommittén 1966. Kawabata fick priset två år senare, 1968.",
+   "citat": "Inför valet av Sachs och Agnon tog Svenska Akademien det ovanliga beslutet att negligera Nobelkommitténs förslag Yasunari Kawabata.",
+   "källa": "Nelly Sachs",
+   "person": "yasunari-kawabata",
+   "personer": [
+    "yasunari-kawabata",
+    "nelly-sachs",
+    "shmuel-josef-agnon"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-31",
+   "fråga": "Tillsammans med vilken pristagare skrev Miguel Ángel Asturias boken Comiendo en Hungría (1969)?",
+   "svar": "Pablo Neruda",
+   "fel": [
+    "Gabriela Mistral",
+    "Octavio Paz",
+    "Gabriel García Márquez"
+   ],
+   "förklaring": "Två latinamerikanska Nobelpristagare skrev tillsammans om att äta i Ungern.",
+   "citat": "1969 - Comiendo en Hungaría (med Pablo Neruda)",
+   "källa": "Miguel Ángel Asturias",
+   "person": "pablo-neruda",
+   "personer": [
+    "pablo-neruda",
+    "miguel-angel-asturias"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-32",
+   "fråga": "Vilken colombiansk pristagare kallade Pablo Neruda ”den störste av 1900-talets poeter på alla språk”?",
+   "svar": "Gabriel García Márquez",
+   "fel": [
+    "Mario Vargas Llosa",
+    "Octavio Paz",
+    "Miguel Ángel Asturias"
+   ],
+   "förklaring": "Nerudas Nobelpris 1971 var kontroversiellt för hans politik, men kollegerna hyllade poesin.",
+   "citat": "Den colombianske romanförfattaren Gabriel García Márquez kallade honom en gång för \"den störste av 1900-talets poeter på alla språk\".",
+   "källa": "Pablo Neruda",
+   "person": "gabriel-garcia-marquez",
+   "personer": [
+    "gabriel-garcia-marquez",
+    "pablo-neruda"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-33",
+   "fråga": "Vilken pristagare slog Mario Vargas Llosa i ansiktet i Mexico City 1976, vilket blev slutet på deras vänskap?",
+   "svar": "Gabriel García Márquez",
+   "fel": [
+    "Octavio Paz",
+    "Pablo Neruda",
+    "Miguel Ángel Asturias"
+   ],
+   "förklaring": "Vargas Llosa hade tidigare skrivit en stor studie om sin vän, García Márquez: historia de un deicidio, men de blev ovänner.",
+   "citat": "År 1976 slog han Márquez i ansiktet i Mexico City vid Palacio de Bellas Artes; detta blev slutet på deras vänskap.",
+   "källa": "Mario Vargas Llosa",
+   "person": "gabriel-garcia-marquez",
+   "personer": [
+    "gabriel-garcia-marquez",
+    "mario-vargas-llosa"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-34",
+   "fråga": "Om vilken pristagare skrev Mario Vargas Llosa den omfattande studien Historia de un deicidio (”Berättelsen om ett gudamord”)?",
+   "svar": "Gabriel García Márquez",
+   "fel": [
+    "Pablo Neruda",
+    "Octavio Paz",
+    "Miguel Ángel Asturias"
+   ],
+   "förklaring": "Studien handlar om hans dåvarande vän García Márquez, som han senare blev ovän med.",
+   "citat": "García Márquez: historia de un deicidio ('García Márquez: berättelsen om ett gudamord') är en omfattande studie av hans vän",
+   "källa": "Mario Vargas Llosa",
+   "person": "gabriel-garcia-marquez",
+   "personer": [
+    "gabriel-garcia-marquez",
+    "mario-vargas-llosa"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-35",
+   "fråga": "Vilken pristagare kallade Mario Vargas Llosa ”författaren som fulländade den moderna romanens teknik”?",
+   "svar": "William Faulkner",
+   "fel": [
+    "Ernest Hemingway",
+    "John Steinbeck",
+    "Saul Bellow"
+   ],
+   "förklaring": "Faulkner var en av Vargas Llosas favoritförfattare och den som troligen påverkat honom mest; favoritromanen var Ljus i augusti.",
+   "citat": "Vargas Llosa anser att Faulker är \"författaren som fulländade den moderna romanens teknik\".",
+   "källa": "Mario Vargas Llosa",
+   "person": "william-faulkner",
+   "personer": [
+    "william-faulkner",
+    "mario-vargas-llosa"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-36",
+   "fråga": "Vilken pristagare bjöd 1990 in Mario Vargas Llosa till en konferens om kommunismens sammanbrott – en månad innan han själv fick Nobelpriset?",
+   "svar": "Octavio Paz",
+   "fel": [
+    "Gabriel García Márquez",
+    "Camilo José Cela",
+    "Czesław Miłosz"
+   ],
+   "förklaring": "Det var på Paz konferens i Mexiko som Vargas Llosa fördömde det mexikanska maktsystemet.",
+   "citat": "bjöds Vargas Llosa in till en konferens för intellektuella i Mexiko av det landets mest framstående författare, Octavio Paz.",
+   "källa": "Mario Vargas Llosa",
+   "person": "octavio-paz",
+   "personer": [
+    "octavio-paz",
+    "mario-vargas-llosa"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-37",
+   "fråga": "Vilken fransk pristagares romanform är främst påverkad av William Faulkner?",
+   "svar": "Claude Simon",
+   "fel": [
+    "Albert Camus",
+    "Jean-Marie Gustave Le Clézio",
+    "Patrick Modiano"
+   ],
+   "förklaring": "Claude Simons självbiografiskt präglade romaner, ofta utgående från krigsminnen, bär tydliga spår av Faulkner.",
+   "citat": "Hans författarskap har djupa självbiografiska rötter och hans romanform är främst påverkad av William Faulkner.",
+   "källa": "Claude Simon",
+   "person": "claude-simon",
+   "personer": [
+    "claude-simon",
+    "william-faulkner"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-38",
+   "fråga": "Vilken svensk pristagare var en förebild för den japanske pristagaren Kenzaburo Oe?",
+   "svar": "Selma Lagerlöf",
+   "fel": [
+    "Harry Martinson",
+    "Pär Lagerkvist",
+    "Tomas Tranströmer"
+   ],
+   "förklaring": "Oe påverkades av Sartre och existentialismen, men hade också förebilder i Selma Lagerlöf och Henry Miller.",
+   "citat": "En förebild var Selma Lagerlöf, en annan Henry Miller.",
+   "källa": "Kenzaburo Oe",
+   "person": "selma-lagerlof",
+   "personer": [
+    "selma-lagerlof",
+    "kenzaburo-oe"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-39",
+   "fråga": "J.M. Coetzees doktorsavhandling byggde på datorbaserad stilanalys av vilken pristagares verk?",
+   "svar": "Samuel Beckett",
+   "fel": [
+    "Harold Pinter",
+    "T.S. Eliot",
+    "William Golding"
+   ],
+   "förklaring": "Coetzee disputerade i lingvistik i Austin, Texas, och Beckett räknas också bland hans influenser.",
+   "citat": "där hans avhandling byggde på datorbaserad stilanalys av Samuel Becketts arbeten.",
+   "källa": "J.M. Coetzee",
+   "person": "samuel-beckett",
+   "personer": [
+    "samuel-beckett",
+    "j-m-coetzee"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-40",
+   "fråga": "Vem hade Elfriede Jelinek hellre sett fått Nobelpriset när hon själv belönades 2004?",
+   "svar": "Peter Handke",
+   "fel": [
+    "Günter Grass",
+    "Herta Müller",
+    "Elias Canetti"
+   ],
+   "förklaring": "Jelinek var kritisk till sitt eget pris och tyckte att österrikaren Handke borde ha fått det. Han fick det 2019.",
+   "citat": "Hon hade istället föredragit att österrikaren Peter Handke skulle få priset.",
+   "källa": "Elfriede Jelinek",
+   "person": "peter-handke",
+   "personer": [
+    "peter-handke",
+    "elfriede-jelinek"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-41",
+   "fråga": "Vilken senare pristagare undertecknade, liksom Peter Handke, ett konstnärsupprop 2004 till försvar för Slobodan Milošević?",
+   "svar": "Harold Pinter",
+   "fel": [
+    "Dario Fo",
+    "Günter Grass",
+    "José Saramago"
+   ],
+   "förklaring": "Handke stod nära Milošević och höll tal vid hans begravning 2006; Pinter fanns bland undertecknarna av uppropet.",
+   "citat": "I mars 2004 undertecknade Handke ett konstnärsupprop ... till försvar för Slobodan Milošević. Till undertecknarna hörde även den senare nobelprisbelönade Harold Pinter.",
+   "källa": "Peter Handke",
+   "person": "harold-pinter",
+   "personer": [
+    "harold-pinter",
+    "peter-handke"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-42",
+   "fråga": "När Sigrid Undset fick Nobelpriset 1928 röstade några ledamöter i stället på Maksim Gorkij och vilken blivande pristagare?",
+   "svar": "Thomas Mann",
+   "fel": [
+    "Hermann Hesse",
+    "Sinclair Lewis",
+    "John Galsworthy"
+   ],
+   "förklaring": "Tilldelningen till Undset skedde inte utan strid i Akademien. Thomas Mann fick priset året därpå, 1929.",
+   "citat": "Tilldelningen skedde inte utan strid inom Akademien, där några av ledamöterna röstade på ryske Maksim Gorkij och tyske Thomas Mann.",
+   "källa": "Sigrid Undset",
+   "person": "thomas-mann",
+   "personer": [
+    "thomas-mann",
+    "sigrid-undset"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-43",
+   "fråga": "Vilken dansk pristagare räknas bland Thomas Manns influenser?",
+   "svar": "Henrik Pontoppidan",
+   "fel": [
+    "Karl Gjellerup",
+    "Johannes V. Jensen",
+    "Bjørnstjerne Bjørnson"
+   ],
+   "förklaring": "I Thomas Manns infobox listas bland influenserna Nietzsche, Schopenhauer, Wagner – och dansken Henrik Pontoppidan.",
+   "citat": "Grimmelshausen, Heinrich Mann, Melville, Henrik Pontoppidan",
+   "källa": "Thomas Mann",
+   "person": "henrik-pontoppidan",
+   "personer": [
+    "henrik-pontoppidan",
+    "thomas-mann"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-44",
+   "fråga": "Vilken tysk pristagare hör, liksom Tjechov, Gogol och Poe, till Olga Tokarczuks favoritförfattare?",
+   "svar": "Thomas Mann",
+   "fel": [
+    "Hermann Hesse",
+    "Günter Grass",
+    "Heinrich Böll"
+   ],
+   "förklaring": "Tokarczuk har också nämnt C.G. Jungs teorier som en viktig inspirationskälla.",
+   "citat": "Andra favoritförfattare är Anton Tjechov, Thomas Mann, Nikolaj Gogol och Edgar Allan Poe.",
+   "källa": "Olga Tokarczuk",
+   "person": "thomas-mann",
+   "personer": [
+    "thomas-mann",
+    "olga-tokarczuk"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-45",
+   "fråga": "Vilken brittisk pristagare hörde, liksom Viktor Rydberg, Joseph Conrad och Lev Tolstoj, till Harry Martinsons litterära förebilder?",
+   "svar": "Rudyard Kipling",
+   "fel": [
+    "John Galsworthy",
+    "George Bernard Shaw",
+    "Winston Churchill"
+   ],
+   "förklaring": "Martinsons barndom som utackorderat sockenbarn liknade Rydbergs; bland förebilderna fanns också Kipling.",
+   "citat": "en författare som för övrigt liksom Rudyard Kipling, Joseph Conrad och Lev Tolstoj tillhörde Martinsons litterära förebilder.",
+   "källa": "Harry Martinson",
+   "person": "rudyard-kipling",
+   "personer": [
+    "rudyard-kipling",
+    "harry-martinson"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-46",
+   "fråga": "Kerstin Ekman valdes 1978 in i Svenska Akademien på stol nummer 15 som efterträdare till vilken pristagare?",
+   "svar": "Harry Martinson",
+   "fel": [
+    "Eyvind Johnson",
+    "Pär Lagerkvist",
+    "Erik Axel Karlfeldt"
+   ],
+   "förklaring": "Ekman blev den tredje kvinnan i Akademien, efter Selma Lagerlöf och Elin Wägner, och efterträdde Harry Martinson.",
+   "citat": "Ekman blev 1978 ledamot av Svenska Akademien på stol nummer 15 (efter Harry Martinson)",
+   "källa": "Kerstin Ekman",
+   "person": "harry-martinson",
+   "personer": [
+    "harry-martinson"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-47",
+   "fråga": "Vilken pristagare anges som influens för både Seamus Heaney och Wisława Szymborska?",
+   "svar": "Czesław Miłosz",
+   "fel": [
+    "Joseph Brodsky",
+    "Jaroslav Seifert",
+    "Derek Walcott"
+   ],
+   "förklaring": "Miłosz finns i båda poeternas infoboxar över influenser.",
+   "citat": "influenser = Czesław Miłosz",
+   "källa": "Wisława Szymborska",
+   "person": "czeslaw-milosz",
+   "personer": [
+    "czeslaw-milosz",
+    "wislawa-szymborska",
+    "seamus-heaney"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-48",
+   "fråga": "Samuel Beckett översatte Anthology of Mexican Poems (1958). Vilken pristagare var bokens redaktör?",
+   "svar": "Octavio Paz",
+   "fel": [
+    "Pablo Neruda",
+    "Gabriela Mistral",
+    "Juan Ramón Jiménez"
+   ],
+   "förklaring": "Bland Becketts översättningar finns antologin med mexikansk poesi som Octavio Paz sammanställt.",
+   "citat": "Anthology of Mexican Poems (Octavio Paz, redaktör) (1958)",
+   "källa": "Samuel Beckett",
+   "person": "octavio-paz",
+   "personer": [
+    "octavio-paz",
+    "samuel-beckett"
+   ],
+   "typ": "koppling"
+  },
+  {
+   "id": "nobel-kopplingar-49",
+   "fråga": "Vilken pristagares Krilontrilogi inspirerade Kerstin Ekmans roman Gör mig levande igen?",
+   "svar": "Eyvind Johnson",
+   "fel": [
+    "Harry Martinson",
+    "Pär Lagerkvist",
+    "Verner von Heidenstam"
+   ],
+   "förklaring": "Eyvind Johnsons inflytande märks i senare svensk litteratur, bland annat hos Kerstin Ekman och P.O. Enquist.",
+   "citat": "Kerstin Ekmans roman Gör mig levande igen är inspirerad av Krilontrilogin.",
+   "källa": "Eyvind Johnson",
+   "person": "eyvind-johnson",
+   "personer": [
+    "eyvind-johnson"
+   ],
+   "typ": "koppling"
   }
  ]
 }
