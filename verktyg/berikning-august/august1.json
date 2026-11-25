@@ -1,0 +1,1386 @@
+[
+ {
+  "id": "aug-1990-lars-ahlin",
+  "handling": "En roman som utspelar sig i Sundsvall och är en fortsättning på en roman från 1954 om den brådmogne pojken Zacharias.",
+  "handling_källa": "De sotarna! De sotarna!",
+  "handling_citat": "Boken utspelar sig i barndomsstaden Sundsvall och är en fortsättning på Stora glömskan från 1954.",
+  "andra_böcker": [
+   "Tåbb med manifestet",
+   "Kanelbiten",
+   "Stora glömskan",
+   "Natt i marknadstältet",
+   "Fromma mord",
+   "Bark och löv"
+  ],
+  "frågor": [
+   {
+    "fråga": "I vilken stad utspelar sig Lars Ahlins roman De sotarna! De sotarna!?",
+    "svar": "Sundsvall",
+    "fel": [
+     "Härnösand",
+     "Umeå",
+     "Östersund"
+    ],
+    "förklaring": "Sundsvall var Ahlins barndomsstad; han föddes där och återvände dit som sjuåring.",
+    "citat": "Boken utspelar sig i barndomsstaden Sundsvall",
+    "källa": "De sotarna! De sotarna!"
+   },
+   {
+    "fråga": "Vilken tidigare roman av Lars Ahlin är De sotarna! De sotarna! en fortsättning på?",
+    "svar": "Stora glömskan",
+    "fel": [
+     "Kanelbiten",
+     "Natt i marknadstältet",
+     "Fromma mord"
+    ],
+    "förklaring": "Stora glömskan från 1954 är ett porträtt av den brådmogne pojken Zacharias.",
+    "citat": "är en fortsättning på Stora glömskan från 1954",
+    "källa": "De sotarna! De sotarna!"
+   },
+   {
+    "fråga": "Vilken roman av Lars Ahlin anses vara hans mästerverk?",
+    "svar": "Natt i marknadstältet",
+    "fel": [
+     "Tåbb med manifestet",
+     "Bark och löv",
+     "Kvinna, kvinna"
+    ],
+    "förklaring": "I romanen från 1957 kontrasteras en svår äktenskapskris mot en varm livsinsikt.",
+    "citat": "Ahlins mästerverk anses emellertid vara Natt i marknadstältet (1957)",
+    "källa": "Lars Ahlin"
+   },
+   {
+    "fråga": "Med vilken idéroman debuterade Lars Ahlin 1943?",
+    "svar": "Tåbb med manifestet",
+    "fel": [
+     "Min död är min",
+     "Om",
+     "Fromma mord"
+    ],
+    "förklaring": "Hans egensinniga romaner gjorde honom till en av efterkrigstidens mest uppburna svenska prosaister.",
+    "citat": "Ahlin debuterade 1943 med idéromanen Tåbb med manifestet",
+    "källa": "Lars Ahlin"
+   }
+  ]
+ },
+ {
+  "id": "aug-1991-sven-delblanc",
+  "handling": "Självbiografisk skildring av författarens uppväxtår i Kanada och Södermanland, beskriven av juryn som en skräckfylld uppväxt.",
+  "handling_källa": "Livets ax",
+  "handling_citat": "I boken berättar Delblanc om sina uppväxtår i Kanada och Södermanland.",
+  "andra_böcker": [
+   "Åminne",
+   "Stenfågel",
+   "Vinteride",
+   "Stadsporten",
+   "Samuels bok",
+   "Prästkappan"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vad syftar titeln på Sven Delblancs självbiografiska bok Livets ax på?",
+    "svar": "Ett veteax han försökte svälja som barn",
+    "fel": [
+     "En skörd på gården Mölna Övre",
+     "En dikt av hans morfar",
+     "Ett bibelord hans mor ofta citerade"
+    ],
+    "förklaring": "Minnet är från sensommaren 1934 i Kanada, då den treårige Delblanc upplevde axet som både sött och bittert – en metafor för livet.",
+    "citat": "Den då treårige Sven Delblanc stoppade ett veteax i munnen och försökte svälja det.",
+    "källa": "Livets ax"
+   },
+   {
+    "fråga": "Varför avstod Sven Delblanc först från att ge ut Livets ax, som han skrev en första version av 1988?",
+    "svar": "Han tyckte den var för pinsam",
+    "fel": [
+     "Förlaget refuserade manuset",
+     "Hans mor motsatte sig utgivningen",
+     "Han hade tappat bort manuset"
+    ],
+    "förklaring": "Han ändrade sig senare och menade att en omedveten övertygelse fått honom att spara manuskriptet.",
+    "citat": "han ansåg att den var ”alltför pinsam att publicera”",
+    "källa": "Livets ax"
+   },
+   {
+    "fråga": "Vid vilken flod i Kanada skördade familjen Delblanc vete sommaren 1934, enligt Livets ax?",
+    "svar": "Minitonas",
+    "fel": [
+     "Red River",
+     "Saskatchewan",
+     "Assiniboine"
+    ],
+    "förklaring": "Det var där den treårige Sven försökte svälja ett veteax, minnet som gett boken dess titel.",
+    "citat": "skörda ett vetefält vid floden Minitonas i Kanada",
+    "källa": "Livets ax"
+   },
+   {
+    "fråga": "Vilken TV-serie skrev Sven Delblanc manus till, byggd på hans romansvit om det fiktiva samhället Hedeby?",
+    "svar": "Hedebyborna",
+    "fel": [
+     "Kära farmor",
+     "Maskeraden",
+     "Lekar i kvinnohagen"
+    ],
+    "förklaring": "Serien bygger på de tre första böckerna i Hedebysviten: Åminne, Stenfågel och Vinteride.",
+    "citat": "TV-serien Hedebyborna, som Delblanc själv skrev manus till, bygger på de tre första böckerna i romansviten.",
+    "källa": "Sven Delblanc"
+   },
+   {
+    "fråga": "I vilket land föddes Sven Delblanc?",
+    "svar": "Kanada",
+    "fel": [
+     "Norge",
+     "Tyskland",
+     "USA"
+    ],
+    "förklaring": "Han föddes i Swan River i Manitoba men växte huvudsakligen upp i Södermanland.",
+    "citat": "Delblanc föddes i Kanada men växte huvudsakligen upp i Sverige",
+    "källa": "Sven Delblanc"
+   }
+  ]
+ },
+ {
+  "id": "aug-1992-niklas-radstrom",
+  "handling": "En självbiografisk roman, mittdelen i en trilogi som inleddes 1989 och avslutades 1996.",
+  "handling_källa": "Niklas Rådström",
+  "handling_citat": "Månen vet inte, den första boken i en självbiografisk trilogi där även Medan tiden tänker på annat, 1992 (belönad med Augustpriset) och Spårvagn på Vintergatan, 1996, ingår.",
+  "andra_böcker": [
+   "Månen vet inte",
+   "Spårvagn på Vintergatan",
+   "Vänd ditt timglas",
+   "Ängel bland skuggor",
+   "Vad du vill",
+   "En handfull regn"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vilken roman inleder den självbiografiska trilogi av Niklas Rådström där Medan tiden tänker på annat ingår?",
+    "svar": "Månen vet inte",
+    "fel": [
+     "Vänd ditt timglas",
+     "Ängel bland skuggor",
+     "Vad du vill"
+    ],
+    "förklaring": "Månen vet inte från 1989 var Rådströms första roman och fick BMF-plaketten.",
+    "citat": "1989 kom hans första roman Månen vet inte, den första boken i en självbiografisk trilogi",
+    "källa": "Niklas Rådström"
+   },
+   {
+    "fråga": "Vilken roman avslutar Niklas Rådströms självbiografiska trilogi, där Medan tiden tänker på annat är mittdelen?",
+    "svar": "Spårvagn på Vintergatan",
+    "fel": [
+     "Drivved från Arkadien",
+     "En handfull regn",
+     "Månens anförvant"
+    ],
+    "förklaring": "Trilogin består av Månen vet inte (1989), Medan tiden tänker på annat (1992) och Spårvagn på Vintergatan (1996).",
+    "citat": "och Spårvagn på Vintergatan, 1996, ingår",
+    "källa": "Niklas Rådström"
+   },
+   {
+    "fråga": "Vem är Niklas Rådströms far?",
+    "svar": "Pär Rådström",
+    "fel": [
+     "Stig Claesson",
+     "Thomas Jennefelt",
+     "Daniel Börtz"
+    ],
+    "förklaring": "Hans mor var teaterchefen Anne Marie Rådström.",
+    "citat": "Niklas Rådström är son till författaren Pär Rådström och teaterchefen Anne Marie Rådström.",
+    "källa": "Niklas Rådström"
+   },
+   {
+    "fråga": "Vilken var Niklas Rådströms första helaftonspjäs, med premiär på Unga Klara i regi av Suzanne Osten?",
+    "svar": "Hitlers barndom",
+    "fel": [
+     "Kvartett",
+     "De onda",
+     "Gå genom ett berg"
+    ],
+    "förklaring": "Pjäsen har spelats i en rad uppsättningar runt om i världen.",
+    "citat": "kom hans första helaftonspjäs, Hitlers barndom, som hade premiär på Unga Klara i regi av Suzanne Osten",
+    "källa": "Niklas Rådström"
+   }
+  ]
+ },
+ {
+  "id": "aug-1993-kerstin-ekman",
+  "handling": "En deckare om ett ouppklarat dubbelmord i en fiktiv jämtländsk by, dit en kvinna från Stockholm flyttat med sin dotter för att arbeta som lärare.",
+  "handling_källa": "Händelser vid vatten",
+  "handling_citat": "Ekman beskriver med sitt poetiska språk hur ett dubbelmord förblir ouppklarat, och hur detta påverkar de bosatta i och runt Svartvattnet.",
+  "andra_böcker": [
+   "Häxringarna",
+   "Änglahuset",
+   "Hunden",
+   "Rövarna i Skuleskogen",
+   "Gör mig levande igen",
+   "Guds barmhärtighet"
+  ],
+  "frågor": [
+   {
+    "fråga": "I vilket landskap ligger den fiktiva byn där Kerstin Ekmans Händelser vid vatten utspelar sig?",
+    "svar": "Jämtland",
+    "fel": [
+     "Härjedalen",
+     "Lappland",
+     "Ångermanland"
+    ],
+    "förklaring": "Byn heter Svartvattnet och dit flyttar en kvinna från Stockholm med sin dotter.",
+    "citat": "Boken utspelar sig i en fiktiv jämtländsk by kallad Svartvattnet",
+    "källa": "Händelser vid vatten"
+   },
+   {
+    "fråga": "Vilket brott förblir ouppklarat i Kerstin Ekmans Händelser vid vatten?",
+    "svar": "Ett dubbelmord",
+    "fel": [
+     "Ett bankrån",
+     "En mordbrand",
+     "En kidnappning"
+    ],
+    "förklaring": "Romanen är en deckare som parallellt utvecklas till en samhällsskildrande utvecklingsroman.",
+    "citat": "hur ett dubbelmord förblir ouppklarat",
+    "källa": "Händelser vid vatten"
+   },
+   {
+    "fråga": "Vem läste Händelser vid vatten som radioföljetong i Sveriges Radio P1?",
+    "svar": "Rolf Lassgård",
+    "fel": [
+     "Krister Henriksson",
+     "Stellan Skarsgård",
+     "Lena Endre"
+    ],
+    "förklaring": "Hela romanen finns på Sveriges Radio i hans uppläsning från 2012.",
+    "citat": "Den har också sänts som radioföljetong i Sveriges Radio P1, i uppläsning av Rolf Lassgård.",
+    "källa": "Händelser vid vatten"
+   },
+   {
+    "fråga": "Vem regisserade SVT:s dramaserie Händelser vid vatten från 2023?",
+    "svar": "Mikael Marcimain",
+    "fel": [
+     "Jan Troell",
+     "Daniel Alfredson",
+     "Lasse Hallström"
+    ],
+    "förklaring": "Serien bygger på Kerstin Ekmans roman från 1993 och har samma namn.",
+    "citat": "Boken dramatiserades 2023 av SVT i en dramaserie med samma namn, regisserad av Mikael Marcimain.",
+    "källa": "Händelser vid vatten"
+   },
+   {
+    "fråga": "Vilket nordiskt litteraturpris fick Kerstin Ekman 1994 för Händelser vid vatten?",
+    "svar": "Nordiska rådets litteraturpris",
+    "fel": [
+     "Svenska Akademiens nordiska pris",
+     "Doblougska priset",
+     "Övralidspriset"
+    ],
+    "förklaring": "Boken fick också Svenska Deckarakademins pris för bästa svenska kriminalroman.",
+    "citat": "1994 – Nordiska rådets litteraturpris för romanen Händelser vid vatten",
+    "källa": "Kerstin Ekman"
+   }
+  ]
+ },
+ {
+  "id": "aug-1994-bjorn-ranelid",
+  "handling": "En roman med bildrikt språk om udda och utsatta människor som försvarar den enskilda människans integritet och värdighet.",
+  "handling_källa": "Björn Ranelid",
+  "handling_citat": "de udda och utsatta människorna till individualister som försvarar den enskilda människans integritet och värdighet.",
+  "andra_böcker": [
+   "Påfågelns längtan",
+   "Mördarens öga",
+   "Mästaren",
+   "Kärlekens innersta rum",
+   "Tusen kvinnor och en sorg",
+   "Kniven i hjärtat"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vad liknades Björn Ranelid vid i Augustprisjuryns motivering för Synden?",
+    "svar": "En skicklig illusionist",
+    "fel": [
+     "En modern profet",
+     "En språkets arkitekt",
+     "En lyrisk dokumentarist"
+    ],
+    "förklaring": "Juryn lyfte fram hans överväldigande bildrika språk.",
+    "citat": "Som en skicklig illusionist förvandlar han, med ett överväldigande bildrikt språk",
+    "källa": "Björn Ranelid"
+   },
+   {
+    "fråga": "Vilket förlag gav ut Björn Ranelids roman Synden?",
+    "svar": "Bonniers",
+    "fel": [
+     "Norstedts",
+     "Natur & Kultur",
+     "Wahlström & Widstrand"
+    ],
+    "förklaring": "Synden kom ut 1994, samma år som Ranelid fick Augustpriset för den.",
+    "citat": "Utgiven på Bonniers förlag.",
+    "källa": "Synden"
+   },
+   {
+    "fråga": "Vad kallas Björn Ranelids säregna språkliga stil?",
+    "svar": "Ranelidska",
+    "fel": [
+     "Ranelidismen",
+     "Österlenprosa",
+     "Malmöbarock"
+    ],
+    "förklaring": "Han beskriver själv sitt språk som ett prosaspråk med vissa rötter i poesin.",
+    "citat": "han i sitt skrivande har en unik och helt egen språklig stil, kallad ranelidska",
+    "källa": "Björn Ranelid"
+   },
+   {
+    "fråga": "Vilken fotbollsklubb värvade den unge Björn Ranelid?",
+    "svar": "Malmö FF",
+    "fel": [
+     "Helsingborgs IF",
+     "IFK Göteborg",
+     "Trelleborgs FF"
+    ],
+    "förklaring": "Han spelade dock bara en cupmatch för A-laget.",
+    "citat": "Tidigt fick Malmö FF (MFF) upp ögonen för honom och värvade honom.",
+    "källa": "Björn Ranelid"
+   },
+   {
+    "fråga": "Med vilken låt deltog Björn Ranelid och Sara Li i Melodifestivalen 2012?",
+    "svar": "Mirakel",
+    "fel": [
+     "Kärlek",
+     "Synden",
+     "Ord"
+    ],
+    "förklaring": "Låten gick till final i Globen men slutade på tionde och sista plats.",
+    "citat": "Han deltog tillsammans med Sara Li i Melodifestivalen 2012 med låten Mirakel",
+    "källa": "Björn Ranelid"
+   }
+  ]
+ },
+ {
+  "id": "aug-1995-torgny-lindgren",
+  "handling": "En roman om två dödssjuka, sedan decennier osams bröder i norra Västerbotten och en kvinnlig författare som blir inneboende hos den ene.",
+  "handling_källa": "Hummelhonung",
+  "handling_citat": "Den handlar om två trätande ålderstigna bröder i norra Västerbotten, och en katolsk kvinnlig författare som lär känna dem.",
+  "andra_böcker": [
+   "Ormens väg på hälleberget",
+   "Merabs skönhet",
+   "Batseba",
+   "Ljuset",
+   "Pölsan",
+   "Dorés bibel"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vad heter de två bröderna i Torgny Lindgrens Hummelhonung?",
+    "svar": "Hadar och Olof",
+    "fel": [
+     "Aron och Olof",
+     "Hadar och Theodor",
+     "Elias och Markus"
+    ],
+    "förklaring": "Bröderna bor ett stenkast från varandra men har inte haft kontakt på många år.",
+    "citat": "Mannen, Hadar, har en bror som heter Olof",
+    "källa": "Hummelhonung"
+   },
+   {
+    "fråga": "Hur håller Hadar koll på om hans bror fortfarande lever i Torgny Lindgrens Hummelhonung?",
+    "svar": "Han ser om det ryker ur broderns skorsten",
+    "fel": [
+     "Han lyssnar efter broderns hosta",
+     "Han frågar grannarna",
+     "Han ser om broderns lampa är tänd"
+    ],
+    "förklaring": "Det enda bröderna lever för är att överleva den andre.",
+    "citat": "titta efter med jämna mellanrum om det ryker ur hans skorsten",
+    "källa": "Hummelhonung"
+   },
+   {
+    "fråga": "Från vilket land kommer filmen Braty – ostannja spovid (2013), som bygger på Hummelhonung?",
+    "svar": "Ukraina",
+    "fel": [
+     "Polen",
+     "Ryssland",
+     "Rumänien"
+    ],
+    "förklaring": "I filmen är handlingen förflyttad till ett isolerat och snötäckt område i Karpaterna.",
+    "citat": "Boken är förlaga till den ukrainska filmen Braty – ostannja spovid från 2013.",
+    "källa": "Hummelhonung"
+   },
+   {
+    "fråga": "Vilken tonsättare skrev operan Hummelhonung från 2001, baserad på Torgny Lindgrens roman?",
+    "svar": "Carl Unander-Scharin",
+    "fel": [
+     "Sven-David Sandström",
+     "Daniel Börtz",
+     "Thomas Jennefelt"
+    ],
+    "förklaring": "Unander-Scharin tonsatte också dikter ur Lindgrens debutbok Plåtsax, hjärtats instrument.",
+    "citat": "Carl Unander-Scharins opera Hummelhonung från 2001 är baserad på Lindgrens roman med samma namn.",
+    "källa": "Torgny Lindgren"
+   },
+   {
+    "fråga": "Vilka två romaner bildar tillsammans med Hummelhonung en triptyk av Torgny Lindgren?",
+    "svar": "Pölsan och Dorés bibel",
+    "fel": [
+     "Batseba och Ljuset",
+     "Merabs skönhet och Legender",
+     "Klingsor och Minnen"
+    ],
+    "förklaring": "Triptyken gavs 2008 ut i en gemensam volym med titeln Nåden har ingen lag.",
+    "citat": "Hummelhonung (1995), Pölsan (2002) och Dorés bibel (2005) bildar tillsammans en triptyk av romaner.",
+    "källa": "Torgny Lindgren"
+   }
+  ]
+ },
+ {
+  "id": "aug-1996-tomas-transtromer",
+  "handling": "Diktsamling om poetens upplevda oförmåga att skriva efter en hjärnblödning hösten 1990, där han för första gången använder haikuformen.",
+  "handling_källa": "Sorgegondolen",
+  "handling_citat": "Diktsamlingens övergripande tema är Tomas Tranströmers upplevda oförmåga att skriva poesi efter att ha drabbats av en hjärnblödning hösten 1990.",
+  "andra_böcker": [
+   "17 dikter",
+   "Den halvfärdiga himlen",
+   "Östersjöar",
+   "Det vilda torget",
+   "För levande och döda",
+   "Den stora gåtan"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vilken kompositörs musikstycke har gett Tomas Tranströmers diktsamling Sorgegondolen dess titel?",
+    "svar": "Franz Liszt",
+    "fel": [
+     "Richard Wagner",
+     "Frédéric Chopin",
+     "Ludwig van Beethoven"
+    ],
+    "förklaring": "I dikten ”Sorgegondol nr 2” figurerar både Liszt och hans svärson Richard Wagner.",
+    "citat": "Titeln kommer från det klassiska musikstycket \"Sorgegondol\" komponerat av Franz Liszt.",
+    "källa": "Sorgegondolen"
+   },
+   {
+    "fråga": "Vilken japansk versform använder Tomas Tranströmer för första gången i Sorgegondolen?",
+    "svar": "Haiku",
+    "fel": [
+     "Tanka",
+     "Renga",
+     "Senryu"
+    ],
+    "förklaring": "Haikun blev den övervägande formen i hans senare samling Den stora gåtan.",
+    "citat": "Sorgegondolen är första diktsamlingen där Tomas Tranströmer använder sig av den japanska versformen haiku",
+    "källa": "Sorgegondolen"
+   },
+   {
+    "fråga": "Vilken konstnärs målning tolkas i slutdikten ”En skiss från 1844” i Tranströmers Sorgegondolen?",
+    "svar": "William Turner",
+    "fel": [
+     "John Constable",
+     "Caspar David Friedrich",
+     "J.C. Dahl"
+    ],
+    "förklaring": "Målningen är Regn, ånga och fart från 1844.",
+    "citat": "Slutdikten ”En skiss från 1844” (18) är en tolkning av William Turners oljemålning",
+    "källa": "Sorgegondolen"
+   },
+   {
+    "fråga": "Vilken senare diktsamling bearbetar, liksom Sorgegondolen, Tomas Tranströmers svårigheter efter stroken?",
+    "svar": "Den stora gåtan",
+    "fel": [
+     "För levande och döda",
+     "Det vilda torget",
+     "Östersjöar"
+    ],
+    "förklaring": "Efter stroken gick Tranströmer alltmer över till haikuns korta form.",
+    "citat": "något han bearbetade i diktsamlingarna Sorgegondolen och Den stora gåtan",
+    "källa": "Tomas Tranströmer"
+   },
+   {
+    "fråga": "Vilket år tilldelades Tomas Tranströmer Nobelpriset i litteratur?",
+    "svar": "2011",
+    "fel": [
+     "2001",
+     "2009",
+     "2013"
+    ],
+    "förklaring": "Motiveringen löd ”för att han i förtätade, genomlysta bilder ger oss ny tillgång till det verkliga”.",
+    "citat": "Tranströmer tilldelades Nobelpriset i litteratur 2011",
+    "källa": "Tomas Tranströmer"
+   }
+  ]
+ },
+ {
+  "id": "aug-1997-majgull-axelsson",
+  "handling": "En roman om en gravt rörelsehindrad kvinna på institution som genom andra varelsers ögon följer sina tre ovetande fostersystrar.",
+  "handling_källa": "Aprilhäxan",
+  "handling_citat": "Boken handlar om Desirée, som är gravt rörelsehindrad, och hennes tre fostersystrar",
+  "andra_böcker": [
+   "Långt borta från Nifelheim",
+   "...och dom som inte har",
+   "Slumpvandring",
+   "Den jag aldrig var",
+   "Is och vatten, vatten och is",
+   "Jag heter inte Miriam"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vad heter den gravt rörelsehindrade huvudpersonen i Majgull Axelssons Aprilhäxan?",
+    "svar": "Desirée",
+    "fel": [
+     "Elsa",
+     "Ingrid",
+     "Karin"
+    ],
+    "förklaring": "Hon lämnades bort till en institution som liten på grund av sin funktionsnedsättning.",
+    "citat": "Boken handlar om Desirée, som är gravt rörelsehindrad",
+    "källa": "Aprilhäxan"
+   },
+   {
+    "fråga": "Efter vilka är de tre fostersystrarna uppkallade i Majgull Axelssons Aprilhäxan?",
+    "svar": "Hagasessorna",
+    "fel": [
+     "Tre bibliska kvinnor",
+     "Fostermoderns systrar",
+     "Kända filmstjärnor"
+    ],
+    "förklaring": "Systrarna känner inte till Desirée, som lämnats bort till en institution.",
+    "citat": "hennes tre fostersystrar, som alla är uppkallade efter \"hagasessorna\"",
+    "källa": "Aprilhäxan"
+   },
+   {
+    "fråga": "Vilken förmåga har en ”aprilhäxa” i Majgull Axelssons roman Aprilhäxan?",
+    "svar": "Att se genom en annan varelses öga",
+    "fel": [
+     "Att förutse framtiden",
+     "Att läsa andras tankar",
+     "Att bli osynlig"
+    ],
+    "förklaring": "Så kan Desirée följa fostersystrarnas liv, och hon upplever att någon av dem stulit hennes liv.",
+    "citat": "hon är en \"aprilhäxa\" och kan se genom någon annan varelses öga",
+    "källa": "Aprilhäxan"
+   },
+   {
+    "fråga": "Vilket pris för säljframgångar fick Majgull Axelsson för Aprilhäxan?",
+    "svar": "Guldpocket",
+    "fel": [
+     "Stora läsarpriset",
+     "Svenska Bokhandelns pris",
+     "Läsarnas romanpris"
+    ],
+    "förklaring": "Boken fick också Augustpriset och BMF-plaketten 1997.",
+    "citat": "Guldpocket för säljframgångarna med Aprilhäxan",
+    "källa": "Majgull Axelsson"
+   },
+   {
+    "fråga": "Med vilken roman debuterade Majgull Axelsson som romanförfattare 1994?",
+    "svar": "Långt borta från Nifelheim",
+    "fel": [
+     "Slumpvandring",
+     "Den jag aldrig var",
+     "Jag heter inte Miriam"
+    ],
+    "förklaring": "Hennes första böcker var sakprosa om barnprostitution och gatubarn i tredje världen.",
+    "citat": "Hon debuterade som romanförfattare 1994 med Långt borta från Nifelheim",
+    "källa": "Majgull Axelsson"
+   }
+  ]
+ },
+ {
+  "id": "aug-1998-goran-tunstrom",
+  "handling": "En roman om en handelsman och autografjägare med uppdrag att skriva en jubileumstext om kända besökare på orten, och om människorna bakom dem.",
+  "handling_källa": "Berömda män som varit i Sunne",
+  "handling_citat": "en handelsman som får i uppdrag att skriva en text till en jubileumsbok.",
+  "andra_böcker": [
+   "Juloratoriet",
+   "Tjuven",
+   "Prästungen",
+   "Guddöttrarna",
+   "Skimmer",
+   "Under tiden"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vad heter huvudpersonen i Göran Tunströms Berömda män som varit i Sunne?",
+    "svar": "Stellan Jonsson Lök",
+    "fel": [
+     "Olof Persson Ek",
+     "Arvid Lindgren Krok",
+     "Erik Nilsson Bark"
+    ],
+    "förklaring": "Han är handelsman och får i uppdrag att skriva en text till en jubileumsbok.",
+    "citat": "Boken handlar om Stellan Jonsson Lök, en handelsman",
+    "källa": "Berömda män som varit i Sunne"
+   },
+   {
+    "fråga": "Vad samlar huvudpersonen Stellan Jonsson Lök på i Göran Tunströms Berömda män som varit i Sunne?",
+    "svar": "Autografer",
+    "fel": [
+     "Frimärken",
+     "Fjärilar",
+     "Mynt"
+    ],
+    "förklaring": "Han påbörjar sitt uppdrag med stor entusiasm men finner snart människorna bakom de berömda männen.",
+    "citat": "Lök som även är autografjägare påbörjar sitt arbete med stor entusiasm",
+    "källa": "Berömda män som varit i Sunne"
+   },
+   {
+    "fråga": "Vilket yrke har Ed Oldin, som återvänder till Sunne för att begrava sin mor, i Göran Tunströms Berömda män som varit i Sunne?",
+    "svar": "Astronaut",
+    "fel": [
+     "Operasångare",
+     "Filmregissör",
+     "Polarforskare"
+    ],
+    "förklaring": "Bland de andra gestalterna finns konstnären Pihlgren som inte längre kan måla.",
+    "citat": "astronauten Ed Oldin som kommer tillbaka till sin födelsestad för att begrava sin mor",
+    "källa": "Berömda män som varit i Sunne"
+   },
+   {
+    "fråga": "Vad har prästen Cederblom förlorat i Göran Tunströms Berömda män som varit i Sunne?",
+    "svar": "Sin tro",
+    "fel": [
+     "Sin röst",
+     "Sin syn",
+     "Sin församling"
+    ],
+    "förklaring": "Lökens efterforskningar leder också till att han börjar finna sig själv.",
+    "citat": "prästen Cederblom som inte längre tror",
+    "källa": "Berömda män som varit i Sunne"
+   },
+   {
+    "fråga": "Vilken av Göran Tunströms romaner, utgiven 1983, filmatiserades 1996?",
+    "svar": "Juloratoriet",
+    "fel": [
+     "Tjuven",
+     "Prästungen",
+     "Skimmer"
+    ],
+    "förklaring": "Juloratoriet fick också Nordiska rådets litteraturpris 1984.",
+    "citat": "Han är förmodligen mest känd för Juloratoriet, utgiven 1983 och filmatiserad 1996.",
+    "källa": "Göran Tunström"
+   }
+  ]
+ },
+ {
+  "id": "aug-1999-per-olov-enquist",
+  "handling": "En historisk roman om den tyske upplysningsläkaren Struensee som vinner den sinnessjuke danske kungen Kristian VII:s gunst och i praktiken styr Danmark.",
+  "handling_källa": "Livläkarens besök",
+  "handling_citat": "Genom kungens sjukdom blir han snabbt den mäktigaste personen i Danmark, och i praktiken envåldshärskare.",
+  "andra_böcker": [
+   "Magnetisörens femte vinter",
+   "Legionärerna",
+   "Sekonden",
+   "Musikanternas uttåg",
+   "Kapten Nemos bibliotek",
+   "Lewis resa"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vilken dansk kung står i centrum i Per Olov Enquists Livläkarens besök?",
+    "svar": "Kristian VII",
+    "fel": [
+     "Fredrik V",
+     "Kristian IV",
+     "Fredrik VI"
+    ],
+    "förklaring": "Den unge kungen anses tidigt vara sinnessjuk, och en livläkare anställs för att hålla honom under uppsikt.",
+    "citat": "Den unge kungen Kristian VII anses tidigt vara sinnessjuk",
+    "källa": "Livläkarens besök"
+   },
+   {
+    "fråga": "Vad händer med Struensee när hans kärleksförhållande med drottningen blir känt i Livläkarens besök?",
+    "svar": "Han avrättas",
+    "fel": [
+     "Han landsförvisas",
+     "Han döms till livstids fängelse",
+     "Han flyr till Tyskland"
+    ],
+    "förklaring": "Drottningen Caroline Mathilde landsförvisas och kung Kristian blir bara mer sinnesförvirrad.",
+    "citat": "Struensee blir avrättad, drottningen landsförvisad",
+    "källa": "Livläkarens besök"
+   },
+   {
+    "fråga": "Vilket brittiskt pris fick Per Olov Enquist 2003 för den engelska översättningen av Livläkarens besök?",
+    "svar": "Independent Foreign Fiction Prize",
+    "fel": [
+     "Booker-priset",
+     "Costa Book Award",
+     "Whitbread-priset"
+    ],
+    "förklaring": "Boken utsågs också till bästa utländska roman i Frankrike.",
+    "citat": "år 2003 tilldelades Enquist det brittiska Independent Foreign Fiction Prize för den engelska översättningen",
+    "källa": "Livläkarens besök"
+   },
+   {
+    "fråga": "Vilken dansk tonsättare skrev operan Livlægens besøg efter Per Olov Enquists Livläkarens besök?",
+    "svar": "Bo Holten",
+    "fel": [
+     "Per Nørgård",
+     "Poul Ruders",
+     "Carl Nielsen"
+    ],
+    "förklaring": "Operan sattes upp på Det Kongelige Teater i Köpenhamn.",
+    "citat": "Den danska operan Livlægens besøg av den danske tonsättaren och dirigenten Bo Holten",
+    "källa": "Livläkarens besök"
+   },
+   {
+    "fråga": "Vilken teater hade premiär på pjäsversionen av Per Olov Enquists Livläkarens besök i december 2015?",
+    "svar": "Stockholms Stadsteater",
+    "fel": [
+     "Dramaten",
+     "Göteborgs stadsteater",
+     "Uppsala stadsteater"
+    ],
+    "förklaring": "Pjäsen dramatiserades av Erik Norberg och Johanna Garpe och sattes 2017 även upp på Malmö Stadsteater.",
+    "citat": "Med premiär i december 2015 spelades pjäsen Livläkarens besök på Stockholms Stadsteater",
+    "källa": "Livläkarens besök"
+   }
+  ]
+ },
+ {
+  "id": "aug-2000-mikael-niemi",
+  "handling": "En skröna om pojken Matti som växer upp i Pajala i Tornedalen, där rock'n'rollen gör entré i pojkarnas liv bland laestadianer och släktfejder.",
+  "handling_källa": "Populärmusik från Vittula",
+  "handling_citat": "den lokala tornedalsfinska beteckningen på området i Pajala där huvudpersonen Matti växer upp.",
+  "andra_böcker": [
+   "Kyrkdjävulen",
+   "Blodsugarna",
+   "Svålhålet",
+   "Mannen som dog som en lax",
+   "Fallvatten",
+   "Koka björn"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vad heter huvudpersonen i Mikael Niemis Populärmusik från Vittula?",
+    "svar": "Matti",
+    "fel": [
+     "Lars",
+     "Olle",
+     "Henrik"
+    ],
+    "förklaring": "Han växer upp i området Vittulajänkkä i Pajala.",
+    "citat": "området i Pajala där huvudpersonen Matti växer upp",
+    "källa": "Populärmusik från Vittula"
+   },
+   {
+    "fråga": "Till vilket språk har Populärmusik från Vittula översatts under titeln Poppimysiikkiä Vittulasta?",
+    "svar": "Meänkieli",
+    "fel": [
+     "Samiska",
+     "Estniska",
+     "Kvänska"
+    ],
+    "förklaring": "Boken finns också på riksfinska som Populäärimusiikkia Vittulajänkältä.",
+    "citat": "Boken har översatts, inte bara till meänkieli som Poppimysiikkiä Vittulasta",
+    "källa": "Populärmusik från Vittula"
+   },
+   {
+    "fråga": "Vem regisserade filmatiseringen av Mikael Niemis Populärmusik från Vittula 2004?",
+    "svar": "Reza Bagher",
+    "fel": [
+     "Lukas Moodysson",
+     "Kjell Sundvall",
+     "Josef Fares"
+    ],
+    "förklaring": "Filmen fick samma titel som romanen.",
+    "citat": "Den blev 2004 filmatiserad av Reza Bagher",
+    "källa": "Populärmusik från Vittula"
+   },
+   {
+    "fråga": "Vilken religiös rörelses inflytande skildras humoristiskt i Mikael Niemis Populärmusik från Vittula?",
+    "svar": "Laestadianismen",
+    "fel": [
+     "Pingströrelsen",
+     "Missionsförbundet",
+     "Frälsningsarmén"
+    ],
+    "förklaring": "Boken skildrar också kommunistiska åsikter, släktfejder och lokal vidskepelse i Tornedalen.",
+    "citat": "laestadianismens inflytande, kommunistiska åsikter, släktfejder, och lokal vidskepelse",
+    "källa": "Populärmusik från Vittula"
+   },
+   {
+    "fråga": "Vilken roman av Mikael Niemi från 2017 handlar om prosten Lars Levi Laestadius?",
+    "svar": "Koka björn",
+    "fel": [
+     "Fallvatten",
+     "Svålhålet",
+     "Sten i siden"
+    ],
+    "förklaring": "Fallvatten från 2012 handlar i stället om en översvämningskatastrof i Norrbotten.",
+    "citat": "2017 utkom romanen Koka björn som handlar om prosten Lars Levi Laestadius.",
+    "källa": "Mikael Niemi"
+   }
+  ]
+ },
+ {
+  "id": "aug-2001-torbjorn-flygt",
+  "handling": null,
+  "handling_källa": null,
+  "handling_citat": null,
+  "andra_böcker": [
+   "Längsta ögonblicket",
+   "Män vid kusten",
+   "Verkan",
+   "Himmel",
+   "Outsider",
+   "Var man"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vilken roman i ordningen var Underdog, som gav Torbjörn Flygt Augustpriset?",
+    "svar": "Hans tredje roman",
+    "fel": [
+     "Hans debutroman",
+     "Hans andra roman",
+     "Hans femte roman"
+    ],
+    "förklaring": "Flygt debuterade 1995 med Längsta ögonblicket.",
+    "citat": "Augustpriset för sin tredje roman, Underdog",
+    "källa": "Torbjörn Flygt"
+   },
+   {
+    "fråga": "Vilken utmärkelse fick Torbjörn Flygt 2001 för Underdog, utöver Augustpriset?",
+    "svar": "BMF-plaketten",
+    "fel": [
+     "Sveriges Radios romanpris",
+     "Aftonbladets litteraturpris",
+     "Doblougska priset"
+    ],
+    "förklaring": "Året därpå fick han även Gleerups skönlitterära pris.",
+    "citat": "BMF-plaketten för Underdog",
+    "källa": "Torbjörn Flygt"
+   },
+   {
+    "fråga": "I vilken sport tog Underdog-författaren Torbjörn Flygt brons i USM 1981?",
+    "svar": "Tyngdlyftning",
+    "fel": [
+     "Brottning",
+     "Boxning",
+     "Friidrott"
+    ],
+    "förklaring": "Han tävlade för Baltic Club.",
+    "citat": "1981 – Brons i USM i tyngdlyftning för Baltic Club",
+    "källa": "Torbjörn Flygt"
+   },
+   {
+    "fråga": "I vilken stad är Torbjörn Flygt, författare till Underdog, född?",
+    "svar": "Malmö",
+    "fel": [
+     "Lund",
+     "Helsingborg",
+     "Göteborg"
+    ],
+    "förklaring": "Flygt är författare, dramatiker, krönikör och litterär ståuppare.",
+    "citat": "född 14 juni 1964 i Malmö",
+    "källa": "Torbjörn Flygt"
+   }
+  ]
+ },
+ {
+  "id": "aug-2002-carl-johan-vallgren",
+  "handling": "En roman i 1800-talets Königsberg om en missbildad, döv pojke med telepatisk förmåga och hans sökande efter en vacker flicka född samma kväll.",
+  "handling_källa": "Den vidunderliga kärlekens historia",
+  "handling_citat": "Han föds missbildad och döv, men har telepatisk förmåga. Samma kväll som han föds, föds även en flicka vid namn Henriette Vogel.",
+  "andra_böcker": [
+   "Nomaderna",
+   "Fågelkvinnan",
+   "Dokument rörande spelaren Rubashov",
+   "För herr Bachmanns broschyr",
+   "Kunzelmann och Kunzelmann",
+   "Havsmannen"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vilken saga är Carl-Johan Vallgrens Den vidunderliga kärlekens historia en tolkning av?",
+    "svar": "Skönheten och odjuret",
+    "fel": [
+     "Den lilla sjöjungfrun",
+     "Törnrosa",
+     "Askungen"
+    ],
+    "förklaring": "Henriette är oerhört vacker redan som barn, och Hercule är raka motsatsen.",
+    "citat": "är en tolkning av Skönheten och odjuret",
+    "källa": "Den vidunderliga kärlekens historia"
+   },
+   {
+    "fråga": "I vilken stad utspelar sig Carl-Johan Vallgrens Den vidunderliga kärlekens historia?",
+    "svar": "Königsberg",
+    "fel": [
+     "Berlin",
+     "Danzig",
+     "Sankt Petersburg"
+    ],
+    "förklaring": "Romanen utspelar sig på 1800-talet.",
+    "citat": "Boken utspelar sig i 1800-talets Königsberg.",
+    "källa": "Den vidunderliga kärlekens historia"
+   },
+   {
+    "fråga": "Vad heter huvudpersonen i Carl-Johan Vallgrens Den vidunderliga kärlekens historia?",
+    "svar": "Hercule Barfuss",
+    "fel": [
+     "Josef Rubashov",
+     "Leopold Vogel",
+     "Emil Bachmann"
+    ],
+    "förklaring": "Han föds samma kväll som flickan Henriette Vogel.",
+    "citat": "Boken handlar om Hercule Barfuss.",
+    "källa": "Den vidunderliga kärlekens historia"
+   },
+   {
+    "fråga": "Vilken särskild förmåga har Hercule Barfuss i Den vidunderliga kärlekens historia?",
+    "svar": "Telepati",
+    "fel": [
+     "Att se in i framtiden",
+     "Att tala med djur",
+     "Att bli osynlig"
+    ],
+    "förklaring": "Han föds missbildad och döv.",
+    "citat": "Han föds missbildad och döv, men har telepatisk förmåga.",
+    "källa": "Den vidunderliga kärlekens historia"
+   },
+   {
+    "fråga": "Hur gamla är Hercule och Henriette när de tvingas skiljas åt i Den vidunderliga kärlekens historia?",
+    "svar": "Elva år",
+    "fel": [
+     "Sju år",
+     "Femton år",
+     "Arton år"
+    ],
+    "förklaring": "Därefter blir Hercules enda mening med livet att finna henne.",
+    "citat": "När de är elva år blir de tvungna att skiljas åt",
+    "källa": "Den vidunderliga kärlekens historia"
+   }
+  ]
+ },
+ {
+  "id": "aug-2003-kerstin-ekman",
+  "handling": "Avslutande delen i en romantrilogi som skildrar en jämtländsk fjällbys utveckling under 1900-talet.",
+  "handling_källa": "Kerstin Ekman",
+  "handling_citat": "I Vargskinnet skildras utvecklingen i en fjällby, Valsjöbyn, under 1900-talet.",
+  "andra_böcker": [
+   "Häxringarna",
+   "Hunden",
+   "Rövarna i Skuleskogen",
+   "Guds barmhärtighet",
+   "Sista rompan",
+   "Mordets praktik"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vilken trilogi av Kerstin Ekman avslutas med romanen Skraplotter?",
+    "svar": "Vargskinnet",
+    "fel": [
+     "Kvinnorna och staden",
+     "Hedebysviten",
+     "Svartvattensviten"
+    ],
+    "förklaring": "Trilogin består av Guds barmhärtighet, Sista rompan och Skraplotter.",
+    "citat": "trilogin Vargskinnet (Guds barmhärtighet, Sista rompan och Skraplotter) där den sista romanen utkom 2003",
+    "källa": "Kerstin Ekman"
+   },
+   {
+    "fråga": "I vilken fjällby skildras utvecklingen under 1900-talet i Kerstin Ekmans trilogi som avslutas med Skraplotter?",
+    "svar": "Valsjöbyn",
+    "fel": [
+     "Svartvattnet",
+     "Östersjäland",
+     "Vallmsta"
+    ],
+    "förklaring": "Ekman flyttade själv till Valsjöbyn i Jämtland i början av 1980-talet.",
+    "citat": "I Vargskinnet skildras utvecklingen i en fjällby, Valsjöbyn, under 1900-talet.",
+    "källa": "Kerstin Ekman"
+   },
+   {
+    "fråga": "Vilken film från 2008 bygger på en episod ur Kerstin Ekmans Skraplotter?",
+    "svar": "Varg",
+    "fel": [
+     "Hunden",
+     "Dödsklockan",
+     "Tärningen är kastad"
+    ],
+    "förklaring": "Även Ekmans Händelser vid vatten har dramatiserats, som TV-serie 2023.",
+    "citat": "2008 – Varg (filmen bygger på en episod ur \"Skraplotter\".)",
+    "källa": "Kerstin Ekman"
+   },
+   {
+    "fråga": "Vem efterträdde Kerstin Ekman på stol nummer 15 i Svenska Akademien?",
+    "svar": "Jila Mossaed",
+    "fel": [
+     "Sara Danius",
+     "Katarina Frostenson",
+     "Kristina Lugn"
+    ],
+    "förklaring": "Ekman hade själv efterträtt Harry Martinson på stolen 1978.",
+    "citat": "På stol nummer 15 efterträddes hon av Jila Mossaed.",
+    "källa": "Kerstin Ekman"
+   }
+  ]
+ },
+ {
+  "id": "aug-2004-bengt-ohlsson",
+  "handling": "En roman som återberättar Hjalmar Söderbergs Doktor Glas ur den olyckligt gifte prästens perspektiv, i Stockholm i början av 1900-talet.",
+  "handling_källa": "Gregorius (roman)",
+  "handling_citat": "Boken är en parafras av Hjalmar Söderbergs kända roman Doktor Glas och berättar historien ur romanfiguren pastor Gregorius perspektiv.",
+  "andra_böcker": [
+   "Dö som en man, sa jag",
+   "Rida på en gris",
+   "Den där lilla stunden av närhet",
+   "Vägs ände",
+   "Se till mig som liten är",
+   "Syster"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vilken klassisk roman är Bengt Ohlssons Gregorius en parafras av?",
+    "svar": "Doktor Glas",
+    "fel": [
+     "Röda rummet",
+     "Den allvarsamma leken",
+     "Martin Bircks ungdom"
+    ],
+    "förklaring": "Ohlsson berättar historien ur pastor Gregorius perspektiv i stället för doktor Glas.",
+    "citat": "Boken är en parafras av Hjalmar Söderbergs kända roman Doktor Glas",
+    "källa": "Gregorius (roman)"
+   },
+   {
+    "fråga": "Till vilken kurort skickas pastor Gregorius för att vila i Bengt Ohlssons roman Gregorius?",
+    "svar": "Porla brunn",
+    "fel": [
+     "Medevi brunn",
+     "Ramlösa brunn",
+     "Loka brunn"
+    ],
+    "förklaring": "Doktor Glas har konstaterat att Gregorius har hjärtproblem och ordinerar vila.",
+    "citat": "föreslår denne att bege sig till Porla brunn för att kurera sig",
+    "källa": "Gregorius (roman)"
+   },
+   {
+    "fråga": "Vem inleder pastor Gregorius en relation med under kurvistelsen i Bengt Ohlssons Gregorius?",
+    "svar": "Anna Hansson",
+    "fel": [
+     "Märit",
+     "Lydia",
+     "Helga"
+    ],
+    "förklaring": "Han har stora svårigheter att låta henne komma nära honom känslomässigt.",
+    "citat": "träffar han den olyckligt gifta Anna Hansson och inleder en relation med henne",
+    "källa": "Gregorius (roman)"
+   },
+   {
+    "fråga": "Ur vems perspektiv berättas Bengt Ohlssons roman Gregorius?",
+    "svar": "Pastor Gregorius",
+    "fel": [
+     "Doktor Glas",
+     "Helga Gregorius",
+     "En allvetande berättare"
+    ],
+    "förklaring": "I Söderbergs Doktor Glas är det i stället doktorn som är berättaren.",
+    "citat": "Gregorius är skrivet ur ett jagperspektiv och berättas av pastor Gregorius.",
+    "källa": "Gregorius (roman)"
+   },
+   {
+    "fråga": "Vilka tackar Bengt Ohlsson i förordet till Gregorius?",
+    "svar": "Erik Satie och bandet Ministry",
+    "fel": [
+     "Hjalmar Söderberg och Stig Larsson",
+     "Helena von Zweigbergk och Åsa Linderborg",
+     "Johnny Ramone och Stig Dagerman"
+    ],
+    "förklaring": "Boken är tillägnad en kvinna vid namn Helena.",
+    "citat": "Bengt Ohlsson tackar i förordet pianisten Erik Satie och bandet Ministry.",
+    "källa": "Gregorius (roman)"
+   }
+  ]
+ },
+ {
+  "id": "aug-2005-monika-fagerholm",
+  "handling": null,
+  "handling_källa": null,
+  "handling_citat": null,
+  "andra_böcker": [
+   "Sham",
+   "Patricia",
+   "Underbara kvinnor vid vatten",
+   "Diva",
+   "Glitterscenen",
+   "Vem dödade bambi?"
+  ],
+  "frågor": [
+   {
+    "fråga": "Hur många sidor har Monika Fagerholms roman Den amerikanska flickan?",
+    "svar": "489",
+    "fel": [
+     "237",
+     "312",
+     "612"
+    ],
+    "förklaring": "Boken är inte illustrerad.",
+    "citat": "Den är inte illustrerad och har 489 sidor.",
+    "källa": "Den amerikanska flickan"
+   },
+   {
+    "fråga": "Vilket förlag gav ut Monika Fagerholms Den amerikanska flickan 2005?",
+    "svar": "Albert Bonniers Förlag",
+    "fel": [
+     "Norstedts",
+     "Natur & Kultur",
+     "Wahlström & Widstrand"
+    ],
+    "förklaring": "Fagerholm är finlandssvensk och bor i Ekenäs.",
+    "citat": "Den är utgiven på Albert Bonniers Förlag 2005.",
+    "källa": "Den amerikanska flickan"
+   },
+   {
+    "fråga": "Vad heter Monika Fagerholms Den amerikanska flickan i finsk översättning?",
+    "svar": "Amerikkalainen tyttö",
+    "fel": [
+     "Ihanat naiset rannalla",
+     "Säihkenäyttämö",
+     "Kuka tappoi bambin?"
+    ],
+    "förklaring": "De andra titlarna är finska översättningar av Fagerholms Underbara kvinnor vid vatten, Glitterscenen och Vem dödade bambi?",
+    "citat": "Amerikkalainen tyttö",
+    "källa": "Monika Fagerholm"
+   },
+   {
+    "fråga": "Vilket pris fick Monika Fagerholm 2007 för Den amerikanska flickan?",
+    "svar": "Pocketpriset i guld",
+    "fel": [
+     "Pocketpriset i silver",
+     "Runebergspriset",
+     "Finlandiapriset"
+    ],
+    "förklaring": "Pocketpriset delas ut för säljframgångar i pocket.",
+    "citat": "Pocketpriset, guld för Den amerikanska flickan",
+    "källa": "Monika Fagerholm"
+   },
+   {
+    "fråga": "För vilken roman fick Den amerikanska flickans författare Monika Fagerholm Nordiska rådets litteraturpris 2020?",
+    "svar": "Vem dödade bambi?",
+    "fel": [
+     "Glitterscenen",
+     "Diva",
+     "Lola uppochner"
+    ],
+    "förklaring": "Romanen kom ut 2019.",
+    "citat": "Nordiska rådets litteraturpris 2020 för Vem dödade bambi?",
+    "källa": "Monika Fagerholm"
+   }
+  ]
+ },
+ {
+  "id": "aug-2006-susanna-alakoski",
+  "handling": "En roman om en finländsk invandrarfamilj i Ystad på 1960- och 1970-talen.",
+  "handling_källa": "Svinalängorna",
+  "handling_citat": "som handlar om en finländsk invandrarfamilj i Ystad på 1960- och 1970-talen.",
+  "andra_böcker": [
+   "Håpas du trifs bra i fengelset",
+   "Bomullsängeln",
+   "Londonflickan",
+   "Dotterdottern",
+   "Dagens Harri",
+   "Guldfisken"
+  ],
+  "frågor": [
+   {
+    "fråga": "I vilken stad utspelar sig Susanna Alakoskis Svinalängorna?",
+    "svar": "Ystad",
+    "fel": [
+     "Trelleborg",
+     "Landskrona",
+     "Kristianstad"
+    ],
+    "förklaring": "Alakoski föddes i Vasa men växte själv upp i Ystad.",
+    "citat": "en finländsk invandrarfamilj i Ystad på 1960- och 1970-talen",
+    "källa": "Svinalängorna"
+   },
+   {
+    "fråga": "Vem regisserade filmen Svinalängorna från 2010, efter Susanna Alakoskis roman?",
+    "svar": "Pernilla August",
+    "fel": [
+     "Lukas Moodysson",
+     "Lisa Langseth",
+     "Ella Lemhagen"
+    ],
+    "förklaring": "Filmen hade premiär hösten 2010.",
+    "citat": "Långfilmen Svinalängorna hade premiär hösten 2010, i regi av Pernilla August.",
+    "källa": "Svinalängorna"
+   },
+   {
+    "fråga": "Under vilken titel blev filmen Svinalängorna Sveriges bidrag till Oscarsgalan 2011?",
+    "svar": "Beyond",
+    "fel": [
+     "Behind",
+     "Between",
+     "Below"
+    ],
+    "förklaring": "Romanen dramatiserades också för scen 2009 i regi av Michaela Granit.",
+    "citat": "Filmen, Beyond, blev Sveriges bidrag till Oscarsgalan 2011.",
+    "källa": "Susanna Alakoski"
+   },
+   {
+    "fråga": "Under vilken titel översattes Svinalängorna till finska 2007?",
+    "svar": "Sikalat",
+    "fel": [
+     "Possulat",
+     "Sikojen talot",
+     "Karjasuoja"
+    ],
+    "förklaring": "Översättningen gjordes av Katriina Savolainen; romanen finns även på danska, tyska och koreanska.",
+    "citat": "2007 översattes den till finska av Katriina Savolainen, under titeln Sikalat.",
+    "källa": "Svinalängorna"
+   },
+   {
+    "fråga": "Vilken roman från 2019 inledde Susanna Alakoskis tetralogi på tema textil industrihistoria?",
+    "svar": "Bomullsängeln",
+    "fel": [
+     "Londonflickan",
+     "Dotterdottern",
+     "Håpas du trifs bra i fengelset"
+    ],
+    "förklaring": "Sviten inspirerades av morföräldrarnas arbete på Wasa Bomulls Manufaktur.",
+    "citat": "År 2019 utkom Bomullsängeln, första delen i en tetralogi.",
+    "källa": "Susanna Alakoski"
+   }
+  ]
+ },
+ {
+  "id": "aug-2007-carl-henning-wijkmark",
+  "handling": "En roman om den döende mannen Hasse, med döden som bärande tema.",
+  "handling_källa": "Stundande natten",
+  "handling_citat": "Boken handlar om den döende Hasse och bokens tema behandlar döden.",
+  "andra_böcker": [
+   "Jägarna på Karinhall",
+   "Dressinen",
+   "Sista dagar",
+   "Dacapo",
+   "Du som ej finns",
+   "Den svarta väggen"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vad heter den döende huvudpersonen i Carl-Henning Wijkmarks Stundande natten?",
+    "svar": "Hasse",
+    "fel": [
+     "Gunnar",
+     "Bertil",
+     "Olle"
+    ],
+    "förklaring": "Bokens tema är döden.",
+    "citat": "Boken handlar om den döende Hasse",
+    "källa": "Stundande natten"
+   },
+   {
+    "fråga": "Vad heter Carl-Henning Wijkmarks Stundande natten i tysk översättning?",
+    "svar": "Nahende Nacht",
+    "fel": [
+     "Letzte Tage",
+     "Der du nicht bist",
+     "Die Jäger von Karinhall"
+    ],
+    "förklaring": "De andra titlarna är tyska översättningar av Wijkmarks Sista dagar, Du som ej finns och Jägarna på Karinhall.",
+    "citat": "Tysk översättning: Nahende Nacht (2009)",
+    "källa": "Carl-Henning Wijkmark"
+   },
+   {
+    "fråga": "Vilket förlag gav ut Carl-Henning Wijkmarks Stundande natten?",
+    "svar": "Norstedts",
+    "fel": [
+     "Bonniers",
+     "Cavefors",
+     "Atlas"
+    ],
+    "förklaring": "Romanen kom ut 2007.",
+    "citat": "Stundande natten (Norstedt, 2007)",
+    "källa": "Carl-Henning Wijkmark"
+   },
+   {
+    "fråga": "Vilken roman var Carl-Henning Wijkmarks skönlitterära debut 1972?",
+    "svar": "Jägarna på Karinhall",
+    "fel": [
+     "Dressinen",
+     "Sista dagar",
+     "Dacapo"
+    ],
+    "förklaring": "Romanen är en svart fars om nazisternas och framför allt Hermann Görings privatliv.",
+    "citat": "innan han 1972 gjorde skönlitterär debut med Jägarna på Karinhall",
+    "källa": "Carl-Henning Wijkmark"
+   }
+  ]
+ },
+ {
+  "id": "aug-2008-per-olov-enquist",
+  "handling": "Självbiografi som väckte uppmärksamhet för sin inträngande skildring av författarens alkoholism och som också tar upp en omstridd artikel om Röda khmererna.",
+  "handling_källa": "Per Olov Enquist",
+  "handling_citat": "Självbiografin uppmärksammades inte minst för författarens inträngande skildring av sin alkoholism.",
+  "andra_böcker": [
+   "Magnetisörens femte vinter",
+   "Legionärerna",
+   "Kapten Nemos bibliotek",
+   "Lewis resa",
+   "Boken om Blanche och Marie",
+   "Liknelseboken"
+  ],
+  "frågor": [
+   {
+    "fråga": "Vilket personligt problem skildrades särskilt inträngande i Per Olov Enquists självbiografi Ett annat liv?",
+    "svar": "Hans alkoholism",
+    "fel": [
+     "Hans spelmissbruk",
+     "Hans cancer",
+     "Hans blindhet"
+    ],
+    "förklaring": "Självbiografin kom ut 2008 på Norstedts.",
+    "citat": "Självbiografin uppmärksammades inte minst för författarens inträngande skildring av sin alkoholism.",
+    "källa": "Per Olov Enquist"
+   },
+   {
+    "fråga": "Vilket pris vann Per Olov Enquist 2009 för ljudboksversionen av Ett annat liv, som han läste in själv?",
+    "svar": "Iris Ljudbokspris",
+    "fel": [
+     "Stora Ljudbokspriset",
+     "Sveriges Radios romanpris",
+     "Stora läsarpriset"
+    ],
+    "förklaring": "Ett annat liv var den andra boken som gav Enquist Augustpriset.",
+    "citat": "År 2009 vann han Iris Ljudbokspris för ljudboksversionen av Ett annat liv som han själv läste in.",
+    "källa": "Per Olov Enquist"
+   },
+   {
+    "fråga": "Vilken placering fick Ett annat liv när Expressen Kultur listade de bästa svenska böckerna 2000–2025?",
+    "svar": "Andra plats",
+    "fel": [
+     "Första plats",
+     "Tredje plats",
+     "Tionde plats"
+    ],
+    "förklaring": "Före den kom Lars Noréns En dramatikers dagbok.",
+    "citat": "kom Ett annat liv på andra plats, efter Lars Noréns En dramatikers dagbok.",
+    "källa": "Ett annat liv"
+   },
+   {
+    "fråga": "Vad handlade den omstridda artikel från 1975 som Per Olov Enquist skriver om i Ett annat liv?",
+    "svar": "Röda khmerernas tömning av Phnom Penh",
+    "fel": [
+     "Baltutlämningen",
+     "Mordet på Olof Palme",
+     "OS i München"
+    ],
+    "förklaring": "Enquist uppger att han inte visste vem Pol Pot var när han skrev artikeln.",
+    "citat": "I en artikel från 1975 försvarade Enquist de röda khmerernas tömning av Phnom Penh.",
+    "källa": "Per Olov Enquist"
+   },
+   {
+    "fråga": "Vilket förlag gav ut Per Olov Enquists självbiografi Ett annat liv?",
+    "svar": "Norstedts",
+    "fel": [
+     "Bonniers",
+     "Brombergs",
+     "Wahlström & Widstrand"
+    ],
+    "förklaring": "Boken kom ut i augusti 2008.",
+    "citat": "utgiven i augusti 2008 på Norstedts",
+    "källa": "Ett annat liv"
+   }
+  ]
+ }
+]
