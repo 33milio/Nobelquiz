@@ -19,7 +19,7 @@ const SAMLINGAR = {
   august: {
     nyckel: 'august', fil: 'data-august.json', lagring: 'nobelquiz.august.v1', flik: 'Augustpriset',
     titel: 'Augustpriset', underrubrik: år => `Årets svenska skönlitterära bok 1990–${år}`,
-    pris: 'Augustpriset', nivaer: 2, fakta: ['år', 'verk'], verkOrd: 'bok',
+    pris: 'Augustpriset', nivaer: 2, fakta: ['år', 'verk', 'handling'], verkOrd: 'bok',
   },
 };
 let S = SAMLINGAR.nobel;
@@ -82,7 +82,11 @@ const efternamn = p => p.efternamn || p.namn.split(' ').slice(-1)[0];
 
 // ---------- Leitner ----------
 function kortId(pid, typ) { return pid + '|' + typ; }
-function harFakta(p, typ) { return typ !== 'verk' || !!p.verk; }
+function harFakta(p, typ) {
+  if (typ === 'verk') return !!p.verk;
+  if (typ === 'handling') return !!p.handling;
+  return true;
+}
 function kortFor(p) { return S.fakta.filter(t => harFakta(p, t)).map(t => kortId(p.id, t)); }
 function personFack(p) {
   const k = kortFor(p).map(id => (T.kort[id] && T.kort[id].fack) || 0);
@@ -206,7 +210,7 @@ function arFraga(p) {
 function faktaRad(p) {
   const delar = [esc(p.år), esc(visaLand(p)), esc(visaSprak(p))].filter(Boolean);
   if (p.verk) delar.push(`<i>${esc(p.verk)}</i>`);
-  return `<b>${esc(p.namn)}</b> – ${delar.join(' · ')}`;
+  return `<b>${esc(p.namn)}</b> – ${delar.join(' · ')}` + (p.handling ? `<div class="svag">${esc(p.handling)}</div>` : '');
 }
 function ettval(rubrik, text, ratt, fel, extra = {}) {
   const alternativ = blanda([{ t: String(ratt), ratt: true }, ...fel.map(f => ({ t: String(f), ratt: false }))]);
@@ -261,11 +265,22 @@ function fragaForKort(id) {
         liknandePersoner(p, 3, x => x.verk && x.verk !== p.verk).map(x => x.namn));
     } else {
       const andraVinster = P.filter(x => x.namn === p.namn && x !== p).map(x => x.verk);
+      // Felalternativ: i första hand författarens egna andra böcker, annars andra vinnares titlar
+      const egna = blanda((p.andra_böcker || []).filter(t => t !== p.verk && !andraVinster.includes(t))).slice(0, 3);
+      const fyllnad = liknandePersoner(p, 3, x => x.verk && !andraVinster.includes(x.verk) && !egna.includes(x.verk))
+        .map(x => x.verk).slice(0, 3 - egna.length);
       q = S.verkOrd === 'bok'
         ? ettval('Pristagare → bok', `För vilken bok fick ${p.namn} ${S.pris}${andraVinster.length ? ` ${p.år}` : ''}?`, p.verk,
-          liknandePersoner(p, 3, x => x.verk && !andraVinster.includes(x.verk)).map(x => x.verk))
+          [...egna, ...fyllnad], { tips: egna.length === 3 ? `Alla alternativ är böcker av ${p.namn}.` : '' })
         : ettval('Pristagare → verk', `Vilket verk skrev ${p.namn}?`, p.verk,
           liknandePersoner(p, 3, x => x.verk && x.verk !== p.verk).map(x => x.verk));
+    }
+  } else if (typ === 'handling') {
+    const andra = liknandePersoner(p, 3, x => x.handling && x.verk !== p.verk);
+    if (bakat) {
+      q = ettval('Handling → bok', `Vilken Augustprisbok är det här? ”${p.handling}”`, p.verk, andra.map(x => x.verk));
+    } else {
+      q = ettval('Bok → handling', `Vad handlar ”${p.verk}” av ${p.namn} om?`, p.handling, andra.map(x => x.handling));
     }
   }
   q.kortId = id;
@@ -757,7 +772,7 @@ function visaStatistik() {
   const larda = P.filter(arLard);
   const missar = allaKort.filter(([id, k]) => k.fel > 0 && !id.startsWith('fakta|'))
     .map(([id, k]) => [k.fel / (k.ratt + k.fel), k, id]).sort((a, b) => b[0] - a[0] || b[1].fel - a[1].fel).slice(0, 12);
-  const typNamn = { år: 'Årtal', land: 'Land', språk: 'Språk', verk: 'Verk', fakta: 'Faktafrågor', 'land+bokstav': 'Land + bokstav',
+  const typNamn = { år: 'Årtal', land: 'Land', språk: 'Språk', verk: 'Verk', handling: 'Handling', fakta: 'Faktafrågor', 'land+bokstav': 'Land + bokstav',
     flerspråkiga: 'Flerspråkiga', språkgrupp: 'Språkgrupp', räkna: 'Räkna', ensam: 'Ensam i sitt land', tidslinje: 'Vem först', ordning: 'Tidsordning',
     initialer: 'Initialer', kvinnor: 'Kvinnliga pristagare', delat: 'Delat pris', bokstav: 'Bokstav', 'två gånger': 'Två gånger' };
   const dagar = Object.keys(T.dagar).sort().slice(-7);
@@ -839,7 +854,7 @@ function visaKontroll(flik) {
       </li>`).join('')}</ul></details>`).join('')}`;
   } else {
     innehall = `<p class="svag">Alla ${P.length} pristagare med artikellängd (byte) som avgör nivån.</p>
-    <ul class="lista">${P.slice().sort((a, b) => a.år - b.år).map(p => `<li>${faktaRad(p)}<div class="svag">Nivå ${p.nivå} · ${p.artikellängd.toLocaleString('sv')} byte · ”${esc(p.artikel)}”</div></li>`).join('')}</ul>`;
+    <ul class="lista">${P.slice().sort((a, b) => a.år - b.år).map(p => `<li>${faktaRad(p)}<div class="svag">Nivå ${p.nivå} · ${p.artikellängd.toLocaleString('sv')} byte · ”${esc(p.artikel)}”${p.bok_artikel ? ` · ”${esc(p.bok_artikel)}”` : ''}</div>${p.handling_citat ? `<div class="kalla">Handling enligt ”${esc(p.handling_källa)}”: ”${esc(p.handling_citat)}”</div>` : ''}${p.andra_böcker && p.andra_böcker.length ? `<div class="kalla">Andra böcker (felalternativ): ${esc(p.andra_böcker.join(', '))}</div>` : ''}</li>`).join('')}</ul>`;
   }
   app().innerHTML = `
     <div class="topprad"><button class="stang liten" id="tillbaka">←</button><h1 style="margin:0">Kontrollista</h1></div>

@@ -88,18 +88,44 @@ if __name__ == "__main__":
     antal = {}
     for p in poster:
         antal[p["namn"]] = antal.get(p["namn"], 0) + 1
+    for p in poster:
+        p["bok_artikel"] = None
+        if p["titel_artikel"]:
+            final, t = hamta.resolve(p["titel_artikel"])
+            # Räkna bara som bokartikel om sidan finns och inte är en omdirigering till författaren
+            if t and final != p["artikel"]:
+                p["bok_artikel"] = final
+                print("  bok:", final, len(t), file=sys.stderr)
     ut = []
     for p in sorted(poster, key=lambda p: p["år"]):
         ut.append({
             "id": "aug-" + str(p["år"]) + "-" + slug(p["namn"]), "namn": p["namn"], "efternamn": p["namn"].split(" ")[-1],
             "år": p["år"], "verk": p["titel"], "kön": p["kön"], "land": [], "språk": [],
-            "artikel": p["artikel"] or "", "artikellängd": p["artikellängd"], "nivå": p["nivå"],
+            "artikel": p["artikel"] or "", "bok_artikel": p["bok_artikel"], "artikellängd": p["artikellängd"], "nivå": p["nivå"],
             "flerfaldig": antal[p["namn"]] > 1, "osäkert": p["osäkert"],
         })
+    fragor = []
+    import glob
+    for fn in sorted(glob.glob(os.path.join(ROT, "verktyg", "berikning-august", "*.json"))):
+        for b in json.load(open(fn, encoding="utf-8")):
+            post = next(x for x in ut if x["id"] == b["id"])
+            if b.get("handling"):
+                post["handling"] = b["handling"]
+                post["handling_källa"] = b.get("handling_källa", "")
+                post["handling_citat"] = b.get("handling_citat", "")
+            else:
+                post["osäkert"].append("handling: ingen beskrivning av vad boken handlar om hittades")
+            egna = {x["verk"].lower() for x in ut if x["namn"] == post["namn"]}
+            post["andra_böcker"] = [t for t in b.get("andra_böcker", []) if t.lower() not in egna]
+            for i, f in enumerate(b.get("frågor", [])):
+                fel = [x for x in f["fel"] if x.strip().lower() != f["svar"].strip().lower()]
+                fragor.append({"id": f"{b['id']}-{i+1}", "fråga": f["fråga"], "svar": f["svar"], "fel": fel[:3],
+                               "förklaring": f.get("förklaring", ""), "citat": f.get("citat", ""),
+                               "källa": f.get("källa") or post["artikel"], "person": post["id"]})
     data = {
         "version": datetime.date.today().isoformat(), "hämtad": datetime.date.today().isoformat(),
         "källa": "Svenska Wikipedia: ”Augustpriset” och respektive författares artikel",
-        "senasteÅr": max(p["år"] for p in ut), "pristagare": ut, "faktafrågor": [],
+        "senasteÅr": max(p["år"] for p in ut), "pristagare": ut, "faktafrågor": fragor,
     }
     json.dump(data, open(os.path.join(ROT, "data-august.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("flerfaldiga:", sorted({p["namn"] for p in ut if p["flerfaldig"]}), file=sys.stderr)

@@ -1,6 +1,6 @@
 """Hämtar pristagare från svenska Wikipedia och sparar råtext lokalt.
 Körs: python3 verktyg/hamta.py <mapp för cache>"""
-import json, re, sys, time, urllib.request, urllib.parse, os
+import json, re, sys, time, urllib.request, urllib.error, urllib.parse, os
 
 UA = "NobelQuizPersonal/0.1 (https://github.com/33milio/nobelquiz)"
 CACHE = sys.argv[1]
@@ -20,6 +20,12 @@ def raw(title):
             open(fn, "w", encoding="utf-8").write(txt)
             time.sleep(1.5)
             return txt
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return None  # sidan finns inte
+            wait = 5 * (attempt + 1)
+            print(f"  försök {attempt+1} misslyckades för {title}: {e}; väntar {wait}s", file=sys.stderr)
+            time.sleep(wait)
         except Exception as e:
             wait = 5 * (attempt + 1)
             print(f"  försök {attempt+1} misslyckades för {title}: {e}; väntar {wait}s", file=sys.stderr)
@@ -30,6 +36,8 @@ def resolve(title):
     """Följer omdirigeringar. Returnerar (slutlig titel, text)."""
     for _ in range(3):
         txt = raw(title)
+        if txt is None:
+            return title, None
         m = re.match(r"\s*#(?:OMDIRIGERING|REDIRECT)\s*\[\[([^\]|#]+)", txt, re.I)
         if not m:
             return title, txt
