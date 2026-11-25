@@ -165,6 +165,10 @@ Pristagare med flera länder (alla räknas som rätt) eller historiska landsnamn
   - kategori: före 1992 delades bara ett Augustpris ut – boken räknas här som skönlitterär
 - **Sven Delblanc** (1991) – *Livets ax* · man
   - kategori: före 1992 delades bara ett Augustpris ut – boken räknas här som skönlitterär
+- **Torbjörn Flygt** (2001) – *Underdog* · man
+  - handling: ingen beskrivning av vad boken handlar om hittades
+- **Monika Fagerholm** (2005) – *Den amerikanska flickan* · kvinna
+  - handling: ingen beskrivning av vad boken handlar om hittades
 - **Sigrid Combüchen** (2010) – *Spill* · kvinna
   - titel: förkortad i spelet, hela titeln är ”Spill: en damroman”
 - **Lena Andersson** (2013) – *Egenmäktigt förfarande* · kvinna
@@ -174,4 +178,4 @@ Pristagare med flera länder (alla räknas som rätt) eller historiska landsnamn
 
 ## Faktafrågor
 
-625 frågor. Varje fråga har ett citat ur artikeln som belägg – läs dem i appen under Kontroll → Faktafrågor.
+977 frågor. Varje fråga har ett citat ur artikeln som belägg – läs dem i appen under Kontroll → Faktafrågor.

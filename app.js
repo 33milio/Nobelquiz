@@ -476,10 +476,19 @@ function byggRunda() {
     valda.push(id); return true;
   };
   const platserForKort = FRAGOR_PER_RUNDA - 3; // tre kluriga per runda
-  for (const [, , id] of forfallna) { if (valda.length >= platserForKort - 2) break; lagg(id); }
+  // Nya faktafrågor får reserverade platser – "Vem …?" och kopplingar först (favoriter)
+  const upplast = id => !id || ups.includes(PID[id]?.nivå);
+  const nyaFakta = blanda(faktaFragor().filter(f => !T.kort['fakta|' + f.id] && upplast(f.person) && (f.personer || []).every(upplast)));
+  const antalNyaFakta = Math.min(nyaFakta.length, Math.random() < .5 ? 3 : 4);
+  const favoriter = nyaFakta.filter(f => f.typ).slice(0, antalNyaFakta - 1);
+  const ovriga = nyaFakta.filter(f => !f.typ).slice(0, antalNyaFakta - favoriter.length);
+  const valdaFakta = [...favoriter, ...ovriga, ...nyaFakta.filter(f => f.typ).slice(favoriter.length)].slice(0, antalNyaFakta);
 
-  // Nya personer, från lägsta nivån med opåbörjade
-  // Nya personer: varannan från den lägsta och varannan från den högsta upplåsta nivån
+  // 1. Förfallna kort (repetition), men lämna plats för nya faktafrågor och minst en ny person
+  for (const [, , id] of forfallna) { if (valda.length >= platserForKort - antalNyaFakta - 2) break; lagg(id); }
+  // 2. Nya faktafrågor
+  for (const f of valdaFakta) lagg('fakta|' + f.id);
+  // 3. Nya personer: varannan från den lägsta och varannan från den högsta upplåsta nivån
   const opaborjade = personer.filter(p => !kortFor(p).some(id => T.kort[id]));
   const lagst = blanda(opaborjade).sort((a, b) => a.nivå - b.nivå);
   const hogst = blanda(opaborjade).sort((a, b) => b.nivå - a.nivå);
@@ -490,14 +499,8 @@ function byggRunda() {
     if (valda.length >= platserForKort) break;
     for (const id of blanda(kortFor(p)).slice(0, 2)) lagg(id);
   }
-  // Nya faktafrågor – "Vem …?" och kopplingar först (användarens favoriter)
-  const upplast = id => !id || ups.includes(PID[id]?.nivå);
-  const nyaFakta = blanda(faktaFragor().filter(f => !T.kort['fakta|' + f.id] && upplast(f.person) && (f.personer || []).every(upplast)))
-    .sort((a, b) => (b.typ ? 1 : 0) - (a.typ ? 1 : 0) || Math.random() - .5);
-  const antalNyaFakta = Math.random() < .5 ? 3 : 4;
-  const favoriter = nyaFakta.filter(f => f.typ).slice(0, antalNyaFakta - 1);
-  const ovriga = nyaFakta.filter(f => !f.typ).slice(0, antalNyaFakta - favoriter.length);
-  for (const f of [...favoriter, ...ovriga]) if (valda.length < platserForKort) lagg('fakta|' + f.id);
+  // 4. Fler förfallna kort om det finns plats kvar
+  for (const [, , id] of forfallna) { if (valda.length >= platserForKort) break; lagg(id); }
 
   // Fyll ut med övning av kort som inte är förfallna (räknas inte uppåt i Leitner)
   const ovning = new Set();
