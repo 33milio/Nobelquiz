@@ -415,7 +415,7 @@ const KLURIGA = [
     const ledtrad = [`fick priset under åren ${dec}–${dec + 9}`];
     if (p.land && p.land.length) ledtrad.push(`från ${lista(p.land)}`);
     return { rubrik: 'Initialer', läge: 'skriv', text: `Vilken pristagare har initialerna ${init(p)}?`,
-      tips: `Ledtråd: ${ledtrad.join(', ')}.${giltiga.length > 1 ? ` (${giltiga.length} möjliga svar.)` : ''}`,
+      tips: `Skriv hela namnet. Ledtråd: ${ledtrad.join(', ')}.${giltiga.length > 1 ? ` (${giltiga.length} möjliga svar.)` : ''}`,
       giltiga, person: p, statTyp: 'initialer' };
   },
   function kvinna(ups) {
@@ -538,6 +538,15 @@ function byggRunda() {
 }
 
 // ---------- Kontroll av svar ----------
+// Former av efternamnet som räcker som svar: hela efternamnet, varje del av ett sammansatt
+// efternamn (García, Márquez) och sista ordet i namnet (Kang i Han Kang).
+function godtagnaEfternamn(p) {
+  const e = efternamn(p);
+  const delar = e.split(/[\s-]+/).filter(d => d.length >= 3 && !['von', 'van', 'del', 'des'].includes(d.toLowerCase()));
+  const ord = p.namn.split(/[\s.]+/).filter(Boolean);
+  const utanForNamn = ord.slice(1).map((_, i) => ord.slice(i + 1).join(' ')); // von Heidenstam, Heidenstam
+  return unika([e, ...delar, ...utanForNamn]);
+}
 function rattaSvar(q, svar) {
   if (q.läge === 'ett') {
     return q.alternativ[svar].ratt ? 'ratt' : 'fel';
@@ -558,7 +567,9 @@ function rattaSvar(q, svar) {
     return 'fel';
   }
   if (q.läge === 'skriv') {
-    const trff = q.giltiga.find(p => nastan(svar, p.namn) || nastan(svar, efternamn(p)) || (p.alias || []).some(a => nastan(svar, a)));
+    // Hela namnet (eller alias) godtas alltid. Efternamnet räcker utom på initialfrågan.
+    const helt = p => nastan(svar, p.namn) || (p.alias || []).some(a => nastan(svar, a));
+    const trff = q.giltiga.find(p => helt(p) || (q.statTyp !== 'initialer' && godtagnaEfternamn(p).some(e => nastan(svar, e))));
     q.traff = trff;
     return trff ? 'ratt' : 'fel';
   }
