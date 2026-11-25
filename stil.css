@@ -168,3 +168,8 @@ textarea { min-height: 120px; font-size: .9rem; }
 label.falt { display: block; font-size: .85rem; color: var(--svag); margin-top: 8px; }
 label.falt input { margin-top: 4px; min-height: 48px; }
 details summary { cursor: pointer; padding: 8px 0; font-weight: 600; }
+
+/* Svårt / Bra / Lätt efter rätt svar */
+.betyg { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 8px; }
+.betyg button { text-align: center; min-height: 64px; padding: 8px 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+.betyg button span { font-size: .8rem; opacity: .8; font-weight: 400; }

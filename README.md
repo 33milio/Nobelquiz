@@ -25,6 +25,11 @@ Fungerar i mobilen, även utan internet, och kan läggas på hemskärmen.
 - **Leitner:** varje fakta ligger i ett fack 1–5. Rätt svar flyttar upp ett fack, fel svar flyttar
   tillbaka till fack 1. Fack 1 kommer tillbaka efter 10 minuter (och fel svar dyker upp igen i
   samma runda), fack 2 efter 1 dag, fack 3 efter 3 dagar, fack 4 efter 7 dagar, fack 5 efter 14 dagar.
+- **Svårt / Bra / Lätt (som i Anki):** efter ett rätt svar väljer man hur lätt det var.
+  *Bra* = vanligt steg upp ett fack. *Lätt* = två fack upp (även vid extraövning), så sådant man
+  redan kan kommer tillbaka sällan; ett nytt kort som markeras Lätt hamnar direkt i fack 3 (lärt).
+  *Svårt* = stannar i samma fack och kommer tillbaka tidigare (i fack 1: igen i samma runda).
+  Under varje knapp står när frågan kommer tillbaka. Fel svar skickar som förut tillbaka till fack 1.
 - **Flera rätta svar:** har en pristagare flera länder eller språk räknas alla som rätt. Väljer
   man bara en del blir det "Nästan" – helt rätt är att välja alla.
 - **Kontrollista:** under *Kontroll* finns alla osäkra uppgifter och alla faktafrågor med citat ur

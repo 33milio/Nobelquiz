@@ -103,9 +103,27 @@ function upplasta() {
   return Array.from({ length: hogsta }, (_, i) => i + 1);
 }
 function registrera(id, resultat, ovning) {
-  // resultat: 'ratt' | 'delvis' | 'fel'
+  // resultat: 'ratt' (= Bra) | 'svart' | 'latt' | 'delvis' | 'fel'
   const nu = Date.now();
   const k = T.kort[id] || { fack: 0, ratt: 0, fel: 0, delvis: 0, nasta: 0 };
+  if (ovning && k.nasta && k.nasta <= nu) ovning = false; // kortet var faktiskt på tur (t.ex. efter Svårt)
+  if (resultat === 'latt') {
+    // Lätt: hoppa två fack framåt, även vid extraövning – slipp öva på det du redan kan
+    k.ratt++;
+    k.fack = Math.min(5, Math.max(1, k.fack) + 2);
+    k.nasta = nu + VANTETID[k.fack] - 2 * 60 * 60 * 1000;
+    k.senast = nu; T.kort[id] = k;
+    return;
+  }
+  if (resultat === 'svart') {
+    // Svårt: rätt men osäkert – stanna i samma fack, kommer tillbaka tidigare
+    k.ratt++;
+    k.fack = Math.max(1, k.fack);
+    // I fack 1 kommer kortet igen redan i samma runda; annars stannar det i facket
+    k.nasta = k.fack === 1 ? nu : nu + VANTETID[k.fack] - 2 * 60 * 60 * 1000;
+    k.senast = nu; T.kort[id] = k;
+    return;
+  }
   if (resultat === 'ratt') {
     k.ratt++;
     if (!ovning || k.fack === 0) k.fack = Math.min(5, Math.max(1, k.fack + 1));
@@ -119,6 +137,22 @@ function registrera(id, resultat, ovning) {
   if (!ovning || resultat !== 'ratt') k.nasta = nu + VANTETID[k.fack] - (k.fack > 1 ? 2 * 60 * 60 * 1000 : 0);
   k.senast = nu;
   T.kort[id] = k;
+}
+// Hur länge det dröjer innan kortet kommer igen, för varje val (visas under knapparna)
+function vantetidText(ms) {
+  if (ms < 60000) return 'igen i rundan';
+  const min = Math.round(ms / 60000);
+  if (min < 60) return `${min} min`;
+  const dagar = Math.round(ms / DAG);
+  return dagar === 1 ? '1 dag' : `${dagar} dagar`;
+}
+function forhandsvisa(id, resultat, ovning) {
+  const fore = T.kort[id] ? Object.assign({}, T.kort[id]) : undefined;
+  registrera(id, resultat, ovning);
+  const k = T.kort[id];
+  const text = vantetidText(Math.max(0, k.nasta - Date.now()) + (k.fack > 1 ? 2 * 60 * 60 * 1000 : 0));
+  if (fore) T.kort[id] = fore; else delete T.kort[id];
+  return text;
 }
 function noteraTyp(typ, resultat) {
   const s = T.typStat[typ] || { ratt: 0, fel: 0, delvis: 0 };
@@ -609,6 +643,18 @@ function visaFraga() {
 function besvara(q, svar) {
   const res = (svar === '' ? 'fel' : rattaSvar(q, svar));
   runda[res]++;
+  // Vid rätt svar på ett kort väljer man Svårt/Bra/Lätt. Bra registreras direkt (om man stänger
+  // appen räknas det som Bra); väljer man något annat ersätts det.
+  const kanBetygsatta = res === 'ratt' && q.kortId;
+  let fore, betyg;
+  if (kanBetygsatta) {
+    fore = T.kort[q.kortId] ? Object.assign({}, T.kort[q.kortId]) : undefined;
+    betyg = {
+      svart: forhandsvisa(q.kortId, 'svart', q.övning),
+      ratt: forhandsvisa(q.kortId, 'ratt', q.övning),
+      latt: forhandsvisa(q.kortId, 'latt', q.övning),
+    };
+  }
   if (q.kortId) registrera(q.kortId, res, q.övning);
   noteraTyp(q.statTyp || 'övrigt', res);
   if (res !== 'ratt') runda.missade.push(q);
@@ -656,11 +702,30 @@ function besvara(q, svar) {
   const yta = $('#svarsyta');
   const fb = document.createElement('div');
   fb.innerHTML = `<div class="aterkoppling ${res}"><div class="rubrik">${rubrik}</div>${detalj ? `<div>${detalj}</div>` : ''}${faktaHtml}</div>
-    <button class="primar" id="nasta" style="margin-top:12px">Nästa</button>`;
+    ${kanBetygsatta ? `<p class="svag" style="text-align:center;margin:12px 0 6px">Hur lätt var det?</p>
+    <div class="betyg">
+      <button data-betyg="svart"><b>Svårt</b><span>${betyg.svart}</span></button>
+      <button data-betyg="ratt" class="primar" id="nasta"><b>Bra</b><span>${betyg.ratt}</span></button>
+      <button data-betyg="latt"><b>Lätt</b><span>${betyg.latt}</span></button>
+    </div>` : `<button class="primar" id="nasta" style="margin-top:12px">Nästa</button>`}`;
   if (q.läge === 'tal' || q.läge === 'skriv') yta.innerHTML = '';
   const svara = $('#svara'); if (svara) svara.remove();
   yta.appendChild(fb);
   $('#nasta').onclick = () => { runda.i++; visaFraga(); };
+  fb.querySelectorAll('[data-betyg]').forEach(b => {
+    if (b.dataset.betyg === 'ratt') return;
+    b.onclick = () => {
+      if (fore) T.kort[q.kortId] = fore; else delete T.kort[q.kortId];
+      registrera(q.kortId, b.dataset.betyg, q.övning);
+      if (b.dataset.betyg === 'svart' && T.kort[q.kortId].fack === 1 && !q.igen) {
+        const ny = Object.assign(fragaForKort(q.kortId), { igen: true, övning: true });
+        runda.fragor.splice(Math.min(runda.fragor.length, runda.i + 3 + Math.floor(Math.random() * 3)), 0, ny);
+      }
+      T.betyg = T.betyg || {}; T.betyg[b.dataset.betyg] = (T.betyg[b.dataset.betyg] || 0) + 1;
+      spara();
+      runda.i++; visaFraga();
+    };
+  });
   $('#nasta').focus({ preventScroll: true });
   fb.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
