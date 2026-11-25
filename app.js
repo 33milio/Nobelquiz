@@ -289,11 +289,13 @@ function fragaForKort(id) {
   return q;
 }
 function faktaFraga(f) {
-  const q = ettval('Faktafråga', f.fråga, f.svar, f.fel.slice(0, 3));
+  const rubrik = { vem: 'Vem?', koppling: 'Kopplingar mellan författare' }[f.typ] || 'Faktafråga';
+  const q = ettval(rubrik, f.fråga, f.svar, f.fel.slice(0, 3));
+  q.personer = (f.personer || []).map(id => PID[id]).filter(Boolean);
   q.källa = f.källa;
   q.förklaring = f.förklaring || '';
   q.kortId = 'fakta|' + f.id;
-  q.statTyp = 'fakta';
+  q.statTyp = f.typ === 'koppling' ? 'koppling' : f.typ === 'vem' ? 'vem' : 'fakta';
   if (f.person) q.person = PID[f.person];
   return q;
 }
@@ -488,9 +490,14 @@ function byggRunda() {
     if (valda.length >= platserForKort) break;
     for (const id of blanda(kortFor(p)).slice(0, 2)) lagg(id);
   }
-  // Nya faktafrågor
-  const nyaFakta = blanda(faktaFragor().filter(f => !T.kort['fakta|' + f.id] && (!f.person || ups.includes(PID[f.person]?.nivå))));
-  for (const f of nyaFakta.slice(0, 2)) if (valda.length < platserForKort) lagg('fakta|' + f.id);
+  // Nya faktafrågor – "Vem …?" och kopplingar först (användarens favoriter)
+  const upplast = id => !id || ups.includes(PID[id]?.nivå);
+  const nyaFakta = blanda(faktaFragor().filter(f => !T.kort['fakta|' + f.id] && upplast(f.person) && (f.personer || []).every(upplast)))
+    .sort((a, b) => (b.typ ? 1 : 0) - (a.typ ? 1 : 0) || Math.random() - .5);
+  const antalNyaFakta = Math.random() < .5 ? 3 : 4;
+  const favoriter = nyaFakta.filter(f => f.typ).slice(0, antalNyaFakta - 1);
+  const ovriga = nyaFakta.filter(f => !f.typ).slice(0, antalNyaFakta - favoriter.length);
+  for (const f of [...favoriter, ...ovriga]) if (valda.length < platserForKort) lagg('fakta|' + f.id);
 
   // Fyll ut med övning av kort som inte är förfallna (räknas inte uppåt i Leitner)
   const ovning = new Set();
@@ -709,6 +716,7 @@ function besvara(q, svar) {
   if (q.läge === 'ordning' && res !== 'ratt') detalj = 'Rätt ordning visas nedan.';
   const faktaHtml = [
     q.person ? `<div class="fakta">${faktaRad(q.person)}</div>` : '',
+    ...(q.personer || []).filter(x => x !== q.person).map(x => `<div class="fakta">${faktaRad(x)}</div>`),
     q.traff && q.traff !== q.person ? `<div class="fakta">${faktaRad(q.traff)}</div>` : '',
     ...(q.extraFakta || []).map(t => `<div class="fakta">${esc(t)}</div>`),
     q.förklaring ? `<div class="fakta">${esc(q.förklaring)}</div>` : '',
@@ -774,7 +782,7 @@ function visaStatistik() {
     .map(([id, k]) => [k.fel / (k.ratt + k.fel), k, id]).sort((a, b) => b[0] - a[0] || b[1].fel - a[1].fel).slice(0, 12);
   const typNamn = { år: 'Årtal', land: 'Land', språk: 'Språk', verk: 'Verk', handling: 'Handling', fakta: 'Faktafrågor', 'land+bokstav': 'Land + bokstav',
     flerspråkiga: 'Flerspråkiga', språkgrupp: 'Språkgrupp', räkna: 'Räkna', ensam: 'Ensam i sitt land', tidslinje: 'Vem först', ordning: 'Tidsordning',
-    initialer: 'Initialer', kvinnor: 'Kvinnliga pristagare', delat: 'Delat pris', bokstav: 'Bokstav', 'två gånger': 'Två gånger' };
+    initialer: 'Initialer', kvinnor: 'Kvinnliga pristagare', delat: 'Delat pris', vem: 'Vem?', koppling: 'Kopplingar', bokstav: 'Bokstav', 'två gånger': 'Två gånger' };
   const dagar = Object.keys(T.dagar).sort().slice(-7);
   app().innerHTML = `
     <div class="topprad"><button class="stang liten" id="tillbaka">←</button><h1 style="margin:0">Statistik</h1></div>

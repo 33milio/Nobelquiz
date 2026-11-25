@@ -114,6 +114,22 @@ def grund():
     print(f"{n} pristagare, {antal_kvinnor} kvinnor", file=sys.stderr)
     json.dump(ut, open(os.path.join(ROT, "verktyg", "grund.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
+def extra_fragor(avd, namn, ids):
+    """Läser verktyg/extra-fragor/<avd>-*.json ("Vem …?"- och kopplingsfrågor) och kontrollerar dem."""
+    ut = []
+    for fn in sorted(glob.glob(os.path.join(ROT, "verktyg", "extra-fragor", f"{avd}-*.json"))):
+        bas = os.path.basename(fn)[:-5]
+        for i, f in enumerate(json.load(open(fn, encoding="utf-8"))):
+            fel = [x for x in f["fel"] if x != f["svar"]][:3]
+            if f["svar"] not in namn or len(fel) < 3 or any(x not in namn for x in fel) or f.get("person") not in ids:
+                print("  hoppar över ogiltig fråga:", bas, f.get("fråga", "")[:60], file=sys.stderr)
+                continue
+            ut.append({"id": f"{bas}-{i+1}", "fråga": f["fråga"], "svar": f["svar"], "fel": fel,
+                       "förklaring": f.get("förklaring", ""), "citat": f.get("citat", ""), "källa": f.get("källa", ""),
+                       "person": f["person"], "personer": [x for x in f.get("personer", []) if x in ids],
+                       "typ": f.get("typ", "vem")})
+    return ut
+
 def klar():
     ps = json.load(open(os.path.join(ROT, "verktyg", "grund.json"), encoding="utf-8"))
     pid = {p["id"]: p for p in ps}
@@ -149,6 +165,7 @@ def klar():
                     "förklaring": f.get("förklaring", ""), "citat": f.get("citat", ""),
                     "källa": kalla, "person": person,
                 })
+    fragor += extra_fragor("nobel", {p["namn"] for p in ps}, {p["id"] for p in ps})
     for p in ps:
         for k in ("faktaruta_verk", "motivering_verk"):
             p.pop(k, None)

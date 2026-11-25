@@ -122,6 +122,10 @@ if __name__ == "__main__":
                 fragor.append({"id": f"{b['id']}-{i+1}", "fråga": f["fråga"], "svar": f["svar"], "fel": fel[:3],
                                "förklaring": f.get("förklaring", ""), "citat": f.get("citat", ""),
                                "källa": f.get("källa") or post["artikel"], "person": post["id"]})
+    sys.argv = [sys.argv[0], "klar", hamta.CACHE]  # bygg_data läser argv[2] vid import
+    import bygg_data
+    bygg_data.ROT = ROT
+    fragor += bygg_data.extra_fragor("august", {p["namn"] for p in ut}, {p["id"] for p in ut})
     data = {
         "version": datetime.date.today().isoformat(), "hämtad": datetime.date.today().isoformat(),
         "källa": "Svenska Wikipedia: ”Augustpriset” och respektive författares artikel",
