@@ -444,10 +444,29 @@ const KLURIGA = [
   },
 ];
 function klurigFraga(ups) {
-  for (let f = 0; f < 10; f++) {
-    try { const q = slump(KLURIGA)(ups); if (q) { q.klurig = true; return q; } } catch (e) { /* prova en annan */ }
+  // Varje klurig fråga får ett eget Leitner-kort (nyckel = typ + frågetext), så att man kan
+  // markera Svårt/Bra/Lätt. Frågor som inte är på tur hoppas över så länge det finns andra.
+  const nu = Date.now();
+  let reserv = null;
+  for (let f = 0; f < 25; f++) {
+    let q = null;
+    try { q = slump(KLURIGA)(ups); } catch (e) { /* prova en annan */ }
+    if (!q) continue;
+    q.klurig = true;
+    q.kortId = 'klurig|' + (q.statTyp || 'övrigt') + '|' + q.text;
+    const k = T.kort[q.kortId];
+    if (!k || k.nasta <= nu) return q;
+    if (!reserv) reserv = Object.assign(q, { övning: true });
   }
-  return null;
+  return reserv;
+}
+// Samma fråga en gång till senare i rundan (efter fel svar eller Svårt)
+function igenFraga(q) {
+  if (q.klurig) {
+    return Object.assign({}, q, { igen: true, övning: true, traff: undefined, valda: [],
+      alternativ: q.alternativ ? blanda(q.alternativ.map(a => Object.assign({}, a))) : undefined });
+  }
+  return Object.assign(fragaForKort(q.kortId), { igen: true, övning: true });
 }
 
 // ---------- Bygga en runda ----------
@@ -685,7 +704,7 @@ function besvara(q, svar) {
   if (res !== 'ratt') runda.missade.push(q);
   // Fel svar kommer tillbaka snart: lägg in samma kort igen några frågor senare
   if (res === 'fel' && q.kortId && !q.igen) {
-    const ny = Object.assign(q.kortId.startsWith('fakta|') ? fragaForKort(q.kortId) : fragaForKort(q.kortId), { igen: true, övning: true });
+    const ny = igenFraga(q);
     const pos = Math.min(runda.fragor.length, runda.i + 3 + Math.floor(Math.random() * 3));
     runda.fragor.splice(pos, 0, ny);
   }
@@ -744,7 +763,7 @@ function besvara(q, svar) {
       if (fore) T.kort[q.kortId] = fore; else delete T.kort[q.kortId];
       registrera(q.kortId, b.dataset.betyg, q.övning);
       if (b.dataset.betyg === 'svart' && T.kort[q.kortId].fack === 1 && !q.igen) {
-        const ny = Object.assign(fragaForKort(q.kortId), { igen: true, övning: true });
+        const ny = igenFraga(q);
         runda.fragor.splice(Math.min(runda.fragor.length, runda.i + 3 + Math.floor(Math.random() * 3)), 0, ny);
       }
       T.betyg = T.betyg || {}; T.betyg[b.dataset.betyg] = (T.betyg[b.dataset.betyg] || 0) + 1;

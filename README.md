@@ -30,6 +30,8 @@ Fungerar i mobilen, även utan internet, och kan läggas på hemskärmen.
   redan kan kommer tillbaka sällan; ett nytt kort som markeras Lätt hamnar direkt i fack 3 (lärt).
   *Svårt* = stannar i samma fack och kommer tillbaka tidigare (i fack 1: igen i samma runda).
   Under varje knapp står när frågan kommer tillbaka. Fel svar skickar som förut tillbaka till fack 1.
+  Gäller alla frågetyper, även skrivfrågor, flerval med flera rätta och de kluriga frågorna
+  (som har egna kort; de påverkar inte vilka personer som räknas som lärda).
 - **Flera rätta svar:** har en pristagare flera länder eller språk räknas alla som rätt. Väljer
   man bara en del blir det "Nästan" – helt rätt är att välja alla.
 - **Kontrollista:** under *Kontroll* finns alla osäkra uppgifter och alla faktafrågor med citat ur
