@@ -32,6 +32,9 @@ Fungerar i mobilen, även utan internet, och kan läggas på hemskärmen.
   Under varje knapp står när frågan kommer tillbaka. Fel svar skickar som förut tillbaka till fack 1.
   Gäller alla frågetyper, även skrivfrågor, flerval med flera rätta och de kluriga frågorna
   (som har egna kort; de påverkar inte vilka personer som räknas som lärda).
+- **Färre uppenbara land/språk-frågor:** för pristagare på nivå 1–2 och för dem som bara representerar
+  Tyskland, Schweiz, Österrike, Frankrike eller de nordiska länderna läggs land och språk direkt i fack 4
+  (kommer tillbaka först efter en vecka). Svarar man fel blir frågan vanlig igen.
 - **Flera rätta svar:** har en pristagare flera länder eller språk räknas alla som rätt. Väljer
   man bara en del blir det "Nästan" – helt rätt är att välja alla.
 - **Kontrollista:** under *Kontroll* finns alla osäkra uppgifter och alla faktafrågor med citat ur

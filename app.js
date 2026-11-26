@@ -89,6 +89,28 @@ function harFakta(p, typ) {
   if (typ === 'handling') return !!p.handling;
   return true;
 }
+// Land/språk som man oftast ser på namnet: pristagare på nivå 1–2 och de som bara representerar
+// tysktalande, franska eller nordiska länder. Sådana kort börjar i fack 4 och kommer därför sällan.
+const UPPENBARA_LAND = new Set(['Tyskland', 'Schweiz', 'Österrike', 'Frankrike', 'Sverige', 'Norge', 'Danmark', 'Finland', 'Island']);
+const UPPENBARA_SPRAK = new Set(['Tyska', 'Franska', 'Svenska', 'Norska', 'Danska', 'Finska', 'Isländska']);
+const UPPENBAR_START = 4;
+function uppenbar(p, typ) {
+  if (typ !== 'land' && typ !== 'språk') return false;
+  return p.nivå <= 2 || (p.land.length > 0 && p.land.every(l => UPPENBARA_LAND.has(l)));
+}
+// Lägg in uppenbara land/språk-kort direkt i fack 4 utan att fråga (och flytta upp gamla, en gång)
+function forbered(p) {
+  for (const id of kortFor(p)) {
+    const typ = id.split('|')[1];
+    if (!uppenbar(p, typ)) continue;
+    const k = T.kort[id];
+    if (!k) T.kort[id] = { fack: UPPENBAR_START, ratt: 0, fel: 0, delvis: 0, nasta: Date.now() + VANTETID[UPPENBAR_START], auto: true };
+    else if (!k.flyttadUppenbar && !k.fel && k.fack < UPPENBAR_START) {
+      k.fack = UPPENBAR_START; k.nasta = Math.max(k.nasta, Date.now() + VANTETID[UPPENBAR_START]);
+    }
+    if (T.kort[id]) T.kort[id].flyttadUppenbar = true;
+  }
+}
 function kortFor(p) { return S.fakta.filter(t => harFakta(p, t)).map(t => kortId(p.id, t)); }
 function personFack(p) {
   const k = kortFor(p).map(id => (T.kort[id] && T.kort[id].fack) || 0);
@@ -376,7 +398,9 @@ const KLURIGA = [
   },
   function sprakGrupp(ups) {
     if (!S.fakta.includes('språk')) return null;
-    const sprak = slump(unika(P.filter(p => ups.includes(p.nivå)).flatMap(p => p.språk)));
+    // Inte franska/tyska/nordiska språk – där syns svaret oftast på namnen
+    const sprak = slump(unika(P.filter(p => ups.includes(p.nivå)).flatMap(p => p.språk)).filter(x => !UPPENBARA_SPRAK.has(x)));
+    if (!sprak) return null;
     const med = P.filter(p => p.språk.includes(sprak));
     const utan = P.filter(p => !p.språk.includes(sprak));
     const ratta = blanda(med).slice(0, Math.min(med.length, 1 + Math.floor(Math.random() * 3)));
@@ -493,6 +517,8 @@ function byggRunda() {
   const ups = upplasta();
   const nu = Date.now();
   const personer = P.filter(p => ups.includes(p.nivå));
+  // Påbörjade personer: se till att deras uppenbara land/språk-kort ligger i fack 4
+  for (const p of personer) if (kortFor(p).some(id => T.kort[id] && !T.kort[id].auto)) forbered(p);
   const forfallna = [];
   for (const p of personer) for (const id of kortFor(p)) {
     const k = T.kort[id];
@@ -523,7 +549,7 @@ function byggRunda() {
   // A. Pristagarkort (budget 8): förfallna → resterande fakta för påbörjade → nya personer
   for (const id of forfallnaPerson) { if (personKort() >= PERSONBUDGET) break; lagg(id); }
   // Resterande fakta för påbörjade personer (annars kan ingen bli lärd). Närmast "lärd" först.
-  const ostartade = personer.filter(p => kortFor(p).some(id => T.kort[id]) && kortFor(p).some(id => !T.kort[id]))
+  const ostartade = personer.filter(p => kortFor(p).some(id => T.kort[id] && !T.kort[id].auto) && kortFor(p).some(id => !T.kort[id]))
     .sort((a, b) => personFramsteg(b) - personFramsteg(a) || Math.random() - .5);
   for (const p of ostartade) {
     if (personKort() >= PERSONBUDGET) break;
@@ -531,7 +557,7 @@ function byggRunda() {
   }
   // Nya personer: varannan från den lägsta och varannan från den högsta upplåsta nivån.
   // Fokus: högst MAX_PA_VAG "på väg" samtidigt – utom när inget annat finns att öva på.
-  const opaborjade = personer.filter(p => !kortFor(p).some(id => T.kort[id]));
+  const opaborjade = personer.filter(p => !kortFor(p).some(id => T.kort[id] && !T.kort[id].auto));
   const lagst = blanda(opaborjade).sort((a, b) => a.nivå - b.nivå);
   const hogst = blanda(opaborjade).sort((a, b) => b.nivå - a.nivå);
   const nya = unika(lagst.flatMap((p, i) => [p, hogst[i]]));
@@ -539,7 +565,8 @@ function byggRunda() {
   const maxNya = personKort() < PERSONBUDGET / 2 ? NYA_PERSONER_PER_RUNDA : Math.max(0, Math.min(NYA_PERSONER_PER_RUNDA, MAX_PA_VAG - paVag));
   for (const p of nya.slice(0, maxNya)) {
     if (personKort() >= PERSONBUDGET) break;
-    for (const id of blanda(kortFor(p)).slice(0, 2)) lagg(id);
+    forbered(p);
+    for (const id of blanda(kortFor(p).filter(id => !T.kort[id])).slice(0, 2)) lagg(id);
   }
 
   // B. Faktafrågor (resten upp till 12): förfallna (högst MAX_FAKTA_REP) och nya – "Vem …?" och kopplingar först
