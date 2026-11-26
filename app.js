@@ -4,6 +4,8 @@
 // ---------- Inställningar ----------
 const FRAGOR_PER_RUNDA = 15;
 const NYA_PERSONER_PER_RUNDA = 3;
+const MAX_FAKTA_REP = 3;           // högst så många faktafrågor för repetition per runda
+const MAX_PA_VAG = 10;             // högst så många personer "på väg" (påbörjade, ej lärda) åt gången
 const UPPLASNING_ANDEL = 0.7;      // 70 % av nivån måste vara "lärd"
 const LARD_FACK = 3;               // fack 3 av 5 = lärd
 const DAG = 24 * 60 * 60 * 1000;
@@ -93,12 +95,29 @@ function personFack(p) {
   return Math.min(...k);
 }
 const arLard = p => personFack(p) >= LARD_FACK;
+// Hur långt en person har kommit mot "lärd": 0–1 (varje fakta räknas upp till fack 3)
+function personFramsteg(p) {
+  const k = kortFor(p);
+  return k.reduce((s, id) => s + Math.min(LARD_FACK, (T.kort[id] && T.kort[id].fack) || 0), 0) / (LARD_FACK * k.length);
+}
 function nivaStatus(n) {
   const ps = NIVAER[n - 1];
   const larda = ps.filter(arLard).length;
   const paborjade = ps.filter(p => kortFor(p).some(id => T.kort[id])).length;
-  return { totalt: ps.length, larda, paborjade, andel: ps.length ? larda / ps.length : 0 };
+  const framsteg = ps.length ? ps.reduce((s, p) => s + personFramsteg(p), 0) / ps.length : 0;
+  return { totalt: ps.length, larda, paborjade, framsteg, andel: ps.length ? larda / ps.length : 0 };
 }
+// Antal dagar i rad med spelande (räknat bakåt från i dag eller i går)
+function dagarIRad() {
+  const dag = d => d.toISOString().slice(0, 10);
+  const d = new Date();
+  if (!T.dagar[dag(d)]) d.setDate(d.getDate() - 1);
+  let n = 0;
+  while (T.dagar[dag(d)]) { n++; d.setDate(d.getDate() - 1); }
+  return n;
+}
+// Summan av alla fack = ett enkelt "poäng" för hur mycket man kan
+const totalPoang = () => P.reduce((s, p) => s + kortFor(p).reduce((t, id) => t + ((T.kort[id] && T.kort[id].fack) || 0), 0), 0);
 function upplasta() {
   // En nivå som en gång låsts upp förblir upplåst
   let hogsta = T.hogstaNiva || 1;
@@ -495,38 +514,53 @@ function byggRunda() {
     valda.push(id); return true;
   };
   const platserForKort = FRAGOR_PER_RUNDA - 3; // tre kluriga per runda
-  // Nya faktafrågor får reserverade platser – "Vem …?" och kopplingar först (favoriter)
+  const PERSONBUDGET = 8;                        // resten (4) går till faktafrågor
   const upplast = id => !id || ups.includes(PID[id]?.nivå);
-  const nyaFakta = blanda(faktaFragor().filter(f => !T.kort['fakta|' + f.id] && upplast(f.person) && (f.personer || []).every(upplast)));
-  const antalNyaFakta = Math.min(nyaFakta.length, Math.random() < .5 ? 3 : 4);
-  const favoriter = nyaFakta.filter(f => f.typ).slice(0, antalNyaFakta - 1);
-  const ovriga = nyaFakta.filter(f => !f.typ).slice(0, antalNyaFakta - favoriter.length);
-  const valdaFakta = [...favoriter, ...ovriga, ...nyaFakta.filter(f => f.typ).slice(favoriter.length)].slice(0, antalNyaFakta);
+  const forfallnaPerson = forfallna.filter(([, , id]) => !id.startsWith('fakta|')).map(x => x[2]);
+  const forfallnaFakta = forfallna.filter(([, , id]) => id.startsWith('fakta|')).map(x => x[2]);
+  const personKort = () => valda.filter(id => !id.startsWith('fakta|')).length;
 
-  // 1. Förfallna kort (repetition), men lämna plats för nya faktafrågor och minst en ny person
-  for (const [, , id] of forfallna) { if (valda.length >= platserForKort - antalNyaFakta - 2) break; lagg(id); }
-  // 2. Nya faktafrågor
-  for (const f of valdaFakta) lagg('fakta|' + f.id);
-  // 3. Nya personer: varannan från den lägsta och varannan från den högsta upplåsta nivån
+  // A. Pristagarkort (budget 8): förfallna → resterande fakta för påbörjade → nya personer
+  for (const id of forfallnaPerson) { if (personKort() >= PERSONBUDGET) break; lagg(id); }
+  // Resterande fakta för påbörjade personer (annars kan ingen bli lärd). Närmast "lärd" först.
+  const ostartade = personer.filter(p => kortFor(p).some(id => T.kort[id]) && kortFor(p).some(id => !T.kort[id]))
+    .sort((a, b) => personFramsteg(b) - personFramsteg(a) || Math.random() - .5);
+  for (const p of ostartade) {
+    if (personKort() >= PERSONBUDGET) break;
+    for (const id of kortFor(p).filter(id => !T.kort[id]).slice(0, 2)) lagg(id);
+  }
+  // Nya personer: varannan från den lägsta och varannan från den högsta upplåsta nivån.
+  // Fokus: högst MAX_PA_VAG "på väg" samtidigt – utom när inget annat finns att öva på.
   const opaborjade = personer.filter(p => !kortFor(p).some(id => T.kort[id]));
   const lagst = blanda(opaborjade).sort((a, b) => a.nivå - b.nivå);
   const hogst = blanda(opaborjade).sort((a, b) => b.nivå - a.nivå);
   const nya = unika(lagst.flatMap((p, i) => [p, hogst[i]]));
-  // Få förfallna kort => fler nya personer (upp till dubbelt så många)
-  const maxNya = forfallna.length < 4 ? NYA_PERSONER_PER_RUNDA * 2 : NYA_PERSONER_PER_RUNDA;
+  const paVag = personer.filter(p => !arLard(p) && kortFor(p).some(id => T.kort[id])).length;
+  const maxNya = personKort() < PERSONBUDGET / 2 ? NYA_PERSONER_PER_RUNDA : Math.max(0, Math.min(NYA_PERSONER_PER_RUNDA, MAX_PA_VAG - paVag));
   for (const p of nya.slice(0, maxNya)) {
-    if (valda.length >= platserForKort) break;
+    if (personKort() >= PERSONBUDGET) break;
     for (const id of blanda(kortFor(p)).slice(0, 2)) lagg(id);
   }
-  // 4. Fler förfallna kort om det finns plats kvar
-  for (const [, , id] of forfallna) { if (valda.length >= platserForKort) break; lagg(id); }
 
+  // B. Faktafrågor (resten upp till 12): förfallna (högst MAX_FAKTA_REP) och nya – "Vem …?" och kopplingar först
+  let faktaRep = 0;
+  for (const id of forfallnaFakta) { if (valda.length >= platserForKort || faktaRep >= MAX_FAKTA_REP) break; if (lagg(id)) faktaRep++; }
+  const nyaFakta = blanda(faktaFragor().filter(f => !T.kort['fakta|' + f.id] && upplast(f.person) && (f.personer || []).every(upplast)))
+    .sort((a, b) => (b.typ ? 1 : 0) - (a.typ ? 1 : 0) + (Math.random() < .25 ? 1 : 0)); // mest favoriter, ibland en vanlig
+  for (const f of nyaFakta) { if (valda.length >= platserForKort) break; lagg('fakta|' + f.id); }
+
+  // C. Plats kvar: fler förfallna kort
+  for (const id of [...forfallnaPerson, ...forfallnaFakta]) { if (valda.length >= platserForKort) break; lagg(id); }
   // Fyll ut med övning av kort som inte är förfallna (räknas inte uppåt i Leitner)
   const ovning = new Set();
   if (valda.length < platserForKort) {
-    const startade = blanda(personer.flatMap(p => kortFor(p)).filter(id => T.kort[id] && !valda.includes(id)))
-      .sort((a, b) => T.kort[a].fack - T.kort[b].fack);
-    for (const id of startade) { if (valda.length >= platserForKort) break; if (lagg(id)) ovning.add(id); }
+    // Kort som snart är på tur först; de som är på tur inom 12 timmar räknas som riktig repetition
+    const startade = personer.flatMap(p => kortFor(p)).filter(id => T.kort[id] && !valda.includes(id))
+      .sort((a, b) => T.kort[a].nasta - T.kort[b].nasta);
+    for (const id of startade) {
+      if (valda.length >= platserForKort) break;
+      if (lagg(id) && T.kort[id].nasta - nu > 12 * 3600e3) ovning.add(id);
+    }
   }
   const fragor = blanda(valda).map(id => Object.assign(fragaForKort(id), { övning: ovning.has(id) }));
   const antalKluriga = FRAGOR_PER_RUNDA - fragor.length;
@@ -598,9 +632,10 @@ function visaHem() {
     return `<div class="niva ${last ? 'last' : ''}">
       <div class="nr">${last ? '🔒' : n}</div>
       <div class="info">
-        <div><b>Nivå ${n}</b> <span class="svag">· ${s.larda}/${s.totalt} lärda</span></div>
-        <div class="mätare"><div style="width:${Math.round(s.andel * 100)}%"></div></div>
-        ${!last && n < S.nivaer && !ups.includes(n + 1) ? `<div class="svag">Lär dig ${krav} för att låsa upp nivå ${n + 1}</div>` : ''}
+        <div class="rubrikrad"><span><b>Nivå ${n}</b> <span class="svag">· ${s.larda}/${s.totalt} lärda</span></span>${!last ? `<span class="svag">${Math.round(s.framsteg * 100)} %</span>` : ''}</div>
+        <div class="mätare dubbel"><div class="pagang" style="width:${Math.round(s.framsteg * 100)}%"></div><div style="width:${Math.round(s.andel * 100)}%"></div></div>
+        ${!last && s.paborjade > s.larda ? `<div class="svag">${s.paborjade - s.larda} på väg</div>` : ''}
+        ${!last && n < S.nivaer && !ups.includes(n + 1) ? `<div class="svag">Nivå ${n + 1} låses upp vid ${krav} lärda${s.larda ? ` – ${Math.max(0, krav - s.larda)} kvar` : ''}</div>` : ''}
       </div>
     </div>`;
   }).join('');
@@ -609,6 +644,11 @@ function visaHem() {
       `<button data-samling="${x.nyckel}" class="${x === S ? 'aktiv' : ''}">${esc(x.flik)}</button>`).join('')}</div>
     <h1>${esc(S.titel)}</h1>
     <p class="svag">${esc(S.underrubrik(DATA.senasteÅr))}</p>
+    <div class="siffror" style="margin-top:12px">
+      <div><b>${dagarIRad()}</b><span>dagar i rad</span></div>
+      <div><b>${(T.dagar[new Date().toISOString().slice(0, 10)] || { ratt: 0 }).ratt}</b><span>rätt i dag</span></div>
+      <div><b>${totalPoang()}</b><span>poäng</span></div>
+    </div>
     <div class="stapel" style="margin-top:12px">${nivaHtml}</div>
     <div class="botten">
       <p class="svag" style="text-align:center">${forfallna ? `${forfallna} kort väntar på repetition` : 'Inga kort väntar – nya personer står på tur'}</p>
@@ -629,7 +669,8 @@ function visaHem() {
 }
 
 function startaRunda() {
-  runda = { fragor: byggRunda(), i: 0, ratt: 0, fel: 0, delvis: 0, upplastaFore: upplasta().length, missade: [] };
+  runda = { fragor: byggRunda(), i: 0, ratt: 0, fel: 0, delvis: 0, upplastaFore: upplasta().length, missade: [],
+    lardaFore: new Set(P.filter(arLard).map(p => p.id)), poangFore: totalPoang() };
   visaFraga();
 }
 
@@ -789,14 +830,22 @@ function besvara(q, svar) {
 function visaSlut() {
   const nyNiva = upplasta().length > runda.upplastaFore;
   const tot = runda.ratt + runda.fel + runda.delvis;
+  const nyaLarda = P.filter(p => arLard(p) && !runda.lardaFore.has(p.id));
+  const poang = totalPoang() - runda.poangFore;
+  // Närmast att bli lärda: personer på väg med högst framsteg
+  const nara = P.filter(p => !arLard(p) && upplasta().includes(p.nivå) && personFramsteg(p) > 0)
+    .sort((a, b) => personFramsteg(b) - personFramsteg(a)).slice(0, 3);
   app().innerHTML = `
-    <h1>${nyNiva ? '🎉 Ny nivå upplåst!' : 'Rundan klar'}</h1>
+    <h1>${nyNiva ? '🎉 Ny nivå upplåst!' : nyaLarda.length ? '🎉 Rundan klar' : 'Rundan klar'}</h1>
+    <p style="font-size:1.15rem;margin-top:4px"><b>${poang >= 0 ? '+' : ''}${poang} poäng</b> <span class="svag">· totalt ${totalPoang()}</span></p>
+    ${nyaLarda.length ? `<div class="aterkoppling ratt"><div class="rubrik">Nya lärda: ${nyaLarda.length}</div>${nyaLarda.map(p => `<div class="fakta">${faktaRad(p)}</div>`).join('')}</div>` : ''}
     <div class="siffror" style="margin-top:12px">
       <div><b>${runda.ratt}</b><span>rätt</span></div>
       <div><b>${runda.delvis}</b><span>nästan</span></div>
       <div><b>${runda.fel}</b><span>fel</span></div>
     </div>
-    <p class="svag" style="margin-top:10px">${Math.round(100 * (runda.ratt + runda.delvis / 2) / Math.max(1, tot))} % rätt. Det du missade kommer tillbaka snart.</p>
+    <p class="svag" style="margin-top:10px">${Math.round(100 * (runda.ratt + runda.delvis / 2) / Math.max(1, tot))} % rätt.${runda.missade.length ? ' Det du missade kommer tillbaka snart.' : ''}</p>
+    ${nara.length ? `<h2>Snart lärda</h2><ul class="lista">${nara.map(p => `<li><div class="rubrikrad"><b>${esc(p.namn)}</b><span class="svag">${Math.round(personFramsteg(p) * 100)} %</span></div><div class="mätare"><div style="width:${Math.round(personFramsteg(p) * 100)}%"></div></div></li>`).join('')}</ul>` : ''}
     ${runda.missade.length ? `<h2>Att repetera</h2><ul class="lista">${unika(runda.missade.filter(q => q.person).map(q => q.person)).map(p => `<li>${faktaRad(p)}</li>`).join('')}</ul>` : ''}
     <div class="botten">
       <button class="primar" id="igen">Spela en runda till</button>
@@ -856,7 +905,7 @@ function visaLasPa(n) {
     <div class="flikar">${nivaLista().map(i => `<button data-n="${i}" class="${i === n ? 'aktiv' : ''}">${i}</button>`).join('')}</div>
     <p class="svag">Nivå ${n}, sorterad efter årtal. Fack = hur väl du kan personen (0–5).</p>
     <ul class="lista">${NIVAER[n - 1].slice().sort((a, b) => a.år - b.år).map(p =>
-      `<li>${faktaRad(p)}<div><span class="etikett ${arLard(p) ? 'ok' : ''}">fack ${personFack(p)}</span></div></li>`).join('')}</ul>`;
+      `<li>${faktaRad(p)}<div><span class="etikett ${arLard(p) ? 'ok' : ''}">${arLard(p) ? 'lärd ✓' : Math.round(personFramsteg(p) * 100) + ' % mot lärd'}</span> ${kortFor(p).map(id => `<span class="etikett">${esc(id.split('|')[1])} ${(T.kort[id] && T.kort[id].fack) || 0}</span>`).join('')}</div></li>`).join('')}</ul>`;
   $('#tillbaka').onclick = visaHem;
   app().querySelectorAll('.flikar button').forEach(b => b.onclick = () => visaLasPa(+b.dataset.n));
 }

@@ -173,3 +173,11 @@ details summary { cursor: pointer; padding: 8px 0; font-weight: 600; }
 .betyg { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 8px; }
 .betyg button { text-align: center; min-height: 64px; padding: 8px 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
 .betyg button span { font-size: .8rem; opacity: .8; font-weight: 400; }
+
+/* Framsteg: ljus stapel = på väg mot lärd, guld = lärda */
+.mätare.dubbel { position: relative; }
+.mätare.dubbel > div { position: absolute; left: 0; top: 0; }
+.mätare.dubbel > .pagang { background: var(--guld); opacity: .35; }
+
+.rubrikrad { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.rubrikrad > :last-child { flex: none; }
